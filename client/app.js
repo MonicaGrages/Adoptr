@@ -7,7 +7,7 @@ angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth"])
   .config(router, function($authProvider) {
     $authProvider.configure({
       apiUrl: '/',
-      validateOnPageLoad: true
+      validateOnPageLoad: false
     });
 });
 
