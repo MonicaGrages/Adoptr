@@ -8,5 +8,5 @@
   <p>Sex: {{$ctrl.pet.sex}}</p>
 </div>
 
-<li ng-show="!user.id"><a ui-sref="signIn">Sign in</a></li>
-<li ng-show="user.id"><a ng-click='signOut()'>Sign out</a></li>
+<li ng-show="!$ctrl.currentUserId"><a ui-sref="signIn">Sign in</a></li>
+<li ng-show="$ctrl.currentUserId"><a ng-click='signOut()'>Sign out</a></li>

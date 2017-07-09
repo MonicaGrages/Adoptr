@@ -1,6 +1,7 @@
-SearchController.$inject = ['SearchService'];
-function SearchController(SearchService){
+SearchController.$inject = ['SearchService', '$auth'];
+function SearchController(SearchService, $auth){
   var vm = this;
+  vm.currentUserId = $auth.user.id;
   activate();
 
   function activate(){

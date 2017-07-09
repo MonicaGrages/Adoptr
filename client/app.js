@@ -7,7 +7,7 @@ angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth"])
   .config(router, function($authProvider) {
     $authProvider.configure({
       apiUrl: '/',
-      validateOnPageLoad: false
+      validateOnPageLoad: true
     });
 });
 
@@ -32,7 +32,6 @@ function router ($stateProvider, $urlRouterProvider) {
       url: "/user_registration",
       template: "<user-registration></user-registration>"
     });
-
 
   $urlRouterProvider.otherwise("/");
 }

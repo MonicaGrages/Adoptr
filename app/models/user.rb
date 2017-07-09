@@ -4,4 +4,16 @@ class User < ActiveRecord::Base
           :recoverable, :rememberable, :trackable, :validatable,
           :confirmable, :omniauthable
   include DeviseTokenAuth::Concerns::User
+
+  before_save -> do
+    # self.uid = SecureRandom.uuid
+    skip_confirmation!
+  end
+
+  # before_action :configure_permitted_parameters, if: :devise_controller?
+
+  private
+  # devise_parameter_sanitizer.require(:user).permit(:confirm_success_url, :config_name, :registration)
+
+
 end

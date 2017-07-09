@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   mount_devise_token_auth_for 'User', at: 'api/auth'
-  resources :groups, except: [:new, :edit]
+  # resources :groups, except: [:new, :edit]
 
   get 'home/index'
 

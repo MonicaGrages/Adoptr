@@ -5,15 +5,16 @@ function UserSessionsController($auth, $state){
   activate();
 
   function activate(){
-    console.log('user sessions controller');
   }
 
   vm.handleLoginBtnClick = function(loginForm) {
       $auth.submitLogin(loginForm)
         .then(function(response) {
           // handle success response
+          vm.current_user_id = response.id;
           console.log('successful login');
-          console.log(response);
+          // console.log(response.id);
+          // console.log(vm.current_user_id);
           $state.go('petSearch');
         })
         .catch(function(response) {

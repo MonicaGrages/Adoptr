@@ -15,6 +15,7 @@ function UserRegistrationController($auth){
         // handle success response
         console.log('successful registration: ');
         console.log(response);
+        $state.go('petSearch');
       })
       .catch(function(response) {
         // handle error response
