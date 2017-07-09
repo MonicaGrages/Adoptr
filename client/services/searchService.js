@@ -6,8 +6,10 @@ function SearchService ($http) {
   const service = this;
 
   service.getPet = function () {
-    return $http.get("/pet_search").then(res => {
-      return res.data;
+    return $http.get("/pet_search").then(response => {
+      console.log('response.data is: ');
+      console.log(response.data);
+      return response.data;
     });
   };
 
