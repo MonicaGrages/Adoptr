@@ -1,5 +1,5 @@
 import searchController from "./search.controller";
-import searchTemplate from "./search.html";
+import searchTemplate from './search.html';
 
 const searchComponent = {
   controller: searchController,
