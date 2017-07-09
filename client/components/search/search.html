@@ -1,3 +1,10 @@
 <h1>Adoptr</h1>
 
-<h4>{{$ctrl.pet.name}}</h4>
+<div class="search_pet_info">
+  <h4>{{$ctrl.pet.name}}</h4>
+  <img ng-src={{$ctrl.pet.photo}}>
+  <p>Description: {{$ctrl.pet.description}}</p>
+  <p>Age: {{$ctrl.pet.age}}</p>
+  <p>Size: {{$ctrl.pet.size}}</p>
+  <p>Sex: {{$ctrl.pet.sex}}</p>
+</div>
