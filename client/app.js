@@ -6,7 +6,6 @@ angular.module("AdoptrApp", ["ui.router"]).config(router);
 router.$inject = ["$stateProvider", "$urlRouterProvider"];
 
 function router ($stateProvider, $urlRouterProvider) {
-  console.log('hello');
   $stateProvider
     .state("petSearch", {
       url: "/",

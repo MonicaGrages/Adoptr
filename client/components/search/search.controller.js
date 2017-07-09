@@ -1,7 +1,6 @@
 SearchController.$inject = ['SearchService'];
 function SearchController(SearchService){
   var vm = this;
-  console.log('controller');
   activate();
 
   function activate(){
