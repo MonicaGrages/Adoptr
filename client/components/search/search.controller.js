@@ -5,7 +5,6 @@ function SearchController(SearchService, $auth, $state){
   activate();
 
   function activate(){
-    console.log(vm.currentUser);
     SearchService.getPet()
     .then(response => {
       vm.pet = response;
