@@ -1,6 +1,7 @@
 class User < ActiveRecord::Base
   has_many :pets, through: :favorites
   has_many :favorites, dependent: :destroy
+  has_one :preference, dependent: :destroy
   # Include default devise modules.
   devise :database_authenticatable, :registerable,
           :recoverable, :rememberable, :trackable, :validatable,
