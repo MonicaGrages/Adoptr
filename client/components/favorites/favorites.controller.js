@@ -10,8 +10,6 @@ function FavoritesController(FavoritesService, $auth, $state, $stateParams){
     FavoritesService.getFavorites(userId)
     .then(response => {
       vm.favorites = response;
-      console.log(vm.favorites);
-      console.log(vm.favorites[0].pet_id)
     })
     .catch(response => {
       console.log('error getting favorites');
