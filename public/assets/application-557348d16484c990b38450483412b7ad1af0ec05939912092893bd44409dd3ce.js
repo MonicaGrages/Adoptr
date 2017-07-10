@@ -754,7 +754,7 @@ return t.dispatch("turbolinks:before-render",{data:{newBody:e}})},r.prototype.no
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 58);
+/******/ 	return __webpack_require__(__webpack_require__.s = 63);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -1746,17 +1746,17 @@ function __export(m) {
 }
 Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(16));
-__export(__webpack_require__(62));
-__export(__webpack_require__(63));
-__export(__webpack_require__(64));
-__export(__webpack_require__(65));
-__export(__webpack_require__(75));
-__export(__webpack_require__(76));
-__export(__webpack_require__(77));
+__export(__webpack_require__(67));
+__export(__webpack_require__(68));
+__export(__webpack_require__(69));
+__export(__webpack_require__(70));
+__export(__webpack_require__(80));
+__export(__webpack_require__(81));
+__export(__webpack_require__(82));
 __export(__webpack_require__(45));
 __export(__webpack_require__(40));
-__export(__webpack_require__(78));
-__export(__webpack_require__(81));
+__export(__webpack_require__(83));
+__export(__webpack_require__(86));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
@@ -1774,11 +1774,11 @@ __export(__webpack_require__(81));
  */ /** */
 Object.defineProperty(exports, "__esModule", { value: true });
 var predicates_1 = __webpack_require__(1);
-var rejectFactory_1 = __webpack_require__(11);
+var rejectFactory_1 = __webpack_require__(12);
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
 var transition_1 = __webpack_require__(18);
-var resolvable_1 = __webpack_require__(13);
+var resolvable_1 = __webpack_require__(14);
 /**
  * Returns a string shortened to a maximum length
  *
@@ -2519,13 +2519,21 @@ exports.Param = Param;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var ng_from_import = __webpack_require__(15);
+var ng_from_import = __webpack_require__(11);
 var ng_from_global = angular;
 exports.ng = (ng_from_import && ng_from_import.module) ? ng_from_import : ng_from_global;
 //# sourceMappingURL=angular.js.map
 
 /***/ }),
 /* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(65);
+module.exports = angular;
+
+
+/***/ }),
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2620,7 +2628,7 @@ exports.Rejection = Rejection;
 //# sourceMappingURL=rejectFactory.js.map
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2638,7 +2646,7 @@ var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
 var trace_1 = __webpack_require__(6);
 var coreservices_1 = __webpack_require__(3);
-var rejectFactory_1 = __webpack_require__(11);
+var rejectFactory_1 = __webpack_require__(12);
 var targetState_1 = __webpack_require__(7);
 var defaultOptions = {
     current: common_1.noop,
@@ -2846,7 +2854,7 @@ exports.TransitionHook = TransitionHook;
 //# sourceMappingURL=transitionHook.js.map
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2985,7 +2993,7 @@ exports.Resolvable = Resolvable;
 //# sourceMappingURL=resolvable.js.map
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3057,14 +3065,6 @@ function locationPluginFactory(name, isHtml5, serviceClass, configurationClass) 
 }
 exports.locationPluginFactory = locationPluginFactory;
 //# sourceMappingURL=utils.js.map
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports, __webpack_require__) {
-
-__webpack_require__(60);
-module.exports = angular;
-
 
 /***/ }),
 /* 16 */
@@ -3194,13 +3194,13 @@ var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var hof_1 = __webpack_require__(2);
 var interface_1 = __webpack_require__(8); // has or is using
-var transitionHook_1 = __webpack_require__(12);
+var transitionHook_1 = __webpack_require__(13);
 var hookRegistry_1 = __webpack_require__(25);
 var hookBuilder_1 = __webpack_require__(31);
 var pathFactory_1 = __webpack_require__(19);
 var targetState_1 = __webpack_require__(7);
 var param_1 = __webpack_require__(9);
-var resolvable_1 = __webpack_require__(13);
+var resolvable_1 = __webpack_require__(14);
 var resolveContext_1 = __webpack_require__(20);
 /** @hidden */
 var stateSelf = hof_1.prop("self");
@@ -4002,7 +4002,7 @@ var hof_1 = __webpack_require__(2);
 var trace_1 = __webpack_require__(6);
 var coreservices_1 = __webpack_require__(3);
 var interface_1 = __webpack_require__(32);
-var resolvable_1 = __webpack_require__(13);
+var resolvable_1 = __webpack_require__(14);
 var pathFactory_1 = __webpack_require__(19);
 var strings_1 = __webpack_require__(5);
 var when = interface_1.resolvePolicies.when;
@@ -4714,7 +4714,7 @@ exports.UrlMatcher = UrlMatcher;
  * @module vanilla
  */ /** */
 Object.defineProperty(exports, "__esModule", { value: true });
-var utils_1 = __webpack_require__(14);
+var utils_1 = __webpack_require__(15);
 var predicates_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(0);
 /** A base `LocationServices` */
@@ -5334,21 +5334,21 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var interface_1 = __webpack_require__(8);
 var transition_1 = __webpack_require__(18);
 var hookRegistry_1 = __webpack_require__(25);
-var coreResolvables_1 = __webpack_require__(66);
-var redirectTo_1 = __webpack_require__(67);
-var onEnterExitRetain_1 = __webpack_require__(68);
-var resolve_1 = __webpack_require__(69);
-var views_1 = __webpack_require__(70);
-var updateGlobals_1 = __webpack_require__(71);
-var url_1 = __webpack_require__(72);
+var coreResolvables_1 = __webpack_require__(71);
+var redirectTo_1 = __webpack_require__(72);
+var onEnterExitRetain_1 = __webpack_require__(73);
+var resolve_1 = __webpack_require__(74);
+var views_1 = __webpack_require__(75);
+var updateGlobals_1 = __webpack_require__(76);
+var url_1 = __webpack_require__(77);
 var lazyLoad_1 = __webpack_require__(47);
 var transitionEventType_1 = __webpack_require__(48);
-var transitionHook_1 = __webpack_require__(12);
+var transitionHook_1 = __webpack_require__(13);
 var predicates_1 = __webpack_require__(1);
 var common_1 = __webpack_require__(0);
 var hof_1 = __webpack_require__(2);
-var ignoredTransition_1 = __webpack_require__(73);
-var invalidTransition_1 = __webpack_require__(74);
+var ignoredTransition_1 = __webpack_require__(78);
+var invalidTransition_1 = __webpack_require__(79);
 /**
  * The default [[Transition]] options.
  *
@@ -5586,10 +5586,10 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var angular_1 = __webpack_require__(10);
 var core_1 = __webpack_require__(4);
 var views_1 = __webpack_require__(30);
-var templateFactory_1 = __webpack_require__(82);
+var templateFactory_1 = __webpack_require__(87);
 var stateProvider_1 = __webpack_require__(56);
-var onEnterExitRetain_1 = __webpack_require__(83);
-var locationServices_1 = __webpack_require__(84);
+var onEnterExitRetain_1 = __webpack_require__(88);
+var locationServices_1 = __webpack_require__(89);
 var urlRouterProvider_1 = __webpack_require__(57);
 angular_1.ng.module("ui.router.angular1", []);
 var mod_init = angular_1.ng.module('ui.router.init', []);
@@ -5815,7 +5815,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var interface_1 = __webpack_require__(8);
-var transitionHook_1 = __webpack_require__(12);
+var transitionHook_1 = __webpack_require__(13);
 /**
  * This class returns applicable TransitionHooks for a specific Transition instance.
  *
@@ -6171,7 +6171,7 @@ var common_1 = __webpack_require__(0);
 var predicates_1 = __webpack_require__(1);
 var strings_1 = __webpack_require__(5);
 var hof_1 = __webpack_require__(2);
-var resolvable_1 = __webpack_require__(13);
+var resolvable_1 = __webpack_require__(14);
 var coreservices_1 = __webpack_require__(3);
 var parseUrl = function (url) {
     if (!predicates_1.isString(url))
@@ -6788,7 +6788,7 @@ var coreservices_1 = __webpack_require__(3);
 var pathFactory_1 = __webpack_require__(19);
 var pathNode_1 = __webpack_require__(26);
 var transitionService_1 = __webpack_require__(28);
-var rejectFactory_1 = __webpack_require__(11);
+var rejectFactory_1 = __webpack_require__(12);
 var targetState_1 = __webpack_require__(7);
 var param_1 = __webpack_require__(9);
 var glob_1 = __webpack_require__(17);
@@ -8694,7 +8694,7 @@ exports.lazyLoadState = lazyLoadState;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
-var transitionHook_1 = __webpack_require__(12);
+var transitionHook_1 = __webpack_require__(13);
 /**
  * This class defines a type of hook, such as `onBefore` or `onEnter`.
  * Plugins can define custom hook types, such as sticky states does for `onInactive`.
@@ -8910,7 +8910,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module vanilla
  */
 /** */
-var utils_1 = __webpack_require__(14);
+var utils_1 = __webpack_require__(15);
 var baseLocationService_1 = __webpack_require__(22);
 /** A `LocationServices` that uses the browser hash "#" to get/set the current location */
 var HashLocationService = (function (_super) {
@@ -8992,7 +8992,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 Object.defineProperty(exports, "__esModule", { value: true });
-var utils_1 = __webpack_require__(14);
+var utils_1 = __webpack_require__(15);
 var baseLocationService_1 = __webpack_require__(22);
 /**
  * A `LocationServices` that gets/sets the current location using the browser's `location` and `history` apis
@@ -9479,10 +9479,30 @@ exports.UrlRouterProvider = UrlRouterProvider;
 /* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(59);
-__webpack_require__(90);
-module.exports = __webpack_require__(91);
+"use strict";
 
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+FavoritesController.$inject = ['FavoritesService', '$auth', '$state', '$stateParams'];
+function FavoritesController(FavoritesService, $auth, $state, $stateParams) {
+  var vm = this;
+  vm.currentUser = $auth.user;
+  vm.favorites = [];
+  activate();
+
+  function activate() {
+    var userId = $stateParams.userId;
+    FavoritesService.getFavorites(userId).then(function (response) {
+      vm.favorites = response;
+    }).catch(function (response) {
+      console.log('error getting favorites');
+      console.log(response);
+    });
+  }
+}
+exports.default = FavoritesController;
 
 /***/ }),
 /* 59 */
@@ -9491,32 +9511,209 @@ module.exports = __webpack_require__(91);
 "use strict";
 
 
-var angular = __webpack_require__(15);
-__webpack_require__(61);
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+HeaderController.$inject = ['SearchService', '$auth'];
+function HeaderController(SearchService, $auth) {
+  var vm = this;
+  vm.currentUser = $auth.user;
+  activate();
 
-angular.module("AdoptrApp", ["ui.router"]).config(router);
+  function activate() {}
+
+  vm.signOut = function () {
+    $auth.signOut().then(function (response) {
+      console.log('successful sign out');
+      console.log(response.status);
+      $state.go('home');
+    }).catch(function (response) {
+      console.log('error signing out');
+      console.log(response);
+    });
+  };
+}
+exports.default = HeaderController;
+
+/***/ }),
+/* 60 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+SearchController.$inject = ['SearchService', '$auth', '$state'];
+function SearchController(SearchService, $auth, $state) {
+  var vm = this;
+  vm.currentUser = $auth.user;
+  activate();
+
+  function activate() {
+    console.log("in search controller");
+    SearchService.getPet().then(function (response) {
+      vm.pet = response;
+    }).catch(function (response) {
+      console.log('error getting pet search');
+      console.log(response);
+    });
+  }
+}
+exports.default = SearchController;
+
+/***/ }),
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+UserRegistrationController.$inject = ['$auth'];
+
+function UserRegistrationController($auth) {
+  var vm = this;
+  activate();
+
+  function activate() {
+    console.log('user registration controller');
+  }
+
+  vm.handleRegBtnClick = function (registrationForm) {
+    $auth.submitRegistration(registrationForm).then(function (response) {
+      // handle success response
+      console.log('successful registration: ');
+      console.log(response);
+      $state.go('petSearch');
+    }).catch(function (response) {
+      // handle error response
+      console.log('error with registration: ');
+      console.log(response);
+    });
+  };
+}
+exports.default = UserRegistrationController;
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+UserSessionsController.$inject = ['$auth', '$state'];
+
+function UserSessionsController($auth, $state) {
+  var vm = this;
+  activate();
+
+  function activate() {}
+
+  vm.handleLoginBtnClick = function (loginForm) {
+    $auth.submitLogin(loginForm).then(function (response) {
+      // handle success response
+      vm.current_user_id = response.id;
+      console.log('successful login');
+      // console.log(response.id);
+      // console.log(vm.current_user_id);
+      $state.go('petSearch');
+    }).catch(function (response) {
+      // handle error response
+      console.log('error logging in: ');
+      console.log(response);
+    });
+  };
+}
+exports.default = UserSessionsController;
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(64);
+__webpack_require__(98);
+__webpack_require__(58);
+__webpack_require__(100);
+__webpack_require__(59);
+__webpack_require__(102);
+__webpack_require__(60);
+__webpack_require__(104);
+__webpack_require__(61);
+__webpack_require__(106);
+__webpack_require__(62);
+__webpack_require__(108);
+module.exports = __webpack_require__(109);
+
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+console.log('app.js');
+
+var angular = __webpack_require__(11);
+__webpack_require__(66);
+__webpack_require__(95);
+__webpack_require__(96);
+
+angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth"]).config(router, function ($authProvider) {
+  $authProvider.configure({
+    apiUrl: '/',
+    validateOnPageLoad: false
+  });
+});
 
 router.$inject = ["$stateProvider", "$urlRouterProvider"];
-
 function router($stateProvider, $urlRouterProvider) {
+  console.log("In the Router!");
   $stateProvider.state("petSearch", {
     url: "/",
-    template: "<pet-search></pet-search>"
+    template: "<pet-search></pet-search>",
+    resolve: {
+      auth: function auth($auth) {
+        return $auth.validateUser();
+      }
+    }
+  }).state("signIn", {
+    url: "/sign_in",
+    template: "<sign-in></sign-in>"
+  }).state("userRegistration", {
+    url: "/user_registration",
+    template: "<user-registration></user-registration>"
+  }).state("favorites", {
+    url: "/users/:userId/favorites",
+    template: "<favorites></favorites>",
+    resolve: {
+      auth: function auth($auth) {
+        return $auth.validateUser();
+      }
+    }
+  }).state("petShow", {
+    url: "/pets/:id",
+    template: "<pet-show></pet-show>",
+    resolve: {
+      auth: function auth($auth) {
+        return $auth.validateUser();
+      }
+    }
   });
-  // .state("artist", {
-  //   url: "/artist/:id",
-  //   template: "<tunr-artist></tunr-artist>"
-  // })
-  // .state("newArtist", {
-  //   url: "/artist/new",
-  //   template: "<tunr-new-artist></tunr-new-artist>"
-  // });
 
   $urlRouterProvider.otherwise("/");
 }
 
 /***/ }),
-/* 60 */
+/* 65 */
 /***/ (function(module, exports) {
 
 /**
@@ -43352,7 +43549,7 @@ $provide.value("$locale", {
 !window.angular.$$csp().noInlineStyle && window.angular.element(document.head).prepend('<style type="text/css">@charset "UTF-8";[ng\\:cloak],[ng-cloak],[data-ng-cloak],[x-ng-cloak],.ng-cloak,.x-ng-cloak,.ng-hide:not(.ng-hide-animate){display:none !important;}ng\\:form{display:block;}.ng-animate-shim{visibility:hidden;}.ng-anchor{position:absolute;}</style>');
 
 /***/ }),
-/* 61 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43372,16 +43569,16 @@ __export(__webpack_require__(29));
 __export(__webpack_require__(30));
 __export(__webpack_require__(56));
 __export(__webpack_require__(57));
-__webpack_require__(85);
-__webpack_require__(86);
-__webpack_require__(87);
-__webpack_require__(88);
-__webpack_require__(89);
+__webpack_require__(90);
+__webpack_require__(91);
+__webpack_require__(92);
+__webpack_require__(93);
+__webpack_require__(94);
 exports.default = "ui.router";
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 62 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43397,7 +43594,7 @@ __export(__webpack_require__(27));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 63 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43412,7 +43609,7 @@ __export(__webpack_require__(19));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 64 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43423,12 +43620,12 @@ function __export(m) {
 Object.defineProperty(exports, "__esModule", { value: true });
 /** @module resolve */ /** for typedoc */
 __export(__webpack_require__(32));
-__export(__webpack_require__(13));
+__export(__webpack_require__(14));
 __export(__webpack_require__(20));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 65 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43447,7 +43644,7 @@ __export(__webpack_require__(7));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 66 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43471,7 +43668,7 @@ exports.registerAddCoreResolvables = function (transitionService) {
 //# sourceMappingURL=coreResolvables.js.map
 
 /***/ }),
-/* 67 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43514,7 +43711,7 @@ exports.registerRedirectToHook = function (transitionService) {
 //# sourceMappingURL=redirectTo.js.map
 
 /***/ }),
-/* 68 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43577,7 +43774,7 @@ exports.registerOnEnterHook = function (transitionService) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 69 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43626,7 +43823,7 @@ exports.registerLazyResolveState = function (transitionService) {
 //# sourceMappingURL=resolve.js.map
 
 /***/ }),
-/* 70 */
+/* 75 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43679,7 +43876,7 @@ exports.registerActivateViews = function (transitionService) {
 //# sourceMappingURL=views.js.map
 
 /***/ }),
-/* 71 */
+/* 76 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43720,7 +43917,7 @@ exports.registerUpdateGlobalState = function (transitionService) {
 //# sourceMappingURL=updateGlobals.js.map
 
 /***/ }),
-/* 72 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43751,7 +43948,7 @@ exports.registerUpdateUrl = function (transitionService) {
 //# sourceMappingURL=url.js.map
 
 /***/ }),
-/* 73 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43759,7 +43956,7 @@ exports.registerUpdateUrl = function (transitionService) {
 /** @module hooks */ /** */
 Object.defineProperty(exports, "__esModule", { value: true });
 var trace_1 = __webpack_require__(6);
-var rejectFactory_1 = __webpack_require__(11);
+var rejectFactory_1 = __webpack_require__(12);
 /**
  * A [[TransitionHookFn]] that skips a transition if it should be ignored
  *
@@ -43788,7 +43985,7 @@ exports.registerIgnoredTransitionHook = function (transitionService) {
 //# sourceMappingURL=ignoredTransition.js.map
 
 /***/ }),
-/* 74 */
+/* 79 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43813,7 +44010,7 @@ exports.registerInvalidTransitionHook = function (transitionService) {
 //# sourceMappingURL=invalidTransition.js.map
 
 /***/ }),
-/* 75 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43839,15 +44036,15 @@ Object.defineProperty(exports, "__esModule", { value: true });
 __export(__webpack_require__(8));
 __export(__webpack_require__(31));
 __export(__webpack_require__(25));
-__export(__webpack_require__(11));
-__export(__webpack_require__(18));
 __export(__webpack_require__(12));
+__export(__webpack_require__(18));
+__export(__webpack_require__(13));
 __export(__webpack_require__(48));
 __export(__webpack_require__(28));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 76 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43864,7 +44061,7 @@ __export(__webpack_require__(46));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 77 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43877,7 +44074,7 @@ __export(__webpack_require__(44));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 78 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43891,11 +44088,11 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module vanilla
  */
 /** */
-__export(__webpack_require__(79));
+__export(__webpack_require__(84));
 //# sourceMappingURL=vanilla.js.map
 
 /***/ }),
-/* 79 */
+/* 84 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43912,12 +44109,12 @@ __export(__webpack_require__(52));
 __export(__webpack_require__(53));
 __export(__webpack_require__(54));
 __export(__webpack_require__(55));
-__export(__webpack_require__(14));
-__export(__webpack_require__(80));
+__export(__webpack_require__(15));
+__export(__webpack_require__(85));
 //# sourceMappingURL=index.js.map
 
 /***/ }),
-/* 80 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43930,7 +44127,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 /** */
 var browserLocationConfig_1 = __webpack_require__(55);
 var hashLocationService_1 = __webpack_require__(51);
-var utils_1 = __webpack_require__(14);
+var utils_1 = __webpack_require__(15);
 var pushStateLocationService_1 = __webpack_require__(53);
 var memoryLocationService_1 = __webpack_require__(52);
 var memoryLocationConfig_1 = __webpack_require__(54);
@@ -43952,7 +44149,7 @@ exports.memoryLocationPlugin = utils_1.locationPluginFactory("vanilla.memoryLoca
 //# sourceMappingURL=plugins.js.map
 
 /***/ }),
-/* 81 */
+/* 86 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -43979,7 +44176,7 @@ exports.UIRouterPluginBase = UIRouterPluginBase;
 //# sourceMappingURL=interface.js.map
 
 /***/ }),
-/* 82 */
+/* 87 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44179,7 +44376,7 @@ var scopeBindings = function (bindingsObj) { return Object.keys(bindingsObj || {
 //# sourceMappingURL=templateFactory.js.map
 
 /***/ }),
-/* 83 */
+/* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44210,7 +44407,7 @@ exports.getStateHookBuilder = function (hookName) {
 //# sourceMappingURL=onEnterExitRetain.js.map
 
 /***/ }),
-/* 84 */
+/* 89 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44291,7 +44488,7 @@ exports.Ng1LocationServices = Ng1LocationServices;
 //# sourceMappingURL=locationServices.js.map
 
 /***/ }),
-/* 85 */
+/* 90 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -44665,7 +44862,7 @@ var $urlMatcherFactoryProvider;
 //# sourceMappingURL=injectables.js.map
 
 /***/ }),
-/* 86 */
+/* 91 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45242,7 +45439,7 @@ angular_1.ng.module('ui.router.state')
 //# sourceMappingURL=stateDirectives.js.map
 
 /***/ }),
-/* 87 */
+/* 92 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45294,7 +45491,7 @@ angular_1.ng.module('ui.router.state')
 //# sourceMappingURL=stateFilters.js.map
 
 /***/ }),
-/* 88 */
+/* 93 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45305,7 +45502,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  * @module directives
  */ /** for typedoc */
 var angular_1 = __webpack_require__(10);
-var angular_2 = __webpack_require__(15);
+var angular_2 = __webpack_require__(11);
 var core_1 = __webpack_require__(4);
 var views_1 = __webpack_require__(30);
 var services_1 = __webpack_require__(29);
@@ -45590,7 +45787,7 @@ angular_1.ng.module('ui.router.state').directive('uiView', $ViewDirectiveFill);
 //# sourceMappingURL=viewDirective.js.map
 
 /***/ }),
-/* 89 */
+/* 94 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -45619,44 +45816,1222 @@ angular_1.ng.module('ui.router.state').provider('$uiViewScroll', $ViewScrollProv
 //# sourceMappingURL=viewScroll.js.map
 
 /***/ }),
-/* 90 */
-/***/ (function(module, exports, __webpack_require__) {
+/* 95 */
+/***/ (function(module, exports) {
 
-"use strict";
+if (typeof module !== 'undefined' && typeof exports !== 'undefined' && module.exports === exports) {
+  module.exports = 'ng-token-auth';
+}
 
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-SearchController.$inject = ['SearchService'];
-function SearchController(SearchService) {
-  var vm = this;
-  activate();
-
-  function activate() {
-    SearchService.getPet().then(function (response) {
-      vm.pet = response;
+angular.module('ng-token-auth', ['ipCookie']).provider('$auth', function() {
+  var configs, defaultConfigName;
+  configs = {
+    "default": {
+      apiUrl: '/api',
+      signOutUrl: '/auth/sign_out',
+      emailSignInPath: '/auth/sign_in',
+      emailRegistrationPath: '/auth',
+      accountUpdatePath: '/auth',
+      accountDeletePath: '/auth',
+      confirmationSuccessUrl: function() {
+        return window.location.href;
+      },
+      passwordResetPath: '/auth/password',
+      passwordUpdatePath: '/auth/password',
+      passwordResetSuccessUrl: function() {
+        return window.location.href;
+      },
+      tokenValidationPath: '/auth/validate_token',
+      proxyIf: function() {
+        return false;
+      },
+      proxyUrl: '/proxy',
+      validateOnPageLoad: true,
+      omniauthWindowType: 'sameWindow',
+      storage: 'cookies',
+      forceValidateToken: false,
+      tokenFormat: {
+        "access-token": "{{ token }}",
+        "token-type": "Bearer",
+        client: "{{ clientId }}",
+        expiry: "{{ expiry }}",
+        uid: "{{ uid }}"
+      },
+      cookieOps: {
+        path: "/",
+        expires: 9999,
+        expirationUnit: 'days',
+        secure: false
+      },
+      createPopup: function(url) {
+        return window.open(url, '_blank', 'closebuttoncaption=Cancel');
+      },
+      parseExpiry: function(headers) {
+        return (parseInt(headers['expiry'], 10) * 1000) || null;
+      },
+      handleLoginResponse: function(resp) {
+        return resp.data;
+      },
+      handleAccountUpdateResponse: function(resp) {
+        return resp.data;
+      },
+      handleTokenValidationResponse: function(resp) {
+        return resp.data;
+      },
+      authProviderPaths: {
+        github: '/auth/github',
+        facebook: '/auth/facebook',
+        google: '/auth/google_oauth2'
+      }
+    }
+  };
+  defaultConfigName = "default";
+  return {
+    configure: function(params) {
+      var conf, defaults, fullConfig, i, k, label, v, _i, _len;
+      if (params instanceof Array && params.length) {
+        for (i = _i = 0, _len = params.length; _i < _len; i = ++_i) {
+          conf = params[i];
+          label = null;
+          for (k in conf) {
+            v = conf[k];
+            label = k;
+            if (i === 0) {
+              defaultConfigName = label;
+            }
+          }
+          defaults = angular.copy(configs["default"]);
+          fullConfig = {};
+          fullConfig[label] = angular.extend(defaults, conf[label]);
+          angular.extend(configs, fullConfig);
+        }
+        if (defaultConfigName !== "default") {
+          delete configs["default"];
+        }
+      } else if (params instanceof Object) {
+        angular.extend(configs["default"], params);
+      } else {
+        throw "Invalid argument: ng-token-auth config should be an Array or Object.";
+      }
+      return configs;
+    },
+    $get: [
+      '$http', '$q', '$location', 'ipCookie', '$window', '$timeout', '$rootScope', '$interpolate', '$interval', (function(_this) {
+        return function($http, $q, $location, ipCookie, $window, $timeout, $rootScope, $interpolate, $interval) {
+          return {
+            header: null,
+            dfd: null,
+            user: {},
+            mustResetPassword: false,
+            listener: null,
+            initialize: function() {
+              this.initializeListeners();
+              this.cancelOmniauthInAppBrowserListeners = (function() {});
+              return this.addScopeMethods();
+            },
+            initializeListeners: function() {
+              this.listener = angular.bind(this, this.handlePostMessage);
+              if ($window.addEventListener) {
+                return $window.addEventListener("message", this.listener, false);
+              }
+            },
+            cancel: function(reason) {
+              if (this.requestCredentialsPollingTimer != null) {
+                $timeout.cancel(this.requestCredentialsPollingTimer);
+              }
+              this.cancelOmniauthInAppBrowserListeners();
+              if (this.dfd != null) {
+                this.rejectDfd(reason);
+              }
+              return $timeout(((function(_this) {
+                return function() {
+                  return _this.requestCredentialsPollingTimer = null;
+                };
+              })(this)), 0);
+            },
+            destroy: function() {
+              this.cancel();
+              if ($window.removeEventListener) {
+                return $window.removeEventListener("message", this.listener, false);
+              }
+            },
+            handlePostMessage: function(ev) {
+              var error, oauthRegistration;
+              if (ev.data.message === 'deliverCredentials') {
+                delete ev.data.message;
+                oauthRegistration = ev.data.oauth_registration;
+                delete ev.data.oauth_registration;
+                this.handleValidAuth(ev.data, true);
+                $rootScope.$broadcast('auth:login-success', ev.data);
+                if (oauthRegistration) {
+                  $rootScope.$broadcast('auth:oauth-registration', ev.data);
+                }
+              }
+              if (ev.data.message === 'authFailure') {
+                error = {
+                  reason: 'unauthorized',
+                  errors: [ev.data.error]
+                };
+                this.cancel(error);
+                return $rootScope.$broadcast('auth:login-error', error);
+              }
+            },
+            addScopeMethods: function() {
+              $rootScope.user = this.user;
+              $rootScope.authenticate = angular.bind(this, this.authenticate);
+              $rootScope.signOut = angular.bind(this, this.signOut);
+              $rootScope.destroyAccount = angular.bind(this, this.destroyAccount);
+              $rootScope.submitRegistration = angular.bind(this, this.submitRegistration);
+              $rootScope.submitLogin = angular.bind(this, this.submitLogin);
+              $rootScope.requestPasswordReset = angular.bind(this, this.requestPasswordReset);
+              $rootScope.updatePassword = angular.bind(this, this.updatePassword);
+              $rootScope.updateAccount = angular.bind(this, this.updateAccount);
+              if (this.getConfig().validateOnPageLoad) {
+                return this.validateUser({
+                  config: this.getSavedConfig()
+                });
+              }
+            },
+            submitRegistration: function(params, opts) {
+              var successUrl;
+              if (opts == null) {
+                opts = {};
+              }
+              successUrl = this.getResultOrValue(this.getConfig(opts.config).confirmationSuccessUrl);
+              angular.extend(params, {
+                confirm_success_url: successUrl,
+                config_name: this.getCurrentConfigName(opts.config)
+              });
+              return $http.post(this.apiUrl(opts.config) + this.getConfig(opts.config).emailRegistrationPath, params).then(function(resp) {
+                $rootScope.$broadcast('auth:registration-email-success', params);
+                return resp;
+              }, function(resp) {
+                $rootScope.$broadcast('auth:registration-email-error', resp.data);
+                return $q.reject(resp);
+              });
+            },
+            submitLogin: function(params, opts, httpopts) {
+              if (opts == null) {
+                opts = {};
+              }
+              if (httpopts == null) {
+                httpopts = {};
+              }
+              this.initDfd();
+              $http.post(this.apiUrl(opts.config) + this.getConfig(opts.config).emailSignInPath, params, httpopts).then((function(_this) {
+                return function(resp) {
+                  var authData;
+                  _this.setConfigName(opts.config);
+                  authData = _this.getConfig(opts.config).handleLoginResponse(resp.data, _this);
+                  _this.handleValidAuth(authData);
+                  $rootScope.$broadcast('auth:login-success', _this.user);
+                  return resp;
+                };
+              })(this), (function(_this) {
+                return function(resp) {
+                  _this.rejectDfd({
+                    reason: 'unauthorized',
+                    errors: ['Invalid credentials']
+                  });
+                  $rootScope.$broadcast('auth:login-error', resp.data);
+                  return $q.reject(resp);
+                };
+              })(this));
+              return this.dfd.promise;
+            },
+            userIsAuthenticated: function() {
+              return this.retrieveData('auth_headers') && this.user.signedIn && !this.tokenHasExpired();
+            },
+            requestPasswordReset: function(params, opts) {
+              var successUrl;
+              if (opts == null) {
+                opts = {};
+              }
+              successUrl = this.getResultOrValue(this.getConfig(opts.config).passwordResetSuccessUrl);
+              params.redirect_url = successUrl;
+              if (opts.config != null) {
+                params.config_name = opts.config;
+              }
+              return $http.post(this.apiUrl(opts.config) + this.getConfig(opts.config).passwordResetPath, params).then(function(resp) {
+                $rootScope.$broadcast('auth:password-reset-request-success', params);
+                return resp;
+              }, function(resp) {
+                $rootScope.$broadcast('auth:password-reset-request-error', resp.data);
+                return $q.reject(resp);
+              });
+            },
+            updatePassword: function(params) {
+              return $http.put(this.apiUrl() + this.getConfig().passwordUpdatePath, params).then((function(_this) {
+                return function(resp) {
+                  $rootScope.$broadcast('auth:password-change-success', resp.data);
+                  _this.mustResetPassword = false;
+                  return resp;
+                };
+              })(this), function(resp) {
+                $rootScope.$broadcast('auth:password-change-error', resp.data);
+                return $q.reject(resp);
+              });
+            },
+            updateAccount: function(params) {
+              return $http.put(this.apiUrl() + this.getConfig().accountUpdatePath, params).then((function(_this) {
+                return function(resp) {
+                  var curHeaders, key, newHeaders, updateResponse, val, _ref;
+                  updateResponse = _this.getConfig().handleAccountUpdateResponse(resp.data);
+                  curHeaders = _this.retrieveData('auth_headers');
+                  angular.extend(_this.user, updateResponse);
+                  if (curHeaders) {
+                    newHeaders = {};
+                    _ref = _this.getConfig().tokenFormat;
+                    for (key in _ref) {
+                      val = _ref[key];
+                      if (curHeaders[key] && updateResponse[key]) {
+                        newHeaders[key] = updateResponse[key];
+                      }
+                    }
+                    _this.setAuthHeaders(newHeaders);
+                  }
+                  $rootScope.$broadcast('auth:account-update-success', resp.data);
+                  return resp;
+                };
+              })(this), function(resp) {
+                $rootScope.$broadcast('auth:account-update-error', resp.data);
+                return $q.reject(resp);
+              });
+            },
+            destroyAccount: function(params) {
+              return $http["delete"](this.apiUrl() + this.getConfig().accountUpdatePath, params).then((function(_this) {
+                return function(resp) {
+                  _this.invalidateTokens();
+                  $rootScope.$broadcast('auth:account-destroy-success', resp.data);
+                  return resp;
+                };
+              })(this), function(resp) {
+                $rootScope.$broadcast('auth:account-destroy-error', resp.data);
+                return $q.reject(resp);
+              });
+            },
+            authenticate: function(provider, opts) {
+              if (opts == null) {
+                opts = {};
+              }
+              if (this.dfd == null) {
+                this.setConfigName(opts.config);
+                this.initDfd();
+                this.openAuthWindow(provider, opts);
+              }
+              return this.dfd.promise;
+            },
+            setConfigName: function(configName) {
+              if (configName == null) {
+                configName = defaultConfigName;
+              }
+              return this.persistData('currentConfigName', configName, configName);
+            },
+            openAuthWindow: function(provider, opts) {
+              var authUrl, omniauthWindowType;
+              omniauthWindowType = this.getConfig(opts.config).omniauthWindowType;
+              authUrl = this.buildAuthUrl(omniauthWindowType, provider, opts);
+              if (omniauthWindowType === 'newWindow') {
+                return this.requestCredentialsViaPostMessage(this.getConfig().createPopup(authUrl));
+              } else if (omniauthWindowType === 'inAppBrowser') {
+                return this.requestCredentialsViaExecuteScript(this.getConfig().createPopup(authUrl));
+              } else if (omniauthWindowType === 'sameWindow') {
+                return this.visitUrl(authUrl);
+              } else {
+                throw 'Unsupported omniauthWindowType "#{omniauthWindowType}"';
+              }
+            },
+            visitUrl: function(url) {
+              return $window.location.replace(url);
+            },
+            buildAuthUrl: function(omniauthWindowType, provider, opts) {
+              var authUrl, key, params, val;
+              if (opts == null) {
+                opts = {};
+              }
+              authUrl = this.getConfig(opts.config).apiUrl;
+              authUrl += this.getConfig(opts.config).authProviderPaths[provider];
+              authUrl += '?auth_origin_url=' + encodeURIComponent($window.location.href);
+              params = angular.extend({}, opts.params || {}, {
+                omniauth_window_type: omniauthWindowType
+              });
+              for (key in params) {
+                val = params[key];
+                authUrl += '&';
+                authUrl += encodeURIComponent(key);
+                authUrl += '=';
+                authUrl += encodeURIComponent(val);
+              }
+              return authUrl;
+            },
+            requestCredentialsViaPostMessage: function(authWindow) {
+              if (authWindow.closed) {
+                return this.handleAuthWindowClose(authWindow);
+              } else {
+                authWindow.postMessage("requestCredentials", "*");
+                return this.requestCredentialsPollingTimer = $timeout(((function(_this) {
+                  return function() {
+                    return _this.requestCredentialsViaPostMessage(authWindow);
+                  };
+                })(this)), 500);
+              }
+            },
+            requestCredentialsViaExecuteScript: function(authWindow) {
+              var handleAuthWindowClose, handleLoadStop;
+              this.cancelOmniauthInAppBrowserListeners();
+              handleAuthWindowClose = this.handleAuthWindowClose.bind(this, authWindow);
+              handleLoadStop = this.handleLoadStop.bind(this, authWindow);
+              authWindow.addEventListener('loadstop', handleLoadStop);
+              authWindow.addEventListener('exit', handleAuthWindowClose);
+              return this.cancelOmniauthInAppBrowserListeners = function() {
+                authWindow.removeEventListener('loadstop', handleLoadStop);
+                return authWindow.removeEventListener('exit', handleAuthWindowClose);
+              };
+            },
+            handleLoadStop: function(authWindow) {
+              _this = this;
+              return authWindow.executeScript({
+                code: 'requestCredentials()'
+              }, function(response) {
+                var data, ev;
+                data = response[0];
+                if (data) {
+                  ev = new Event('message');
+                  ev.data = data;
+                  _this.cancelOmniauthInAppBrowserListeners();
+                  $window.dispatchEvent(ev);
+                  _this.initDfd();
+                  return authWindow.close();
+                }
+              });
+            },
+            handleAuthWindowClose: function(authWindow) {
+              this.cancel({
+                reason: 'unauthorized',
+                errors: ['User canceled login']
+              });
+              this.cancelOmniauthInAppBrowserListeners;
+              return $rootScope.$broadcast('auth:window-closed');
+            },
+            resolveDfd: function() {
+              if (!this.dfd) {
+                return;
+              }
+              this.dfd.resolve(this.user);
+              return $timeout(((function(_this) {
+                return function() {
+                  _this.dfd = null;
+                  if (!$rootScope.$$phase) {
+                    return $rootScope.$digest();
+                  }
+                };
+              })(this)), 0);
+            },
+            buildQueryString: function(param, prefix) {
+              var encoded, k, str, v;
+              str = [];
+              for (k in param) {
+                v = param[k];
+                k = prefix ? prefix + "[" + k + "]" : k;
+                encoded = angular.isObject(v) ? this.buildQueryString(v, k) : k + "=" + encodeURIComponent(v);
+                str.push(encoded);
+              }
+              return str.join("&");
+            },
+            parseLocation: function(location) {
+              var i, locationSubstring, obj, pair, pairs;
+              locationSubstring = location.substring(1);
+              obj = {};
+              if (locationSubstring) {
+                pairs = locationSubstring.split('&');
+                pair = void 0;
+                i = void 0;
+                for (i in pairs) {
+                  i = i;
+                  if ((pairs[i] === '') || (typeof pairs[i] === 'function')) {
+                    continue;
+                  }
+                  pair = pairs[i].split('=');
+                  obj[decodeURIComponent(pair[0])] = decodeURIComponent(pair[1]);
+                }
+              }
+              return obj;
+            },
+            validateUser: function(opts) {
+              var clientId, configName, expiry, location_parse, params, search, token, uid, url;
+              if (opts == null) {
+                opts = {};
+              }
+              configName = opts.config;
+              if (this.dfd == null) {
+                this.initDfd();
+                if (this.userIsAuthenticated()) {
+                  this.resolveDfd();
+                } else {
+                  search = $location.search();
+                  location_parse = this.parseLocation(window.location.search);
+                  params = Object.keys(search).length === 0 ? location_parse : search;
+                  token = params.auth_token || params.token;
+                  if (token !== void 0) {
+                    clientId = params.client_id;
+                    uid = params.uid;
+                    expiry = params.expiry;
+                    configName = params.config;
+                    this.setConfigName(configName);
+                    this.mustResetPassword = params.reset_password;
+                    this.firstTimeLogin = params.account_confirmation_success;
+                    this.oauthRegistration = params.oauth_registration;
+                    this.setAuthHeaders(this.buildAuthHeaders({
+                      token: token,
+                      clientId: clientId,
+                      uid: uid,
+                      expiry: expiry
+                    }));
+                    url = $location.path() || '/';
+                    ['auth_token', 'token', 'client_id', 'uid', 'expiry', 'config', 'reset_password', 'account_confirmation_success', 'oauth_registration'].forEach(function(prop) {
+                      return delete params[prop];
+                    });
+                    if (Object.keys(params).length > 0) {
+                      url += '?' + this.buildQueryString(params);
+                    }
+                    $location.url(url);
+                  } else if (this.retrieveData('currentConfigName')) {
+                    configName = this.retrieveData('currentConfigName');
+                  }
+                  if (this.getConfig().forceValidateToken) {
+                    this.validateToken({
+                      config: configName
+                    });
+                  } else if (!isEmpty(this.retrieveData('auth_headers'))) {
+                    if (this.tokenHasExpired()) {
+                      $rootScope.$broadcast('auth:session-expired');
+                      this.rejectDfd({
+                        reason: 'unauthorized',
+                        errors: ['Session expired.']
+                      });
+                    } else {
+                      this.validateToken({
+                        config: configName
+                      });
+                    }
+                  } else {
+                    this.rejectDfd({
+                      reason: 'unauthorized',
+                      errors: ['No credentials']
+                    });
+                    $rootScope.$broadcast('auth:invalid');
+                  }
+                }
+              }
+              return this.dfd.promise;
+            },
+            validateToken: function(opts) {
+              if (opts == null) {
+                opts = {};
+              }
+              if (!this.tokenHasExpired()) {
+                return $http.get(this.apiUrl(opts.config) + this.getConfig(opts.config).tokenValidationPath).then((function(_this) {
+                  return function(resp) {
+                    var authData;
+                    authData = _this.getConfig(opts.config).handleTokenValidationResponse(resp.data);
+                    _this.handleValidAuth(authData);
+                    if (_this.firstTimeLogin) {
+                      $rootScope.$broadcast('auth:email-confirmation-success', _this.user);
+                    }
+                    if (_this.oauthRegistration) {
+                      $rootScope.$broadcast('auth:oauth-registration', _this.user);
+                    }
+                    if (_this.mustResetPassword) {
+                      $rootScope.$broadcast('auth:password-reset-confirm-success', _this.user);
+                    }
+                    $rootScope.$broadcast('auth:validation-success', _this.user);
+                    return _this.user;
+                  };
+                })(this), (function(_this) {
+                  return function(resp) {
+                    if (_this.firstTimeLogin) {
+                      $rootScope.$broadcast('auth:email-confirmation-error', resp.data);
+                    }
+                    if (_this.mustResetPassword) {
+                      $rootScope.$broadcast('auth:password-reset-confirm-error', resp.data);
+                    }
+                    $rootScope.$broadcast('auth:validation-error', resp.data);
+                    _this.rejectDfd({
+                      reason: 'unauthorized',
+                      errors: resp.data != null ? resp.data.errors : ['Unspecified error']
+                    }, resp.status > 0);
+                    return $q.reject(resp);
+                  };
+                })(this));
+              } else {
+                return this.rejectDfd({
+                  reason: 'unauthorized',
+                  errors: ['Expired credentials']
+                });
+              }
+            },
+            tokenHasExpired: function() {
+              var expiry, now;
+              expiry = this.getExpiry();
+              now = new Date().getTime();
+              return expiry && expiry < now;
+            },
+            getExpiry: function() {
+              return this.getConfig().parseExpiry(this.retrieveData('auth_headers') || {});
+            },
+            invalidateTokens: function() {
+              var key, val, _ref;
+              _ref = this.user;
+              for (key in _ref) {
+                val = _ref[key];
+                delete this.user[key];
+              }
+              this.deleteData('currentConfigName');
+              if (this.timer != null) {
+                $interval.cancel(this.timer);
+              }
+              return this.deleteData('auth_headers');
+            },
+            signOut: function() {
+              return $http["delete"](this.apiUrl() + this.getConfig().signOutUrl).then((function(_this) {
+                return function(resp) {
+                  _this.invalidateTokens();
+                  $rootScope.$broadcast('auth:logout-success');
+                  return resp;
+                };
+              })(this), (function(_this) {
+                return function(resp) {
+                  _this.invalidateTokens();
+                  $rootScope.$broadcast('auth:logout-error', resp.data);
+                  return $q.reject(resp);
+                };
+              })(this));
+            },
+            handleValidAuth: function(user, setHeader) {
+              if (setHeader == null) {
+                setHeader = false;
+              }
+              if (this.requestCredentialsPollingTimer != null) {
+                $timeout.cancel(this.requestCredentialsPollingTimer);
+              }
+              this.cancelOmniauthInAppBrowserListeners();
+              angular.extend(this.user, user);
+              this.user.signedIn = true;
+              this.user.configName = this.getCurrentConfigName();
+              if (setHeader) {
+                this.setAuthHeaders(this.buildAuthHeaders({
+                  token: this.user.auth_token,
+                  clientId: this.user.client_id,
+                  uid: this.user.uid,
+                  expiry: this.user.expiry
+                }));
+              }
+              return this.resolveDfd();
+            },
+            buildAuthHeaders: function(ctx) {
+              var headers, key, val, _ref;
+              headers = {};
+              _ref = this.getConfig().tokenFormat;
+              for (key in _ref) {
+                val = _ref[key];
+                headers[key] = $interpolate(val)(ctx);
+              }
+              return headers;
+            },
+            persistData: function(key, val, configName) {
+              if (this.getConfig(configName).storage instanceof Object) {
+                return this.getConfig(configName).storage.persistData(key, val, this.getConfig(configName));
+              } else {
+                switch (this.getConfig(configName).storage) {
+                  case 'localStorage':
+                    return $window.localStorage.setItem(key, JSON.stringify(val));
+                  case 'sessionStorage':
+                    return $window.sessionStorage.setItem(key, JSON.stringify(val));
+                  default:
+                    return ipCookie(key, val, this.getConfig().cookieOps);
+                }
+              }
+            },
+            retrieveData: function(key) {
+              var e;
+              try {
+                if (this.getConfig().storage instanceof Object) {
+                  return this.getConfig().storage.retrieveData(key);
+                } else {
+                  switch (this.getConfig().storage) {
+                    case 'localStorage':
+                      return JSON.parse($window.localStorage.getItem(key));
+                    case 'sessionStorage':
+                      return JSON.parse($window.sessionStorage.getItem(key));
+                    default:
+                      return ipCookie(key);
+                  }
+                }
+              } catch (_error) {
+                e = _error;
+                if (e instanceof SyntaxError) {
+                  return void 0;
+                } else {
+                  throw e;
+                }
+              }
+            },
+            deleteData: function(key) {
+              var cookieOps;
+              if (this.getConfig().storage instanceof Object) {
+                this.getConfig().storage.deleteData(key);
+              }
+              switch (this.getConfig().storage) {
+                case 'localStorage':
+                  return $window.localStorage.removeItem(key);
+                case 'sessionStorage':
+                  return $window.sessionStorage.removeItem(key);
+                default:
+                  cookieOps = {
+                    path: this.getConfig().cookieOps.path
+                  };
+                  if (this.getConfig().cookieOps.domain !== void 0) {
+                    cookieOps.domain = this.getConfig().cookieOps.domain;
+                  }
+                  return ipCookie.remove(key, cookieOps);
+              }
+            },
+            setAuthHeaders: function(h) {
+              var expiry, newHeaders, now, result;
+              newHeaders = angular.extend(this.retrieveData('auth_headers') || {}, h);
+              result = this.persistData('auth_headers', newHeaders);
+              expiry = this.getExpiry();
+              now = new Date().getTime();
+              if (expiry > now) {
+                if (this.timer != null) {
+                  $interval.cancel(this.timer);
+                }
+                this.timer = $interval(((function(_this) {
+                  return function() {
+                    return _this.validateUser({
+                      config: _this.getSavedConfig()
+                    });
+                  };
+                })(this)), parseInt(expiry - now), 1);
+              }
+              return result;
+            },
+            initDfd: function() {
+              return this.dfd = $q.defer();
+            },
+            rejectDfd: function(reason, invalidateTokens) {
+              if (invalidateTokens == null) {
+                invalidateTokens = true;
+              }
+              if (invalidateTokens === true) {
+                this.invalidateTokens();
+              }
+              if (this.dfd != null) {
+                this.dfd.reject(reason);
+                return $timeout(((function(_this) {
+                  return function() {
+                    return _this.dfd = null;
+                  };
+                })(this)), 0);
+              }
+            },
+            apiUrl: function(configName) {
+              if (this.getConfig(configName).proxyIf()) {
+                return this.getConfig(configName).proxyUrl;
+              } else {
+                return this.getConfig(configName).apiUrl;
+              }
+            },
+            getConfig: function(name) {
+              return configs[this.getCurrentConfigName(name)];
+            },
+            getResultOrValue: function(arg) {
+              if (typeof arg === 'function') {
+                return arg();
+              } else {
+                return arg;
+              }
+            },
+            getCurrentConfigName: function(name) {
+              return name || this.getSavedConfig();
+            },
+            getSavedConfig: function() {
+              var c, key;
+              c = void 0;
+              key = 'currentConfigName';
+              if (this.hasLocalStorage()) {
+                if (c == null) {
+                  c = JSON.parse($window.localStorage.getItem(key));
+                }
+              } else if (this.hasSessionStorage()) {
+                if (c == null) {
+                  c = JSON.parse($window.sessionStorage.getItem(key));
+                }
+              }
+              if (c == null) {
+                c = ipCookie(key);
+              }
+              return c || defaultConfigName;
+            },
+            hasSessionStorage: function() {
+              var error;
+              if (this._hasSessionStorage == null) {
+                this._hasSessionStorage = false;
+                try {
+                  $window.sessionStorage.setItem('ng-token-auth-test', 'ng-token-auth-test');
+                  $window.sessionStorage.removeItem('ng-token-auth-test');
+                  this._hasSessionStorage = true;
+                } catch (_error) {
+                  error = _error;
+                }
+              }
+              return this._hasSessionStorage;
+            },
+            hasLocalStorage: function() {
+              var error;
+              if (this._hasLocalStorage == null) {
+                this._hasLocalStorage = false;
+                try {
+                  $window.localStorage.setItem('ng-token-auth-test', 'ng-token-auth-test');
+                  $window.localStorage.removeItem('ng-token-auth-test');
+                  this._hasLocalStorage = true;
+                } catch (_error) {
+                  error = _error;
+                }
+              }
+              return this._hasLocalStorage;
+            }
+          };
+        };
+      })(this)
+    ]
+  };
+}).config([
+  '$httpProvider', function($httpProvider) {
+    var httpMethods, tokenIsCurrent, updateHeadersFromResponse;
+    tokenIsCurrent = function($auth, headers) {
+      var newTokenExpiry, oldTokenExpiry;
+      oldTokenExpiry = Number($auth.getExpiry());
+      newTokenExpiry = Number($auth.getConfig().parseExpiry(headers || {}));
+      return newTokenExpiry >= oldTokenExpiry;
+    };
+    updateHeadersFromResponse = function($auth, resp) {
+      var key, newHeaders, val, _ref;
+      newHeaders = {};
+      _ref = $auth.getConfig().tokenFormat;
+      for (key in _ref) {
+        val = _ref[key];
+        if (resp.headers(key)) {
+          newHeaders[key] = resp.headers(key);
+        }
+      }
+      if (tokenIsCurrent($auth, newHeaders)) {
+        return $auth.setAuthHeaders(newHeaders);
+      }
+    };
+    $httpProvider.interceptors.push([
+      '$injector', function($injector) {
+        return {
+          request: function(req) {
+            $injector.invoke([
+              '$http', '$auth', function($http, $auth) {
+                var key, val, _ref, _results;
+                if (req.url.match($auth.apiUrl())) {
+                  _ref = $auth.retrieveData('auth_headers');
+                  _results = [];
+                  for (key in _ref) {
+                    val = _ref[key];
+                    _results.push(req.headers[key] = val);
+                  }
+                  return _results;
+                }
+              }
+            ]);
+            return req;
+          },
+          response: function(resp) {
+            $injector.invoke([
+              '$http', '$auth', function($http, $auth) {
+                if (resp.config.url.match($auth.apiUrl())) {
+                  return updateHeadersFromResponse($auth, resp);
+                }
+              }
+            ]);
+            return resp;
+          },
+          responseError: function(resp) {
+            $injector.invoke([
+              '$http', '$auth', function($http, $auth) {
+                if (resp.config.url.match($auth.apiUrl())) {
+                  return updateHeadersFromResponse($auth, resp);
+                }
+              }
+            ]);
+            return $injector.get('$q').reject(resp);
+          }
+        };
+      }
+    ]);
+    httpMethods = ['get', 'post', 'put', 'patch', 'delete'];
+    return angular.forEach(httpMethods, function(method) {
+      var _base;
+      if ((_base = $httpProvider.defaults.headers)[method] == null) {
+        _base[method] = {};
+      }
+      return $httpProvider.defaults.headers[method]['If-Modified-Since'] = 'Mon, 26 Jul 1997 05:00:00 GMT';
     });
   }
-}
-exports.default = SearchController;
+]).run([
+  '$auth', '$window', '$rootScope', function($auth, $window, $rootScope) {
+    return $auth.initialize();
+  }
+]);
+
+window.isOldIE = function() {
+  var nav, out, version;
+  out = false;
+  nav = navigator.userAgent.toLowerCase();
+  if (nav && nav.indexOf('msie') !== -1) {
+    version = parseInt(nav.split('msie')[1]);
+    if (version < 10) {
+      out = true;
+    }
+  }
+  return out;
+};
+
+window.isIE = function() {
+  var nav;
+  nav = navigator.userAgent.toLowerCase();
+  return (nav && nav.indexOf('msie') !== -1) || !!navigator.userAgent.match(/Trident.*rv\:11\./);
+};
+
+window.isEmpty = function(obj) {
+  var key, val;
+  if (!obj) {
+    return true;
+  }
+  if (obj.length > 0) {
+    return false;
+  }
+  if (obj.length === 0) {
+    return true;
+  }
+  for (key in obj) {
+    val = obj[key];
+    if (Object.prototype.hasOwnProperty.call(obj, key)) {
+      return false;
+    }
+  }
+  return true;
+};
+
 
 /***/ }),
-/* 91 */
+/* 96 */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(97);
+module.exports = 'ipCookie';
+
+
+/***/ }),
+/* 97 */
+/***/ (function(module, exports) {
+
+/*
+ * Copyright 2013 Ivan Pusic
+ * Contributors:
+ *   Matjaz Lipus
+ */
+angular.module('ivpusic.cookie', ['ipCookie']);
+angular.module('ipCookie', ['ng']).
+factory('ipCookie', ['$document',
+  function ($document) {
+    'use strict';
+
+    function tryDecodeURIComponent(value) {
+        try {
+            return decodeURIComponent(value);
+        } catch(e) {
+              // Ignore any invalid uri component
+        }
+    }
+
+    return (function () {
+      function cookieFun(key, value, options) {
+
+        var cookies,
+          list,
+          i,
+          cookie,
+          pos,
+          name,
+          hasCookies,
+          all,
+          expiresFor;
+
+        options = options || {};
+        var dec = options.decode || tryDecodeURIComponent;
+        var enc = options.encode || encodeURIComponent;
+
+        if (value !== undefined) {
+          // we are setting value
+          value = typeof value === 'object' ? JSON.stringify(value) : String(value);
+
+          if (typeof options.expires === 'number') {
+            expiresFor = options.expires;
+            options.expires = new Date();
+            // Trying to delete a cookie; set a date far in the past
+            if (expiresFor === -1) {
+              options.expires = new Date('Thu, 01 Jan 1970 00:00:00 GMT');
+              // A new
+            } else if (options.expirationUnit !== undefined) {
+              if (options.expirationUnit === 'hours') {
+                options.expires.setHours(options.expires.getHours() + expiresFor);
+              } else if (options.expirationUnit === 'minutes') {
+                options.expires.setMinutes(options.expires.getMinutes() + expiresFor);
+              } else if (options.expirationUnit === 'seconds') {
+                options.expires.setSeconds(options.expires.getSeconds() + expiresFor);
+              } else if (options.expirationUnit === 'milliseconds') {
+                options.expires.setMilliseconds(options.expires.getMilliseconds() + expiresFor);
+              } else {
+                options.expires.setDate(options.expires.getDate() + expiresFor);
+              }
+            } else {
+              options.expires.setDate(options.expires.getDate() + expiresFor);
+            }
+          }
+          return ($document[0].cookie = [
+            enc(key),
+            '=',
+            enc(value),
+            options.expires ? '; expires=' + options.expires.toUTCString() : '',
+            options.path ? '; path=' + options.path : '',
+            options.domain ? '; domain=' + options.domain : '',
+            options.secure ? '; secure' : ''
+          ].join(''));
+        }
+
+        list = [];
+        all = $document[0].cookie;
+        if (all) {
+          list = all.split('; ');
+        }
+
+        cookies = {};
+        hasCookies = false;
+
+        for (i = 0; i < list.length; ++i) {
+          if (list[i]) {
+            cookie = list[i];
+            pos = cookie.indexOf('=');
+            name = cookie.substring(0, pos);
+            value = dec(cookie.substring(pos + 1));
+            if(angular.isUndefined(value))
+              continue;
+
+            if (key === undefined || key === name) {
+              try {
+                cookies[name] = JSON.parse(value);
+              } catch (e) {
+                cookies[name] = value;
+              }
+              if (key === name) {
+                return cookies[name];
+              }
+              hasCookies = true;
+            }
+          }
+        }
+        if (hasCookies && key === undefined) {
+          return cookies;
+        }
+      }
+      cookieFun.remove = function (key, options) {
+        var hasCookie = cookieFun(key) !== undefined;
+
+        if (hasCookie) {
+          if (!options) {
+            options = {};
+          }
+          options.expires = -1;
+          cookieFun(key, '', options);
+        }
+        return hasCookie;
+      };
+      return cookieFun;
+    }());
+  }
+]);
+
+
+/***/ }),
+/* 98 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-var angular = __webpack_require__(15);
+var _favorites = __webpack_require__(58);
 
-SearchService.$inject = ["$http"];
+var _favorites2 = _interopRequireDefault(_favorites);
 
-function SearchService($http) {
+var _favorites3 = __webpack_require__(99);
+
+var _favorites4 = _interopRequireDefault(_favorites3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var favoritesComponent = {
+  controller: _favorites2.default,
+  template: _favorites4.default
+};
+
+angular.module("AdoptrApp").component("favorites", favoritesComponent);
+
+/***/ }),
+/* 99 */
+/***/ (function(module, exports) {
+
+module.exports = "<h3>Favorites Here</h3>\n\n<div ng-repeat=\"favorite in $ctrl.favorites\">\n{{favorite.pet.name}}\nhello\n</div>\n";
+
+/***/ }),
+/* 100 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _header = __webpack_require__(59);
+
+var _header2 = _interopRequireDefault(_header);
+
+var _header3 = __webpack_require__(101);
+
+var _header4 = _interopRequireDefault(_header3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var headerComponent = {
+  controller: _header2.default,
+  template: _header4.default
+};
+
+angular.module("AdoptrApp").component("headerNav", headerComponent);
+
+/***/ }),
+/* 101 */
+/***/ (function(module, exports) {
+
+module.exports = "<div>\n  <h2>Adoptr</h2>\n</div>\n\n<div ng-show=\"!$ctrl.currentUser.id\">\n  <p><a ui-sref=\"signIn\">Sign in</a></p>\n</div>\n<div ng-show=\"$ctrl.currentUser.id\">\n  <p>Signed in as {{$ctrl.currentUser.email}}</p>\n  <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>\n  <p><a ui-sref=\"favorites({userId: $ctrl.currentUser.id})\">See My Favorite Pets</a></p>\n</div>\n";
+
+/***/ }),
+/* 102 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _search = __webpack_require__(60);
+
+var _search2 = _interopRequireDefault(_search);
+
+var _search3 = __webpack_require__(103);
+
+var _search4 = _interopRequireDefault(_search3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var searchComponent = {
+  controller: _search2.default,
+  template: _search4.default
+};
+
+angular.module("AdoptrApp").component("petSearch", searchComponent);
+
+/***/ }),
+/* 103 */
+/***/ (function(module, exports) {
+
+module.exports = "\n<div class=\"search_pet_info\">\n  <h4>{{$ctrl.pet.name}}</h4>\n  <img ng-src={{$ctrl.pet.photo}}>\n  <p>Description: {{$ctrl.pet.description}}</p>\n  <p>Age: {{$ctrl.pet.age}}</p>\n  <p>Size: {{$ctrl.pet.size}}</p>\n  <p>Sex: {{$ctrl.pet.sex}}</p>\n</div>\n\n\n";
+
+/***/ }),
+/* 104 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _user_registration = __webpack_require__(61);
+
+var _user_registration2 = _interopRequireDefault(_user_registration);
+
+var _user_registration3 = __webpack_require__(105);
+
+var _user_registration4 = _interopRequireDefault(_user_registration3);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var UserRegistrationComponent = {
+  controller: _user_registration2.default,
+  template: _user_registration4.default
+};
+
+angular.module("AdoptrApp").component("userRegistration", UserRegistrationComponent);
+
+/***/ }),
+/* 105 */
+/***/ (function(module, exports) {
+
+module.exports = "<form ng-submit=\"$ctrl.handleRegBtnClick(registrationForm)\" role=\"form\" ng-init=\"registrationForm = {}\">\n  <div class=\"form-group\">\n    <label>email</label>\n    <input type=\"email\" name=\"email\" ng-model=\"registrationForm.email\" required=\"required\" class=\"form-control\"/>\n  </div>\n\n  <div class=\"form-group\">\n    <label>password</label>\n    <input type=\"password\" name=\"password\" ng-model=\"registrationForm.password\" required=\"required\" class=\"form-control\"/>\n  </div>\n\n  <div class=\"form-group\">\n    <label>password confirmation</label>\n    <input type=\"password\" name=\"password_confirmation\" ng-model=\"registrationForm.password_confirmation\" required=\"required\" class=\"form-control\"/>\n  </div>\n\n  <button type=\"submit\" class=\"btn btn-primary btn-lg\">Register</button>\n</form>\n";
+
+/***/ }),
+/* 106 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var _user_sessions = __webpack_require__(62);
+
+var _user_sessions2 = _interopRequireDefault(_user_sessions);
+
+var _new = __webpack_require__(107);
+
+var _new2 = _interopRequireDefault(_new);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var UserSessionsComponent = {
+  controller: _user_sessions2.default,
+  template: _new2.default
+};
+
+angular.module("AdoptrApp").component("signIn", UserSessionsComponent);
+
+/***/ }),
+/* 107 */
+/***/ (function(module, exports) {
+
+module.exports = "<!-- client/app/views/user_sessions/new.html -->\n\n<form ng-submit=\"$ctrl.handleLoginBtnClick(loginForm)\" role=\"form\" ng-init=\"loginForm = {}\">\n  <div class=\"form-group\">\n    <label for=\"email\">Email</label>\n    <input type=\"email\"\n           name=\"email\"\n           id=\"email\"\n           ng-model=\"loginForm.email\"\n           required=\"required\"\n           class=\"form-control\">\n  </div>\n\n  <div class=\"form-group\">\n    <label for=\"password\">Password</label>\n    <input type=\"password\"\n           name=\"password\"\n           id=\"password\"\n           ng-model=\"loginForm.password\"\n           required=\"required\"\n           class=\"form-control\">\n  </div>\n\n  <button type=\"submit\" class=\"btn btn-primary btn-lg\">Sign in</button>\n</form>\n";
+
+/***/ }),
+/* 108 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var angular = __webpack_require__(11);
+
+FavoritesService.$inject = ["$http"];
+
+function FavoritesService($http) {
   var service = this;
 
-  service.getPet = function () {
-    return $http.get("/pet_search").then(function (response) {
+  service.getFavorites = function (userId) {
+    return $http.get("/users/" + userId + "/favorites").then(function (response) {
       return response.data;
     });
   };
@@ -45672,6 +47047,31 @@ function SearchService($http) {
   //     return res.data;
   //   });
   // };
+
+  return service;
+}
+
+angular.module("AdoptrApp").service("FavoritesService", FavoritesService);
+
+/***/ }),
+/* 109 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+var angular = __webpack_require__(11);
+
+SearchService.$inject = ["$http"];
+
+function SearchService($http) {
+  var service = this;
+
+  service.getPet = function () {
+    return $http.get("/pet_search").then(function (response) {
+      return response.data;
+    });
+  };
 
   return service;
 }
@@ -46290,6 +47690,10 @@ angular.module("AdoptrApp").service("SearchService", SearchService);
   this.App || (this.App = {});
 
   App.cable = ActionCable.createConsumer();
+
+}).call(this);
+(function() {
+
 
 }).call(this);
 (function() {

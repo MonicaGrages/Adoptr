@@ -44,8 +44,16 @@ function router ($stateProvider, $urlRouterProvider) {
           return $auth.validateUser();
         }
       }
+    })
+    .state("petShow", {
+      url: "/pets/:id",
+      template: "<pet-show></pet-show>",
+      resolve: {
+        auth: function($auth) {
+          return $auth.validateUser();
+        }
+      }
     });
-
 
   $urlRouterProvider.otherwise("/");
 }

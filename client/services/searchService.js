@@ -11,18 +11,6 @@ function SearchService ($http) {
     });
   };
 
-  // service.getArtist = function (id) {
-  //   return $http.get("/artist/" + id).then(res => {
-  //     return res.data;
-  //   });
-  // };
-
-  // service.saveArtist = function (newArtist) {
-  //   return $http.post("/artist", newArtist).then(res => {
-  //     return res.data;
-  //   });
-  // };
-
   return service;
 }
 
