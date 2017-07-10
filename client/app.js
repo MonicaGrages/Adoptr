@@ -1,3 +1,6 @@
+console.log('app.js')
+
+
 const angular = require("angular");
 require("angular-ui-router");
 require("ng-token-auth");
@@ -41,7 +44,7 @@ function router ($stateProvider, $urlRouterProvider) {
           return $auth.validateUser();
         }
       }
-    })
+    });
 
 
   $urlRouterProvider.otherwise("/");
