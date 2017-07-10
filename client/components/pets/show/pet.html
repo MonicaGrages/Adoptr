@@ -12,4 +12,12 @@
 <p>Size: {{$ctrl.pet.size}}</p>
 <p>Sex: {{$ctrl.pet.sex}}</p>
 
-
+<button ng-click="$ctrl.showContact=true">Contact About Adoption</button>
+<div ng-show="$ctrl.showContact">
+  <p>Phone: {{$ctrl.pet.contact.phone}}</p>
+  <p>Email: {{$ctrl.pet.contact.email}}</p>
+  <p>City: {{$ctrl.pet.contact.city}}</p>
+  <p>State: {{$ctrl.pet.contact.state}}</p>
+  <p>Zip: {{$ctrl.pet.contact.zip}}</p>
+  <a href="https://www.petfinder.com/petdetail/{{$ctrl.pet.petfinder_id}}">View on Petfinder</a>
+</div>

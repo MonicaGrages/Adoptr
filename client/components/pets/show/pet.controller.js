@@ -3,6 +3,7 @@ function PetsController(PetsService, FavoritesService, $auth, $state, $statePara
   var vm = this;
   vm.currentUser = $auth.user;
   vm.isFavorite = false;
+  vm.showContact = false;
   activate();
 
   function activate(){
