@@ -14,15 +14,16 @@ angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth"])
 
 router.$inject = ["$stateProvider", "$urlRouterProvider"];
 function router ($stateProvider, $urlRouterProvider) {
+  console.log("In the Router")
   $stateProvider
     .state("petSearch", {
       url: "/",
-      template: "<pet-search></pet-search>"
-      // resolve: {
-      //   auth: function($auth) {
-      //     return $auth.validateUser();
-      //   }
-      // }
+      template: "<pet-search></pet-search>",
+      resolve: {
+        auth: function($auth) {
+          return $auth.validateUser();
+        }
+      }
     })
     .state("signIn", {
       url: "/sign_in",
