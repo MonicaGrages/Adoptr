@@ -13,5 +13,8 @@
     "html-loader": "^0.4.5",
     "ng-token-auth": "0.0.30",
     "webpack": "^3.1.0"
+  },
+  "scripts": {
+    "postinstall": "webpack -p --progress"
   }
 }
