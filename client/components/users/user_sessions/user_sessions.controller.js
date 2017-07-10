@@ -13,8 +13,6 @@ function UserSessionsController($auth, $state){
           // handle success response
           vm.current_user_id = response.id;
           console.log('successful login');
-          // console.log(response.id);
-          // console.log(vm.current_user_id);
           $state.go('petSearch');
         })
         .catch(function(response) {

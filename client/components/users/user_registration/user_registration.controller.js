@@ -1,12 +1,11 @@
 
-UserRegistrationController.$inject = ['$auth'];
+UserRegistrationController.$inject = ['$auth', '$state'];
 
-function UserRegistrationController($auth){
+function UserRegistrationController($auth, $state){
   var vm = this;
   activate();
 
   function activate(){
-    console.log('user registration controller');
   }
 
   vm.handleRegBtnClick = function(registrationForm) {
