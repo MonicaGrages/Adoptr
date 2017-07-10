@@ -1,6 +1,3 @@
-console.log('app.js');
-
-
 const angular = require("angular");
 require("angular-ui-router");
 require("ng-token-auth");

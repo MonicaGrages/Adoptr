@@ -1,5 +1,5 @@
-FavoritesController.$inject = ['FavoritesService', '$auth', '$state', '$stateParams'];
-function FavoritesController(FavoritesService, $auth, $state, $stateParams){
+PetsController.$inject = ['PetsService', '$auth', '$state', '$stateParams'];
+function PetsController(PetsService, $auth, $state, $stateParams){
   var vm = this;
   vm.currentUser = $auth.user;
   activate();
@@ -17,4 +17,4 @@ function FavoritesController(FavoritesService, $auth, $state, $stateParams){
   }
 
 }
-export default FavoritesController;
+export default PetsController;

@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "/pet_search", to: "pet_searches#index"
   root "home#index"
 
-  get'/users/:userId/favorites', to: "favorites#index"
+  get '/users/:userId/favorites', to: "favorites#index"
+
+  get '/pets/:id', to: "pets#show"
 
 end

@@ -1,6 +1,8 @@
 <h3>Favorites Here</h3>
 
+
 <div ng-repeat="favorite in $ctrl.favorites">
+<a ui-sref="petShow({id: favorite.pet_id})">
 {{favorite.pet.name}}
-hello
+</a>
 </div>
