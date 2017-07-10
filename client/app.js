@@ -17,12 +17,12 @@ function router ($stateProvider, $urlRouterProvider) {
   $stateProvider
     .state("petSearch", {
       url: "/",
-      template: "<pet-search></pet-search>",
-      resolve: {
-        auth: function($auth) {
-          return $auth.validateUser();
-        }
-      }
+      template: "<pet-search></pet-search>"
+      // resolve: {
+      //   auth: function($auth) {
+      //     return $auth.validateUser();
+      //   }
+      // }
     })
     .state("signIn", {
       url: "/sign_in",
