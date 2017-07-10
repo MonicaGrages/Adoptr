@@ -13,13 +13,13 @@ function UserRegistrationController($auth, $state){
       .then(function(response) {
         // handle success response
         console.log('successful registration: ');
-        console.log(response);
+        console.log(response.data.status);
         $state.go('petSearch');
       })
       .catch(function(response) {
         // handle error response
         console.log('error with registration: ');
-        console.log(response);
+        console.log(response.data.errors.full_messages[0]);
       });
     };
 

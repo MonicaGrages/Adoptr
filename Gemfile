@@ -36,6 +36,7 @@ gem 'jbuilder', '~> 2.5'
 # For use in making API calls
 gem 'httparty'
 
+gem 'devise'
 gem 'devise_token_auth'
 gem 'omniauth'
 
