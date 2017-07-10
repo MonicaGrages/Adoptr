@@ -1,4 +1,6 @@
 class Pet < ApplicationRecord
+  has_many :users, through: :favorites
+  has_many :favorites
   include HTTParty
   base_uri 'http://api.petfinder.com/pet.getRandom?key=1219862dd4ec54515c6b83ea07c325ca&format=json&output=full'
 

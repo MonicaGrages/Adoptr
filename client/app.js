@@ -31,7 +31,17 @@ function router ($stateProvider, $urlRouterProvider) {
     .state("userRegistration", {
       url: "/user_registration",
       template: "<user-registration></user-registration>"
-    });
+    })
+    .state("favorites", {
+      url: "/users/:userId/favorites",
+      template: "<favorites></favorites>",
+      resolve: {
+        auth: function($auth) {
+          return $auth.validateUser();
+        }
+      }
+    })
+
 
   $urlRouterProvider.otherwise("/");
 }

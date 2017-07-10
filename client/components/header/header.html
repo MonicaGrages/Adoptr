@@ -8,5 +8,5 @@
 <div ng-show="$ctrl.currentUser.id">
   <p>Signed in as {{$ctrl.currentUser.email}}</p>
   <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>
-  <p><a ui-sref="favoritePets">See My Favorite Pets</a></p>
+  <p><a ui-sref="favorites({userId: $ctrl.currentUser.id})">See My Favorite Pets</a></p>
 </div>
