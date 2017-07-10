@@ -43,6 +43,18 @@ function PetsController(PetsService, FavoritesService, $auth, $state, $statePara
       });
   }
 
+  vm.deleteFavorite = function() {
+    FavoritesService.deleteFavorite(vm.favorite.id)
+      .then(response => {
+        console.log(response.data.message);
+        $state.go('favorites', {userId: vm.currentUser.id})
+      })
+      .catch(response => {
+        console.log('error deleting favorite');
+        console.log(response.data.error);
+      })
+  }
+
 
 }
 export default PetsController;

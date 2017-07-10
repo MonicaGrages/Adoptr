@@ -19,6 +19,13 @@ function FavoritesService ($http) {
       });
   }
 
+  service.deleteFavorite = function (favoriteId) {
+    return $http.delete('/favorites/'+favoriteId)
+      .then(response => {
+        return response;
+      });
+  }
+
   return service;
 }
 

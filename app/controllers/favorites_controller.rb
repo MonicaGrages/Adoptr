@@ -4,7 +4,6 @@ class FavoritesController < ApplicationController
     @favorites = @user.favorites
     render json: @favorites,
       include: {:pet => {:only => :name}}
-
   end
 
   def create
@@ -17,6 +16,13 @@ class FavoritesController < ApplicationController
   end
 
   def delete
+    @favorite = Favorite.find(params[:id])
+    if @favorite.delete
+      render json: {message: "successfully deleted favorite"}
+    else
+      render status: 500,
+        json: {error: "error deleting favorite"}
+    end
   end
 
   private
