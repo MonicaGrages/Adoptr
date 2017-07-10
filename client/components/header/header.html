@@ -4,6 +4,7 @@
 
 <div ng-show="!$ctrl.currentUser.id">
   <p><a ui-sref="signIn">Sign in</a></p>
+  <p><a ui-sref="userRegistration">Sign up</a></p>
 </div>
 <div ng-show="$ctrl.currentUser.id">
   <p>Signed in as {{$ctrl.currentUser.email}}</p>

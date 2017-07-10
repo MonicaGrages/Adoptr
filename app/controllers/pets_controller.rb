@@ -5,6 +5,7 @@ class PetsController < ApplicationController
 
   def show
     @pet = Pet.find(params[:id])
-    render json: @pet
+    render json: @pet,
+      include: {:favorites => {:only => :user_id}}
   end
 end

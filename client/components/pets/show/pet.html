@@ -1,6 +1,11 @@
 <h1>{{$ctrl.pet.name}}</h1>
+<div ng-show="$ctrl.isFavorite">
+  <p>You favorited this pet on ___</p>
+</div>
 <img ng-src={{$ctrl.pet.photo}}>
 <p>{{$ctrl.pet.description}}</p>
 <p>Age: {{$ctrl.pet.age}}</p>
 <p>Size: {{$ctrl.pet.size}}</p>
 <p>Sex: {{$ctrl.pet.sex}}</p>
+
+

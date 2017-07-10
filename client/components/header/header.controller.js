@@ -1,5 +1,5 @@
-HeaderController.$inject = ['SearchService', '$auth', '$state'];
-function HeaderController(SearchService, $auth, $state){
+HeaderController.$inject = ['$auth', '$state'];
+function HeaderController($auth, $state){
   var vm = this;
   vm.currentUser = $auth.user;
   activate();
