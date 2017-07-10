@@ -1,7 +1,7 @@
 <h1>{{$ctrl.pet.name}}</h1>
 <div ng-show="$ctrl.isFavorite">
   <p>You favorited this pet on {{$ctrl.favorite.created_at | date}}</p>
-  <p><a ng-click="">Remove From Favorites</a></p>
+  <p><a ng-click="$ctrl.deleteFavorite()">Remove From Favorites</a></p>
 </div>
 <div ng-hide="$ctrl.isFavorite">
   <a ng-click="$ctrl.addToFavorites()">Add To Favorites</a>
