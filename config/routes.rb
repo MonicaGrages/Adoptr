@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   get '/pets/:id', to: "pets#show"
 
+  post '/favorites', to: "favorites#create"
+
 end

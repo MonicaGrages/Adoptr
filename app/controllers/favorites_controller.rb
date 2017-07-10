@@ -8,6 +8,12 @@ class FavoritesController < ApplicationController
   end
 
   def create
+    @favorite = Favorite.new(favorite_params)
+    if @favorite.save
+      render json: @favorite
+    else
+      render json: @favorite.errors
+    end
   end
 
   def delete
@@ -15,5 +21,8 @@ class FavoritesController < ApplicationController
 
   private
   def pet_params
+  end
+  def favorite_params
+    params.require(:favorite).permit(:user_id, :pet_id)
   end
 end

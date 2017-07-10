@@ -1,5 +1,5 @@
-PetsController.$inject = ['PetsService', '$auth', '$state', '$stateParams'];
-function PetsController(PetsService, $auth, $state, $stateParams){
+PetsController.$inject = ['PetsService', 'FavoritesService', '$auth', '$state', '$stateParams'];
+function PetsController(PetsService, FavoritesService, $auth, $state, $stateParams){
   var vm = this;
   vm.currentUser = $auth.user;
   vm.isFavorite = false;
@@ -19,12 +19,9 @@ function PetsController(PetsService, $auth, $state, $stateParams){
   }
 
   vm.checkIfFavorite = function() {
-    console.log(vm.pet.favorites);
-    console.log(vm.currentUser);
     vm.pet.favorites.forEach(function(favorite) {
       if (favorite.user_id === vm.currentUser.id) {
         vm.favorite = favorite;
-        console.log(favorite);
         vm.isFavorite = true;
         return true;
       } else {
@@ -33,23 +30,18 @@ function PetsController(PetsService, $auth, $state, $stateParams){
     })
   }
 
-
-
-
-  //   if (vm.pet.favorites.forEach(function(favorite) {
-  //     console.log(favorite.user_id);
-  //     console.log(vm.currentUser.id);
-
-  //     })
-  //   )
-  //     {
-  //       console.log('true');
-  //       return true;
-  //     } else {
-  //       console.log('false');
-  //       return false;
-  //     }
-  // }
+  vm.addToFavorites = function () {
+    let petId = $stateParams.id;
+    let userId = vm.currentUser.id;
+    FavoritesService.addFavorite(petId, userId)
+      .then(response => {
+        vm.favorite = response.data;
+        return vm.isFavorite = true;
+      })
+      .catch(response => {
+        console.log(response);
+      });
+  }
 
 
 }

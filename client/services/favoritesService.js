@@ -12,17 +12,12 @@ function FavoritesService ($http) {
     });
   };
 
-  // service.getArtist = function (id) {
-  //   return $http.get("/artist/" + id).then(res => {
-  //     return res.data;
-  //   });
-  // };
-
-  // service.saveArtist = function (newArtist) {
-  //   return $http.post("/artist", newArtist).then(res => {
-  //     return res.data;
-  //   });
-  // };
+  service.addFavorite = function (petId, userId) {
+    return $http.post('/favorites', {"favorite": {"pet_id": petId, "user_id": userId}})
+      .then(response => {
+        return response;
+      });
+  }
 
   return service;
 }
