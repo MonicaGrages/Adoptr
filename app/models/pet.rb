@@ -1,6 +1,7 @@
 class Pet < ApplicationRecord
   has_many :users, through: :favorites
-  has_many :favorites
+  has_many :favorites, dependent: :destroy
+  has_one :contact, dependent: :destroy
   include HTTParty
   base_uri 'http://api.petfinder.com/pet.getRandom?key=1219862dd4ec54515c6b83ea07c325ca&format=json&output=full'
 
@@ -20,6 +21,13 @@ class Pet < ApplicationRecord
            size: pet['size']['$t'],
            petfinder_id: pet['id']['$t'])
 
+    pet_contact = new_pet.create_contact(phone: pet['contact']['phone']['$t'],
+                                         state: pet['contact']['state']['$t'],
+                                         email: pet['contact']['email']['$t'],
+                                         city: pet['contact']['city']['$t'],
+                                         zip: pet['contact']['zip']['$t'])
+
+    return new_pet
   end
 
 end
