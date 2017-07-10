@@ -23,6 +23,8 @@ function PetsController(PetsService, $auth, $state, $stateParams){
     console.log(vm.currentUser);
     vm.pet.favorites.forEach(function(favorite) {
       if (favorite.user_id === vm.currentUser.id) {
+        vm.favorite = favorite;
+        console.log(favorite);
         vm.isFavorite = true;
         return true;
       } else {
