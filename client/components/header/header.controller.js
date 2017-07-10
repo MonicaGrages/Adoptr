@@ -12,7 +12,7 @@ function HeaderController($auth, $state){
       .then(function(response) {
         console.log('successful sign out');
         console.log(response.status);
-        $state.go('home');
+        $state.go('petSearch');
       })
       .catch(function(response) {
         console.log('error signing out');
