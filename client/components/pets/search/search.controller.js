@@ -5,7 +5,7 @@ function SearchController(SearchService, FavoritesService, $auth, $state){
   activate();
 
   function activate(){
-    SearchService.getPet()
+    SearchService.getPet(vm.currentUser.id)
     .then(response => {
       vm.pet = response;
     })

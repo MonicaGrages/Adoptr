@@ -5,8 +5,9 @@ class Pet < ApplicationRecord
   include HTTParty
   base_uri 'http://api.petfinder.com/pet.getRandom?key=1219862dd4ec54515c6b83ea07c325ca&format=json&output=full'
 
-  def self.generate
-    response = get("")
+
+  def self.generate search_query
+    response = get("#{search_query}")
     pet = response['petfinder']['pet']
     existing_pet = find_by(petfinder_id: pet['id']['$t'])
     return existing_pet unless existing_pet.nil?
