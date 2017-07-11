@@ -1,10 +1,12 @@
-SearchService.$inject = ["$http"];
+SearchService.$inject = ["$http", "$auth", "UsersService"];
 
-function SearchService ($http) {
+function SearchService ($http, $auth, UsersService) {
   const service = this;
+  let currentUser = $auth.user;
 
-  service.getPet = function () {
-    return $http.get("/pet_search").then(response => {
+
+  service.getPet = function (userId) {
+    return $http.get("/pet_search/"+userId).then(response => {
       return response.data;
     });
   };

@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get 'home/index'
 
-  get "/pet_search", to: "pet_searches#index"
+  get "/pet_search/:user_id", to: "pet_searches#index"
   root "home#index"
 
   get '/users/:userId/favorites', to: "favorites#index"
