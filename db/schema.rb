@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170710222501) do
+ActiveRecord::Schema.define(version: 20170710225640) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,12 +50,12 @@ ActiveRecord::Schema.define(version: 20170710222501) do
 
   create_table "preferences", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "type"
     t.string "age"
     t.string "size"
     t.string "sex"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "pet_type"
     t.index ["user_id"], name: "index_preferences_on_user_id"
   end
 

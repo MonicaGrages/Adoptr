@@ -49,7 +49,17 @@ function router ($stateProvider, $urlRouterProvider) {
           return $auth.validateUser();
         }
       }
+    })
+    .state("userShow", {
+      url: "/users/:id",
+      template: "<user-show></user-show>",
+      resolve: {
+        auth: function($auth) {
+          return $auth.validateUser();
+        }
+      }
     });
+
 
   $urlRouterProvider.otherwise("/");
 }

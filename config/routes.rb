@@ -17,4 +17,6 @@ Rails.application.routes.draw do
 
   delete '/favorites/:id', to: "favorites#delete"
 
+  get '/users/:id', to: "users#show"
+
 end
