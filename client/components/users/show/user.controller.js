@@ -22,7 +22,6 @@ function UserController(UsersService, FavoritesService, $auth, $state, $statePar
     UsersService.updatePreferences(vm.user.id, vm.user.preference)
       .then(response => {
         console.log('successfully updated preferences');
-        // vm.user.preference = response;
       })
       .catch(response => {
         console.log('error updating preferences');

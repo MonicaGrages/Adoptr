@@ -11,7 +11,6 @@ function UsersService ($http) {
   };
 
   service.updatePreferences = function (userId, preferenceEdits) {
-    console.log(preferenceEdits);
     return $http.put('/users/'+userId+'/preferences', preferenceEdits)
       .then(response => {
         return response;
