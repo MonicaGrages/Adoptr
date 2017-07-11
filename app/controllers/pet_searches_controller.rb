@@ -1,7 +1,8 @@
 class PetSearchesController < ApplicationController
   # before_action :authenticate_user!
   def index
-    @search_preferences = User.find(params[:user_id]).preference
+    @user = User.find(params[:user_id])
+    @search_preferences = @user.preference
     puts @search_preferences["age"]
 
     @search_query = ""
@@ -22,11 +23,7 @@ class PetSearchesController < ApplicationController
       @search_query = @search_query + "&animal=#{@search_preferences['pet_type']}"
     end
 
-    puts @search_query
-
-    # search_ = params[:search_query]
-    # search_query = "&animal=dog&size=S"
-    @pet = Pet.generate @search_query
+    @pet = Pet.generate(@user.id, @search_query)
     render json: @pet
   end
 end

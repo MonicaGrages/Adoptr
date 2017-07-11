@@ -7,7 +7,6 @@ Rails.application.routes.draw do
   get 'home/index'
 
   get "/pet_search/:user_id", to: "pet_searches#index"
-  root "home#index"
 
   get '/users/:userId/favorites', to: "favorites#index"
 
@@ -15,10 +14,14 @@ Rails.application.routes.draw do
 
   post '/favorites', to: "favorites#create"
 
+  post '/passes', to: "passes#create"
+
   delete '/favorites/:id', to: "favorites#delete"
 
   get '/users/:id', to: "users#show"
 
   put '/users/:user_id/preferences', to: "preferences#update"
+
+  root "home#index"
 
 end
