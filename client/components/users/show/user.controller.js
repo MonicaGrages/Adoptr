@@ -10,7 +10,6 @@ function UserController(UsersService, FavoritesService, $auth, $state, $statePar
     UsersService.getUser(id)
     .then(response => {
       vm.user = response;
-        console.log(vm.user);
     })
     .catch(response => {
       console.log('error getting user');

@@ -1,5 +1,3 @@
-const angular = require("angular");
-
 FavoritesService.$inject = ["$http"];
 
 function FavoritesService ($http) {

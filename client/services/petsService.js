@@ -1,5 +1,3 @@
-const angular = require("angular");
-
 PetsService.$inject = ["$http"];
 
 function PetsService ($http) {

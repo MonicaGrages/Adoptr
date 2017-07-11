@@ -11,8 +11,11 @@ class User < ActiveRecord::Base
   before_save -> do
     # self.uid = SecureRandom.uuid
     skip_confirmation!
-    # create_preference()
   end
+
+  # after_save -> do
+  #   create_preference()
+  # end
 
   # before_action :configure_permitted_parameters, if: :devise_controller?
 

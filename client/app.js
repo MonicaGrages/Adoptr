@@ -4,13 +4,15 @@ require("ng-token-auth");
 require("angular-cookie");
 
 angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth"])
-  .config(router, function($authProvider) {
+  .config(router, auth);
+
+auth.$inject = ["$authProvider"];
+function auth($authProvider) {
     $authProvider.configure({
       apiUrl: '/',
       validateOnPageLoad: false
     });
-});
-
+}
 
 router.$inject = ["$stateProvider", "$urlRouterProvider"];
 function router ($stateProvider, $urlRouterProvider) {

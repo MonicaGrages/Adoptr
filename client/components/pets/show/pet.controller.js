@@ -1,5 +1,5 @@
-PetsController.$inject = ['PetsService', 'FavoritesService', '$auth', '$state', '$stateParams'];
-function PetsController(PetsService, FavoritesService, $auth, $state, $stateParams){
+PetsController.$inject = ['PetsService', 'FavoritesService', '$auth', '$stateParams'];
+function PetsController(PetsService, FavoritesService, $auth, $stateParams){
   var vm = this;
   vm.currentUser = $auth.user;
   vm.isFavorite = false;
@@ -48,7 +48,7 @@ function PetsController(PetsService, FavoritesService, $auth, $state, $statePara
     FavoritesService.deleteFavorite(vm.favorite.id)
       .then(response => {
         console.log(response.data.message);
-        $state.go('favorites', {userId: vm.currentUser.id})
+        vm.isFavorite = false;
       })
       .catch(response => {
         console.log('error deleting favorite');

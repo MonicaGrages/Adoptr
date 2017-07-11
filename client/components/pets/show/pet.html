@@ -20,4 +20,12 @@
   <p>State: {{$ctrl.pet.contact.state}}</p>
   <p>Zip: {{$ctrl.pet.contact.zip}}</p>
   <a href="https://www.petfinder.com/petdetail/{{$ctrl.pet.petfinder_id}}">View on Petfinder</a>
+  <button ng-click="$ctrl.showContact=false">Hide</button>
+</div>
+
+<div>
+  <nav>
+    <a href="#">Email this pet to a friend</a>
+    <a href="#">Post this pet on facebook, twitter, etc</a>
+  </nav>
 </div>

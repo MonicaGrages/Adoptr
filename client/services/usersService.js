@@ -1,5 +1,3 @@
-const angular = require("angular");
-
 UsersService.$inject = ["$http"];
 
 function UsersService ($http) {

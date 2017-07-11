@@ -1,5 +1,3 @@
-const angular = require("angular");
-
 SearchService.$inject = ["$http"];
 
 function SearchService ($http) {
