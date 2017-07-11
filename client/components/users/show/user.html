@@ -1,1 +1,25 @@
-<h1>user show page</h1>
+<h1>Your Account</h1>
+{{$ctrl.user.email}}
+
+<h4>Pet Search Preferences</h4>
+
+<div ng-hide="$ctrl.isEditingPreferences">
+  <button ng-click="$ctrl.isEditingPreferences=true">Edit</button>
+  <p>Pet type:  {{$ctrl.user.preference.pet_type}}</p>
+  <p>Age:  {{$ctrl.user.preference.age}}</p>
+  <p>Size:  {{$ctrl.user.preference.size}}</p>
+  <p>Sex:  {{$ctrl.user.preference.sex}}</p>
+</div>
+<div ng-show="$ctrl.isEditingPreferences">
+  <form ng-submit="$ctrl.updatePreference(preferenceEdits)">
+    Pet type: <input type="text" ng-model="$ctrl.user.preference.pet_type">
+    <br>
+    Age: <input type="text" ng-model="$ctrl.user.preference.age">
+    <br>
+    Size: <input type="text" ng-model="$ctrl.user.preference.size">
+    <br>
+    Sex: <input type="text" ng-model="$ctrl.user.preference.sex">
+    <input type="submit">
+    <button ng-click="$ctrl.isEditingPreferences=false">Nevermind</button>
+  </form>
+</div>
