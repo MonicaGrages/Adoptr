@@ -18,7 +18,7 @@
   </p>
 </div>
 <div ng-show="$ctrl.isEditingPreferences">
-  <form ng-submit="$ctrl.updatePreference(preferenceEdits)">
+  <form ng-submit="$ctrl.updatePreferences($ctrl.user.preference)">
     I am a __human __other<br>
     Looking for:
     Pet type: <input type="text" ng-model="$ctrl.user.preference.pet_type">
@@ -28,7 +28,8 @@
     Size: <input type="text" ng-model="$ctrl.user.preference.size">
     <br>
     Sex: <input type="text" ng-model="$ctrl.user.preference.sex">
-    <input type="submit">
-    <button ng-click="$ctrl.isEditingPreferences=false">Nevermind</button>
+    <input type="submit" ng-click='$ctrl.isEditingPreferences-false'>
   </form>
+  <button ng-click="$ctrl.isEditingPreferences=false">Nevermind</button>
+
 </div>

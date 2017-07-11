@@ -19,4 +19,6 @@ Rails.application.routes.draw do
 
   get '/users/:id', to: "users#show"
 
+  put '/users/:user_id/preferences', to: "preferences#update"
+
 end
