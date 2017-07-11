@@ -13,9 +13,9 @@ class User < ActiveRecord::Base
     skip_confirmation!
   end
 
-  # after_save -> do
-  #   create_preference(pet_type: 'dogs', age: nil, sex: nil, size: nil)
-  # end
+  after_create -> do
+    create_preference(pet_type: nil, age: nil, sex: nil, size: nil)
+  end
 
   # before_action :configure_permitted_parameters, if: :devise_controller?
 
