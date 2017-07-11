@@ -1,5 +1,5 @@
-SearchController.$inject = ['SearchService', 'FavoritesService', '$auth', '$state'];
-function SearchController(SearchService, FavoritesService, $auth, $state){
+SearchController.$inject = ['SearchService', 'FavoritesService', 'PassesService', '$auth', '$state'];
+function SearchController(SearchService, FavoritesService, PassesService, $auth, $state){
   var vm = this;
   vm.currentUser = $auth.user;
   activate();
@@ -21,6 +21,18 @@ function SearchController(SearchService, FavoritesService, $auth, $state){
     FavoritesService.addFavorite(petId, userId)
       .then(response => {
         $state.go('petShow({id: $ctrl.pet.id})');
+      })
+      .catch(response => {
+        console.log(response);
+      });
+  }
+
+  vm.passOnPet = function() {
+    let petId = vm.pet.id;
+    let userId = vm.currentUser.id;
+    PassesService.addPass(petId, userId)
+      .then(response => {
+        activate();
       })
       .catch(response => {
         console.log(response);
