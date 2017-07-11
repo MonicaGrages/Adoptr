@@ -19,16 +19,43 @@
 </div>
 <div ng-show="$ctrl.isEditingPreferences">
   <form ng-submit="$ctrl.updatePreferences($ctrl.user.preference)">
-    I am a __human __other<br>
-    Looking for:
-    Pet type: <input type="text" ng-model="$ctrl.user.preference.pet_type">
-    <br>
-    Age: <input type="text" ng-model="$ctrl.user.preference.age">
-    <br>
-    Size: <input type="text" ng-model="$ctrl.user.preference.size">
-    <br>
-    Sex: <input type="text" ng-model="$ctrl.user.preference.sex">
-    <input type="submit" ng-click='$ctrl.isEditingPreferences-false'>
+    <div>
+      <p>I am a:</p>
+      <input type="radio" checked>Human
+      <input type="radio" >Other
+    </div>
+
+    <div>
+    <p>Looking for:</p>
+      <input type="radio" value="dog" ng-model="$ctrl.user.preference.pet_type">Dogs
+      <input type="radio" value="cat" ng-model="$ctrl.user.preference.pet_type">Cats
+      <input type="radio" value="all" ng-model="$ctrl.user.preference.pet_type">All
+    </div>
+    <div>
+      Age:
+      <input type="radio" value="Baby" ng-model="$ctrl.user.preference.age">Baby
+      <input type="radio" value="Young" ng-model="$ctrl.user.preference.age">Young
+      <input type="radio" value="Adult" ng-model="$ctrl.user.preference.age">Adult
+      <input type="radio" value="Senior" ng-model="$ctrl.user.preference.age">Senior
+      <input type="radio" value="all" ng-model="$ctrl.user.preference.age">Any Age
+    </div>
+    <div>
+      Size:
+      <input type="radio" value="S" ng-model="$ctrl.user.preference.size">Small
+      <input type="radio" value="M" ng-model="$ctrl.user.preference.size">Medium
+      <input type="radio" value="L" ng-model="$ctrl.user.preference.size">Large
+      <input type="radio" value="XL" ng-model="$ctrl.user.preference.size">X-Large
+      <input type="radio" value="all" ng-model="$ctrl.user.preference.size">Any Size
+    </div>
+    <div>
+      Sex:
+      <input type="radio" value="M" ng-model="$ctrl.user.preference.sex">Male
+      <input type="radio" value="F" ng-model="$ctrl.user.preference.sex">Female
+      <input type="radio" value="all" ng-model="$ctrl.user.preference.sex">Either Sex
+    </div>
+    <div>
+      <input type="submit" name="Submit Changes" ng-click="$ctrl.isEditingPreferences=false">
+    </div>
   </form>
   <button ng-click="$ctrl.isEditingPreferences=false">Nevermind</button>
 

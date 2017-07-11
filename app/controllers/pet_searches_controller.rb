@@ -6,19 +6,19 @@ class PetSearchesController < ApplicationController
 
     @search_query = ""
 
-    if @search_preferences['age']
+    unless @search_preferences['age'] == "all"
       @search_query = @search_query + "&age=#{@search_preferences['age']}"
     end
 
-    if @search_preferences['size']
+    unless @search_preferences['size'] == "all"
       @search_query = @search_query + "&size=#{@search_preferences['size']}"
     end
 
-    if @search_preferences['sex']
+    unless @search_preferences['sex'] == "all"
       @search_query = @search_query + "&sex=#{@search_preferences['sex']}"
     end
 
-    if @search_preferences['pet_type']
+    unless @search_preferences['pet_type'] == "all"
       @search_query = @search_query + "&animal=#{@search_preferences['pet_type']}"
     end
 
