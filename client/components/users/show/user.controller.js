@@ -2,6 +2,7 @@ UserController.$inject = ['UsersService', 'FavoritesService', '$auth', '$state',
 function UserController(UsersService, FavoritesService, $auth, $state, $stateParams){
   var vm = this;
   vm.currentUser = $auth.user;
+  vm.isEditingPreferences = false;
   activate();
 
   function activate(){
@@ -9,12 +10,15 @@ function UserController(UsersService, FavoritesService, $auth, $state, $statePar
     UsersService.getUser(id)
     .then(response => {
       vm.user = response;
-        console.log(vm.user.preference);
+        console.log(vm.user);
     })
     .catch(response => {
       console.log('error getting user');
       console.log(response);
     })
+  }
+
+  vm.update = function() {
   }
 
 }
