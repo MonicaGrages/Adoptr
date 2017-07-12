@@ -6,7 +6,10 @@
   },
   "dependencies": {
     "angular": "^1.6.5",
+    "angular-animate": "^1.6.5",
+    "angular-aria": "^1.6.5",
     "angular-cookie": "^4.1.0",
+    "angular-material": "^1.1.4",
     "angular-messages": "^1.6.5",
     "angular-ui-router": "^1.0.3",
     "babel-core": "^6.25.0",
