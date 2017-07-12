@@ -39,7 +39,7 @@
 <p ng-hide="$ctrl.passwordResetResponseMessage" ng-show="passwordReset.$submitted" class="error">{{$ctrl.passwordResetResponseMessage}}</p>
 
 <div ng-show="$ctrl.seeForgotPasswordForm">
-  <form ng-submit="$ctrl.passwordReset($ctrl.passwordResetForm)" name="passwordReset" role="form" ng-init="$ctrl.passwordResetForm = {}">
+  <form ng-submit="$ctrl.passwordReset($ctrl.passwordResetForm)" name="passwordReset" role="form" ng-init="$ctrl.passwordResetForm = {}" novalidate>
   <p ng-show="passwordReset.$submitted && !$ctrl.passwordResetResponseMessage" class="error">Error finding user or sending email. Try again.</p>
   <div class="form-group">
     <label>Email</label>
