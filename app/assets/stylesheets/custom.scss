@@ -14,25 +14,42 @@ $swipe-animation-delay : 250ms;
 $swipe-animation-timing-func : linear;
 
 
-.animation_container{
+.animations_container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.each_animation{
   display: flex;
   justify-content: center;
 }
 
-.phone_image_container {
+.phone_image_container, .computer_image_container {
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   padding: 25px 0 35px 0;
-  height: 300px;
-  width: 180px;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-image: url(https://image.freepik.com/free-icon/smartphone_318-33441.jpg);
+
 }
+
+.phone_image_container {
+  background-image: url(https://image.freepik.com/free-icon/smartphone_318-33441.jpg);
+  height: 300px;
+  width: 180px;
+}
+
+.computer_image_container {
+  background-image: url(https://image.freepik.com/free-icon/computer-screen_318-32677.jpg);
+  height: 300px;
+  width: 370px;
+  padding-bottom: 75px;
+}
+
 
 .dog_image {
   height: 130px;
@@ -63,11 +80,17 @@ $swipe-animation-timing-func : linear;
   .fa-long-arrow-left{
     @include transform( scaleX(0.75) skew(20deg) translateY(-0.9em) translateX(1.25em) );
   }
+
   .fa-long-arrow-right{
     @include transform( scaleX(0.75) skew(20deg) translateY(-0.9em) translateX(-0.95em) );
   }
 
-  .fa-hand-o-up{
+  .fa-mouse-pointer{
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+
+  .fa-hand-o-up, .fa-mouse-pointer{
     @include transform( scaleY(1.2) );
     @include animation-name( $swipe-animation-rotate-name );
     @include animation-duration( $swipe-animation-speed );
