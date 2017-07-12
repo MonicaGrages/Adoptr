@@ -60,6 +60,15 @@ function router ($stateProvider, $urlRouterProvider) {
           return $auth.validateUser();
         }
       }
+    })
+    .state("enterPreferences", {
+      url: "/user_preferences",
+      template: "<enter-preferences></enter-preferences>",
+      resolve: {
+        auth: function($auth) {
+          return $auth.validateUser();
+        }
+      }
     });
 
 

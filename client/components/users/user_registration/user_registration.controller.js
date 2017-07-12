@@ -12,9 +12,8 @@ function UserRegistrationController($auth, $state){
     $auth.submitRegistration(registrationForm)
       .then(function(response) {
         // handle success response
-        console.log('successful registration: ');
         console.log(response.data.status);
-        $state.go('petSearch');
+        $state.go('enterPreferences');
       })
       .catch(function(response) {
         // handle error response
