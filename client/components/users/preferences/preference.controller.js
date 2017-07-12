@@ -19,7 +19,7 @@ function PreferenceController(UsersService, $auth, $state){
     UsersService.updatePreferences(vm.user.id, vm.user.preference)
       .then(response => {
         console.log('successfully updated preferences');
-        $state.go('sign_in');
+        $state.go('petSearch');
       })
       .catch(response => {
         console.log('error updating preferences');
