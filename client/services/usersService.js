@@ -18,8 +18,6 @@ function UsersService ($http, $auth) {
   }
 
   service.incrementPetsViewed = function (userId) {
-    console.log(userId)
-    console.log('viewed another pet');
     return $http.patch('/users/'+userId+'/preferences')
       .then(response => {
         return response;

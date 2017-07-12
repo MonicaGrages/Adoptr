@@ -33,7 +33,6 @@ function SearchController(SearchService, FavoritesService, PassesService, UsersS
     let userId = vm.currentUser.id;
     PassesService.addPass(petId, userId)
       .then(response => {
-        console.log('pass');
         activate();
       })
       .catch(response => {

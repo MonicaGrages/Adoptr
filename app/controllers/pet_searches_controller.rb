@@ -3,7 +3,6 @@ class PetSearchesController < ApplicationController
   def index
     @user = User.find(params[:user_id])
     @search_preferences = @user.preference
-    puts @search_preferences["age"]
 
     @search_query = ""
 
@@ -23,9 +22,10 @@ class PetSearchesController < ApplicationController
       @search_query = @search_query + "&animal=#{@search_preferences['pet_type']}"
     end
 
-    @search_query = ""
+    @search_query = @search_query + "&offset=#{@search_preferences['pets_viewed']}"
+    puts @search_query
 
-    @pet = Pet.generate(@user.id, @search_query, )
+    @pet = Pet.generate(@user.id, @search_query)
     render json: @pet
   end
 end

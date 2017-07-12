@@ -6,7 +6,6 @@ function SearchService ($http, $auth, UsersService) {
 
 
   service.getPet = function (userId) {
-    console.log('get pet');
     return $http.get("/pet_search/"+userId).then(response => {
       return response.data;
     });
