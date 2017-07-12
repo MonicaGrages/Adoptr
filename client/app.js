@@ -21,9 +21,7 @@ function router ($stateProvider, $urlRouterProvider) {
       url: "/",
       template: "<pet-search></pet-search>",
       resolve: {
-        auth: function($auth) {
-          return $auth.validateUser();
-        }
+        auth: validateUser
       }
     })
     .state("signIn", {
@@ -38,39 +36,36 @@ function router ($stateProvider, $urlRouterProvider) {
       url: "/users/:userId/favorites",
       template: "<favorites></favorites>",
       resolve: {
-        auth: function($auth) {
-          return $auth.validateUser();
-        }
+        auth: validateUser
       }
     })
     .state("petShow", {
       url: "/pets/:id",
       template: "<pet-show></pet-show>",
       resolve: {
-        auth: function($auth) {
-          return $auth.validateUser();
-        }
+        auth: validateUser
       }
     })
     .state("userShow", {
       url: "/users/:id",
       template: "<user-show></user-show>",
       resolve: {
-        auth: function($auth) {
-          return $auth.validateUser();
-        }
+        auth: validateUser
       }
     })
     .state("enterPreferences", {
       url: "/user_preferences",
       template: "<enter-preferences></enter-preferences>",
       resolve: {
-        auth: function($auth) {
-          return $auth.validateUser();
-        }
+        auth: validateUser
       }
     });
 
 
   $urlRouterProvider.otherwise("/");
+}
+
+validateUser.$inject = ["$auth"]
+function validateUser($auth) {
+  return $auth.validateUser();
 }
