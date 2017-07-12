@@ -1,10 +1,11 @@
-SearchController.$inject = ['SearchService', 'FavoritesService', 'PassesService', '$auth', '$state'];
-function SearchController(SearchService, FavoritesService, PassesService, $auth, $state){
+SearchController.$inject = ['SearchService', 'FavoritesService', 'PassesService', 'UsersService', '$auth', '$state'];
+function SearchController(SearchService, FavoritesService, PassesService, UsersService, $auth, $state){
   var vm = this;
   vm.currentUser = $auth.user;
   activate();
 
   function activate(){
+    UsersService.incrementPetsViewed(vm.currentUser.id);
     SearchService.getPet(vm.currentUser.id)
     .then(response => {
       vm.pet = response;
@@ -32,6 +33,7 @@ function SearchController(SearchService, FavoritesService, PassesService, $auth,
     let userId = vm.currentUser.id;
     PassesService.addPass(petId, userId)
       .then(response => {
+        console.log('pass');
         activate();
       })
       .catch(response => {

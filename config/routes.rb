@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   put '/users/:user_id/preferences', to: "preferences#update"
 
+  patch '/users/:user_id/preferences', to: "preferences#increment_pet_views"
+
   root "home#index"
 
 end
