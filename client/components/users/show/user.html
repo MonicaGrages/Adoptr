@@ -19,7 +19,7 @@
   </p>
 </div>
 <div ng-show="$ctrl.isEditingPreferences">
-  <form ng-submit="$ctrl.updatePreferences($ctrl.user.preference)">
+  <form ng-submit="$ctrl.updatePreferences($ctrl.user.preference)" name="preferences" novalidate>
     <div>
       <p>I am a:</p>
       <input type="radio" value="human">Human
@@ -33,9 +33,14 @@
       <input type="radio" value="all" ng-model="$ctrl.user.preference.pet_type">All
     </div>
     <div>
-      <p>Near Zip Code:
-        <input type="text" ng-model="$ctrl.user.preference.zip">
-      </p>
+      <div>Near Zip Code:
+        <input type="text" name="zip" ng-model="$ctrl.user.preference.zip" required ng-maxlength="5" ng-minlength="5">
+        <div class="error-messages" ng-messages="preferences.zip.$error">
+          <div ng-message="required">Please enter a zip code</div>
+          <div ng-message="maxlength">Zip code should be 5 digits. Ex: 30309</div>
+          <div ng-message="minlength">Zip code should be 5 digits. Ex: 30309</div>
+        </div>
+      </div>
     </div>
     <div>
       Age:

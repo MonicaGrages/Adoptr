@@ -2,8 +2,9 @@ const angular = require("angular");
 require("angular-ui-router");
 require("ng-token-auth");
 require("angular-cookie");
+require('angular-messages');
 
-angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth"])
+angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth", "ngMessages"])
   .config(router, auth);
 
 auth.$inject = ["$authProvider"];
