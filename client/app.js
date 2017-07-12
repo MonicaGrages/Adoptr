@@ -3,8 +3,11 @@ require("angular-ui-router");
 require("ng-token-auth");
 require("angular-cookie");
 require('angular-messages');
+require('angular-material');
+require('angular-aria');
+require('angular-animate');
 
-angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth", "ngMessages"])
+angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth", "ngMessages", "ngMaterial", "ngAria", "ngAnimate"])
   .config(router, auth);
 
 auth.$inject = ["$authProvider"];
