@@ -65,7 +65,7 @@
       <input type="radio" value="all" ng-model="$ctrl.user.preference.sex">Either Sex
     </div>
     <div>
-      <input type="submit" name="Submit Changes" ng-click="$ctrl.isEditingPreferences=false">
+      <input type="submit" name="Submit Changes" ng-click="$ctrl.isEditingPreferences=false" ng-disabled="preferences.zip.$invalid">
     </div>
   </form>
   <button ng-click="$ctrl.isEditingPreferences=false">Nevermind</button>
