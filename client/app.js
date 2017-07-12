@@ -17,8 +17,12 @@ function auth($authProvider) {
 router.$inject = ["$stateProvider", "$urlRouterProvider"];
 function router ($stateProvider, $urlRouterProvider) {
   $stateProvider
-    .state("petSearch", {
+    .state("landingPage", {
       url: "/",
+      template: "<landing-page></landing-page>"
+    })
+    .state("petSearch", {
+      url: "/petSearch",
       template: "<pet-search></pet-search>",
       resolve: {
         auth: validateUser
