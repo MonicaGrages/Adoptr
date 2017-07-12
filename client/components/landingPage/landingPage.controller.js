@@ -5,7 +5,6 @@ function LandingPageController($auth, $state){
   activate();
 
   function activate(){
-    console.log('landing page controller');
   }
 
 
