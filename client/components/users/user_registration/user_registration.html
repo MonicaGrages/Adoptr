@@ -1,18 +1,32 @@
-<form ng-submit="$ctrl.handleRegBtnClick(registrationForm)" role="form" ng-init="registrationForm = {}">
+<div class="error" ng-show="$ctrl.registrationErrorMessage">{{$ctrl.registrationErrorMessage}}</div>
+
+<form ng-submit="$ctrl.handleRegBtnClick(registrationForm)" role="form" ng-init="registrationForm = {}" name="registration" novalidate>
   <div class="form-group">
-    <label>email</label>
-    <input type="email" name="email" ng-model="registrationForm.email" required="required" class="form-control"/>
+    <label>Email</label>
+    <input type="email" name="email" ng-model="registrationForm.email" required="required" class="form-control">
+    <div class="error-messages" ng-messages="registration.email.$error" ng-show="registration.email.$touched">
+      <div ng-message="required">Enter an email address</div>
+      <div ng-message="email">Enter a valid email. Ex: MyEmail@email.com</div>
+    </div>
   </div>
 
   <div class="form-group">
-    <label>password</label>
-    <input type="password" name="password" ng-model="registrationForm.password" required="required" class="form-control"/>
+    <label>Password</label>
+    <input type="password" name="password" ng-model="registrationForm.password" required="required" ng-minlength="8" class="form-control">8 characters or more
+    <div class="error-messages" ng-messages="registration.password.$error" ng-show="registration.password.$touched">
+      <div ng-message="required">Enter your password</div>
+      <div ng-message="minlength">Password should be at least 8 characters</div>
+    </div>
   </div>
 
   <div class="form-group">
-    <label>password confirmation</label>
-    <input type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" class="form-control"/>
+    <label>Password confirmation</label>
+    <input type="password" name="password_confirmation" ng-model="registrationForm.password_confirmation" required="required" ng-minlength="8" class="form-control">
+    <div class="error-messages" ng-messages="registration.password_confirmation.$error" ng-show="registration.password_confirmation.$touched">
+      <div ng-message="required">Enter your password again</div>
+      <div ng-message="minlength">Password should be at least 8 characters</div>
+    </div>
   </div>
 
-  <button type="submit" class="btn btn-primary btn-lg">Register</button>
+  <button type="submit" ng-disabled="registration.$invalid">Register</button>
 </form>

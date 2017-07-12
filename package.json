@@ -1,12 +1,13 @@
 {
   "name": "Adoptr",
   "private": true,
-  "engines" : {
+  "engines": {
     "node": "7.9.0"
   },
   "dependencies": {
     "angular": "^1.6.5",
     "angular-cookie": "^4.1.0",
+    "angular-messages": "^1.6.5",
     "angular-ui-router": "^1.0.3",
     "babel-core": "^6.25.0",
     "babel-loader": "^7.1.1",
