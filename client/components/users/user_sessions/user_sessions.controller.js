@@ -28,6 +28,9 @@ function UserSessionsController($auth, $state){
     console.log('reset');
     $auth.requestPasswordReset(vm.passwordResetForm)
         .then(function(response) {
+          // Clear out any previous error messages
+          vm.passwordResetSuccessMessage = "";
+          vm.passwordResetErrorMessage = "";
           // handle success response
           console.log('success');
           console.log(response);
@@ -35,6 +38,9 @@ function UserSessionsController($auth, $state){
           console.log(vm.passwordResetSuccessMessage);
         })
         .catch(function(response) {
+          // Clear out any previous error messages
+          vm.passwordResetSuccessMessage = "";
+          vm.passwordResetErrorMessage = "";
           vm.passwordResetErrorMessage = response.data.errors[0];
           console.log(vm.passwordResetErrorMessage);
           // handle error response
