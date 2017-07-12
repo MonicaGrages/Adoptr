@@ -19,6 +19,9 @@ function UserRegistrationController($auth, $state){
         // handle error response
         console.log('error with registration: ');
         console.log(response);
+        if(response.data.errors.full_messages) {
+          vm.registrationErrorMessage = response.data.errors.full_messages[0];
+        }
       });
     };
 

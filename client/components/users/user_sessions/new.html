@@ -1,4 +1,4 @@
-
+<div class="error" ng-show="$ctrl.loginErrorMessage">{{$ctrl.loginErrorMessage}}</div>
 <form ng-submit="$ctrl.handleLoginBtnClick(loginForm)" role="form" ng-init="loginForm = {}" name="login" novalidate>
   <div class="form-group">
     <label for="email">Email</label>
@@ -8,7 +8,7 @@
            ng-model="loginForm.email"
            required="required"
            class="form-control">
-    <div class="error-messages" ng-messages="login.email.$error">
+    <div class="error-messages" ng-messages="login.email.$error" ng-show="login.email.$touched">
       <div ng-message="required">Enter an email address</div>
       <div ng-message="email">Enter a valid email. Ex: MyEmail@email.com</div>
     </div>
@@ -22,11 +22,11 @@
            ng-model="loginForm.password"
            required="required"
            class="form-control" ng-minlength="8">
-      <div class="error-messages" ng-messages="login.password.$error">
-      <div ng-message="required">Enter your password</div>
-      <div ng-show="$ctrl.loginErrorMessage">Email/Password combination not found. Try again.</div>
-    </div>
+      <div class="error-messages" ng-messages="login.password.$error" ng-show="login.password.$touched">
+        <div ng-message="required">Enter your password</div>
+        <div ng-message="minlength">Password should be at least 8 characters</div>
+      </div>
   </div>
 
-  <button type="submit">Sign in</button>
+  <button type="submit" ng-disabled="login.email.$invalid">Sign in</button>
 </form>

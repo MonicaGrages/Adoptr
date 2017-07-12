@@ -19,6 +19,7 @@ function UserSessionsController($auth, $state){
         // handle error response
         console.log('error logging in: ');
         console.log(response);
+        vm.loginErrorMessage = "Email/Password combination not found. Try again.";
       });
   };
 

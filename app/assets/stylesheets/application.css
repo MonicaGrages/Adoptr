@@ -16,5 +16,9 @@
 
 .error-messages {
   font-size: 13px;
+  color: gray;
+}
+
+.error {
   color: red;
 }
