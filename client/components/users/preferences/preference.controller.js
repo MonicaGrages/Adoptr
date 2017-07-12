@@ -1,13 +1,11 @@
-UserController.$inject = ['UsersService', 'FavoritesService', '$auth', '$state', '$stateParams'];
-function UserController(UsersService, FavoritesService, $auth, $state, $stateParams){
+PreferenceController.$inject = ['UsersService', '$auth', '$state'];
+function PreferenceController(UsersService, $auth, $state){
   var vm = this;
-  let id = $stateParams.id
   vm.currentUser = $auth.user;
-  vm.isEditingPreferences = false;
   activate();
 
   function activate(){
-    UsersService.getUser(id)
+    UsersService.getUser(vm.currentUser.id)
     .then(response => {
       vm.user = response;
     })
@@ -21,6 +19,7 @@ function UserController(UsersService, FavoritesService, $auth, $state, $statePar
     UsersService.updatePreferences(vm.user.id, vm.user.preference)
       .then(response => {
         console.log('successfully updated preferences');
+        $state.go('sign_in');
       })
       .catch(response => {
         console.log('error updating preferences');
@@ -28,4 +27,4 @@ function UserController(UsersService, FavoritesService, $auth, $state, $statePar
   }
 
 }
-export default UserController;
+export default PreferenceController;
