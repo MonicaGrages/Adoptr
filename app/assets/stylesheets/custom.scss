@@ -1,3 +1,5 @@
+@import "compass/css3";
+
 
 $size : 80px;
 $swipe-colour : #000;
@@ -10,7 +12,7 @@ $swipe-animation-speed : 2700ms;
 $swipe-animation-delay : 250ms;
 $swipe-animation-timing-func : linear;
 
-// GENERAL ------------------
+
 
 html, body{
   height: 100%;
@@ -42,7 +44,7 @@ body{
  @include box-sizing(border-box);
 }
 
-// SWIPE ELEMENT ------------
+
 
 .swipe{
   display: inline-block;
@@ -77,7 +79,7 @@ body{
   }
 }
 
-// SWIPE ANIMATION ----------
+
 
 @include keyframes( $swipe-animation-name ){
     0%{ @include transform( translateX(0) ); }
