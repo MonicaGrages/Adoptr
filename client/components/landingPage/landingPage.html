@@ -1,5 +1,10 @@
+<div ng-show="!$ctrl.currentUser.id">
+  <p><a ui-sref="signIn">Sign in</a></p>
+  <p><a ui-sref="userRegistration">Sign up</a></p>
+</div>
+
+<div ng-show="$ctrl.currentUser.id">
+  <header-nav>
+</div>
+
 <h1>Landing Page Here</h1>
-
-<div ng-show="$ctrl.currentUser.id">Welcome Back. User is logged in.</div>
-
-<div ng-hide="$ctrl.currentUser.id">User is not logged in</div>

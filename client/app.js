@@ -59,7 +59,7 @@ function router ($stateProvider, $urlRouterProvider) {
       }
     })
     .state("enterPreferences", {
-      url: "/user_preferences",
+      url: "/new_user_preferences",
       template: "<enter-preferences></enter-preferences>",
       resolve: {
         auth: validateUser
