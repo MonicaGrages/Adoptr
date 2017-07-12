@@ -7,7 +7,10 @@
 <div ng-hide="$ctrl.isFavorite">
   <a ng-click="$ctrl.addToFavorites()">Add To Favorites</a>
 </div>
-<img ng-src={{$ctrl.pet.photo}}>
+
+<div md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addFavorite()">
+  <img ng-src={{$ctrl.pet.photo}}>
+</div>
 <p>{{$ctrl.pet.description}}</p>
 <p>Age: {{$ctrl.pet.age}}</p>
 <p>Size: {{$ctrl.pet.size}}</p>

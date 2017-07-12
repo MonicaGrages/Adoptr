@@ -23,7 +23,7 @@ function SearchController(SearchService, FavoritesService, PassesService, UsersS
     FavoritesService.addFavorite(petId, userId)
       .then(response => {
         console.log('favorited pet');
-        $state.go("petShow({id: vm.pet.id})");
+        activate();
       })
       .catch(response => {
         console.log(response);
