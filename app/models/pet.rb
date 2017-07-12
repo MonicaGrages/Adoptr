@@ -9,11 +9,6 @@ class Pet < ApplicationRecord
 
 
   def self.generate (user_id, search_query)
-    # passes = Pass.where(user_id: user_id)
-    # pass_count = passes.count
-    # favorites = Favorite.where(user_id: user_id)
-    # favorite_count = favorites.count
-    # offset = pass_count + favorite_count
     pets_viewed = (Preference.find_by(user_id: user_id)).pets_viewed
     puts "this user has viewed #{pets_viewed} pets"
     response = get("#{search_query}&offset=#{pets_viewed}")
