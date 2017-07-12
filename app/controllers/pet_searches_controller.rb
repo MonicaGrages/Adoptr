@@ -7,7 +7,7 @@ class PetSearchesController < ApplicationController
     @search_query = ""
 
     unless @search_preferences['zip'] == nil
-      @search_query = @search_query + "&location=30309"
+      @search_query = @search_query + "&location=#{@search_preferences['zip']}"
     end
 
     unless @search_preferences['age'] == "all"

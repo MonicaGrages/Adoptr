@@ -10,9 +10,9 @@ function HeaderController($auth, $state){
     vm.signOut = function() {
     $auth.signOut()
       .then(function(response) {
-        console.log('successful sign out');
+        console.log('Successfully logged out. Come back soon!');
         console.log(response.status);
-        $state.go('petSearch');
+        $state.go('landingPage');
       })
       .catch(function(response) {
         console.log('error signing out');
