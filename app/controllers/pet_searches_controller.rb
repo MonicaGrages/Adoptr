@@ -23,7 +23,9 @@ class PetSearchesController < ApplicationController
       @search_query = @search_query + "&animal=#{@search_preferences['pet_type']}"
     end
 
-    @pet = Pet.generate(@user.id, @search_query)
+    @search_query = ""
+
+    @pet = Pet.generate(@user.id, @search_query, )
     render json: @pet
   end
 end

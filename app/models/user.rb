@@ -15,7 +15,7 @@ class User < ActiveRecord::Base
   end
 
   after_create -> do
-    create_preference(pet_type: "all", age: "all", sex: "all", size: "all")
+    create_preference(pet_type: "all", age: "all", sex: "all", size: "all", pets_viewed: 0)
   end
 
   # before_action :configure_permitted_parameters, if: :devise_controller?
