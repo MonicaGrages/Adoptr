@@ -31,10 +31,12 @@ function UserSessionsController($auth, $state){
           // handle success response
           console.log('success');
           console.log(response);
-          // vm.passwordResetResponse = "Password reset email sent to vm."
+          vm.passwordResetSuccessMessage = response.data.message;
+          console.log(vm.passwordResetSuccessMessage);
         })
         .catch(function(response) {
-          vm.passwordResetResponseMessage = response.data.errors[0];
+          vm.passwordResetErrorMessage = response.data.errors[0];
+          console.log(vm.passwordResetErrorMessage);
           // handle error response
           console.log('error');
           console.log(response);

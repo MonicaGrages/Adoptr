@@ -26,6 +26,9 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  # https://stackoverflow.com/questions/36131936/missing-host-to-link-to-please-provide-the-host-parameter-for-rails-4
+  config.action_mailer.default_url_options = { :host => "localhost:5000" }
+
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = false
 
