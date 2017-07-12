@@ -24,7 +24,7 @@ class PreferencesController < ApplicationController
 
 private
 def preference_params
-  params.require(:preference).permit(:pet_type, :age, :size, :sex)
+  params.require(:preference).permit(:pet_type, :age, :size, :sex, :zip)
 end
 
 end

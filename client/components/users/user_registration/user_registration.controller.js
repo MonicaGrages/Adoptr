@@ -19,7 +19,7 @@ function UserRegistrationController($auth, $state){
       .catch(function(response) {
         // handle error response
         console.log('error with registration: ');
-        console.log(response.data.errors.full_messages[0]);
+        console.log(response);
       });
     };
 
