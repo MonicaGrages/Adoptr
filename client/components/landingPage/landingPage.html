@@ -1,17 +1,19 @@
 <section class="window">
-<div ng-show="!$ctrl.currentUser.id">
-  <p><a ui-sref="signIn">Sign in</a></p>
-  <p><a ui-sref="userRegistration">Sign up</a></p>
-</div>
+  <div ng-show="!$ctrl.currentUser.id">
+    <p><a ui-sref="signIn">Sign in</a></p>
+    <p><a ui-sref="userRegistration">Sign up</a></p>
+  </div>
 
 <!-- <div ng-show="$ctrl.currentUser.id">
   <header-nav></header-nav>
 </div> -->
 
-<h1>Adoptr</h1>
+  <h1>Adoptr</h1>
+  <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
 </section>
 
 <section class="window">
+  <i class="fa fa-chevron-circle-up" aria-hidden="true"></i>
 <!-- This is a swipe demo made with font awesome icons and css animations. I took a lot of guidance from the code in this codepen: https://codepen.io/CunningFatalist/pen/LEOpGB -->
   <div class="animations_container">
     <div class="each_animation">
@@ -40,6 +42,7 @@
       </div>
     </div>
   </div>
+  <i class="fa fa-chevron-circle-down" aria-hidden="true"></i>
 </section>
 
 <section class="window">
