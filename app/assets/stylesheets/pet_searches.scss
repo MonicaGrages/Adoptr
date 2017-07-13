@@ -16,6 +16,17 @@
   font-size: 35px;
 }
 
+.pet_search_name{
+  margin: 0;
+}
+
 .pet_search_image{
   box-shadow: 10px 10px 5px #888888;
+  height: 50vh;
+}
+
+.swipe-box{
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }

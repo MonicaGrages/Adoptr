@@ -1,78 +1,91 @@
-<header-nav></header-nav>
+<section class="window" id="pet_show_window">
+  <header-nav></header-nav>
+  <main class="pet_show_main">
+    <div><h1 class="pet_show_name">{{$ctrl.pet.name}}</h1></div>
+    <div>
+    <div class="pet_show_favorites_message" ng-show="$ctrl.isFavorite">
+      <p>you favorited this pet on {{$ctrl.favorite.created_at | date}}</p>
+      <p class="remove_from_favorites_button"><a ng-click="$ctrl.deleteFavorite()">remove from favorites</a></p>
+    </div>
 
-<main class="pet_show_main">
-  <h1>{{$ctrl.pet.name}}</h1>
-  <div ng-show="$ctrl.isFavorite">
-    <p>you favorited this pet on {{$ctrl.favorite.created_at | date}}</p>
-    <p class="remove_from_favorites_button"><a ng-click="$ctrl.deleteFavorite()">remove from favorites</a></p>
-  </div>
-  <div class="pet_show_favorite_or_pass_buttons">
-    <a ng-hide="$ctrl.isFavorite || $ctrl.wasPassed" ng-click="$ctrl.passOnPet()">
-      <i class="fa fa-angle-double-left" aria-hidden="true"></i> pass
-    </a>
-    <a ng-hide="$ctrl.isFavorite" ng-click="$ctrl.addToFavorites()">
-      add to favorites <i class="fa fa-heart" aria-hidden="true"></i>
-    </a>
-  </div>
-  <img ng-src={{$ctrl.pet.photo}}>
-  <div class="pet_show_small_details">
-    <p>age: {{$ctrl.pet.age}}</p>
-    <p>size: {{$ctrl.pet.size}}</p>
-    <p>sex: {{$ctrl.pet.sex}}</p>
-  </div>
-  <p>{{$ctrl.pet.description}}</p>
-</main>
+    <div class="pet_show_photo_and_buttons_container">
+      <div class="pet_show_pass_favorite_buttons">
+        <a ng-hide="$ctrl.isFavorite || $ctrl.wasPassed" ng-click="$ctrl.passOnPet()">
+          <i class="fa fa-angle-double-left" aria-hidden="true"></i> pass
+        </a>
+        <a ng-hide="$ctrl.isFavorite" ng-click="$ctrl.addToFavorites()">
+          add to favorites <i class="fa fa-heart" aria-hidden="true"></i>
+        </a>
+      </div>
+      <div><img class="pet_show_image" ng-src={{$ctrl.pet.photo}}></div>
+    </div>
 
-<h3 class="pet_show_contact_heading">HELP {{$ctrl.pet.name}} FIND A FUR-EVER HOME</h3>
-<div class="adoption_contact_info">
-  <button class="adoption_contact_buttons" ng-hide="$ctrl.showContact" ng-click="$ctrl.showContact=true">contact about adoption</button>
-  <div ng-show="$ctrl.showContact">
-    <p>phone: {{$ctrl.pet.contact.phone}}</p>
-    <p>email: {{$ctrl.pet.contact.email}}</p>
-    <p>eity: {{$ctrl.pet.contact.city}}</p>
-    <p>etate: {{$ctrl.pet.contact.state}}</p>
-    <p>zip: {{$ctrl.pet.contact.zip}}</p>
-    <p><a class="petfinder_link" href="https://www.petfinder.com/petdetail/{{$ctrl.pet.petfinder_id}}">view on petfinder</a></p>
-    <p class="hide_adoption_contact_button_container"><button class="adoption_contact_buttons" ng-click="$ctrl.showContact=false">hide contact info</button></p>
+    <div class="pet_show_small_details">
+      <p>age: {{$ctrl.pet.age}}</p>
+      <p>size: {{$ctrl.pet.size}}</p>
+      <p>sex: {{$ctrl.pet.sex}}</p>
+    </div>
+    <p class="pet_show_description">{{$ctrl.pet.description | limitTo: 450}}</p>
+
+    </div>
+  </main>
+  <div class="home_page_scroll_tag"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i></div>
+</section>
+
+<section class="window" id="window-2">
+  <div class="home_page_scroll_tag"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></div>
+  <h3 class="pet_show_contact_heading">HELP {{$ctrl.pet.name}} FIND A FUR-EVER HOME</h3>
+  <div class="adoption_contact_info">
+    <button class="adoption_contact_buttons" ng-hide="$ctrl.showContact" ng-click="$ctrl.showContact=true">contact about adoption</button>
+    <div ng-show="$ctrl.showContact">
+      <p>phone: {{$ctrl.pet.contact.phone}}</p>
+      <p>email: {{$ctrl.pet.contact.email}}</p>
+      <p>eity: {{$ctrl.pet.contact.city}}</p>
+      <p>etate: {{$ctrl.pet.contact.state}}</p>
+      <p>zip: {{$ctrl.pet.contact.zip}}</p>
+      <p><a class="petfinder_link" href="https://www.petfinder.com/petdetail/{{$ctrl.pet.petfinder_id}}">view on petfinder</a></p>
+      <p class="hide_adoption_contact_button_container"><button class="adoption_contact_buttons" ng-click="$ctrl.showContact=false">hide contact info</button></p>
+    </div>
   </div>
-</div>
-<div class="socialshare">
-  <div><h4>get the word out</h4></div>
-  <div class="socialshare_links">
-    <i class="fa fa-twitter-square socialshare_icon" aria-hidden="true"
-      socialshare
-      socialshare-provider="twitter"
-      socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
-      socialshare-hashtags="FourLeggedFriends, FurEverHome"
-      socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
-    </i>
-    <i class="fa fa-facebook-official socialshare_icon" aria-hidden="true"
-      socialshare
-      socialshare-provider="facebook"
-      socialshare-quote="Help {{$ctrl.pet.name}} find a fur-ever home"
-      socialshare-hashtags="#FurEverHome"
-      socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
-    </i>
-    <i class="fa fa-google-plus-square socialshare_icon" aria-hidden="true"
-      socialshare
-      socialshare-provider="google"
-      socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
-    </i>
-    <i class="fa fa-pinterest-square socialshare_icon" aria-hidden="true"
-      socialshare
-      socialshare-provider="pinterest"
-      socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
-      socialshare-media="{{$ctrl.pet.photo}}"
-      socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
-    </i>
-    <i class="fa fa-reddit-square socialshare_icon" aria-hidden="true"
-      socialshare
-      socialshare-provider="reddit"
-      socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
-      socialshare-subreddit="aww"
-      socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
-    </i>
+  <div class="socialshare">
+    <div><h4>get the word out</h4></div>
+    <div class="socialshare_links">
+      <i class="fa fa-twitter-square socialshare_icon" aria-hidden="true"
+        socialshare
+        socialshare-provider="twitter"
+        socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
+        socialshare-hashtags="FourLeggedFriends, FurEverHome"
+        socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+      </i>
+      <i class="fa fa-facebook-official socialshare_icon" aria-hidden="true"
+        socialshare
+        socialshare-provider="facebook"
+        socialshare-quote="Help {{$ctrl.pet.name}} find a fur-ever home"
+        socialshare-hashtags="#FurEverHome"
+        socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+      </i>
+      <i class="fa fa-google-plus-square socialshare_icon" aria-hidden="true"
+        socialshare
+        socialshare-provider="google"
+        socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+      </i>
+      <i class="fa fa-pinterest-square socialshare_icon" aria-hidden="true"
+        socialshare
+        socialshare-provider="pinterest"
+        socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
+        socialshare-media="{{$ctrl.pet.photo}}"
+        socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+      </i>
+      <i class="fa fa-reddit-square socialshare_icon" aria-hidden="true"
+        socialshare
+        socialshare-provider="reddit"
+        socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
+        socialshare-subreddit="aww"
+        socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+      </i>
+    </div>
   </div>
-</div>
+  <footer-nav></footer-nav>
+</section>
 
 

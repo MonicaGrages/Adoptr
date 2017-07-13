@@ -2,7 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.pet_show_favorite_or_pass_buttons{
+/*.pet_show_favorite_or_pass_buttons{
   width: 90%;
   display: flex;
   flex-direction: row;
@@ -11,31 +11,75 @@
   a:hover{
     text-decoration: underline;
   };
+}*/
+
+#pet_show_window{
+  color: white;
+  justify-content: space-around;
 }
 
 .pet_show_main{
   margin-right: auto;
   margin-left: auto;
-  width: 60%;
+  width: 90%;
   text-align: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  .pet_show_small_details{
-    display: flex;
-    width: 100%;
-    flex-direction: row;
-    justify-content: space-between;
-  }
+  align-items: center;
+}
+
+.pet_show_small_details{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.pet_show_name{
+  margin: 0;
+}
+
+.pet_show_image{
+/*  width: 35vw;*/
+max-height: 45vh;
+border-radius: 4px;
+border: 3px solid white;
+}
+
+.pet_show_photo_and_buttons_container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  a:hover{
+    text-decoration: underline;
+  };
+}
+
+.pet_show_pass_favorite_buttons{
+/*  width: 30vw;*/
+  width: 260px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pet_show_favorites_message{
+  display: flex;
+  justify-content: space-between;
 }
 
 .remove_from_favorites_button:hover{
   text-decoration: underline;
 }
 
+.pet_show_description{
+  font-size: 12px;
+  max-height: 20vh;
+}
+
 .pet_show_contact_heading{
   text-align: center;
+  font-size: 45px;
 }
 
 .adoption_contact_info{
@@ -50,7 +94,6 @@
   }
 }
 
-
 .adoption_contact_buttons{
   background-color: black;
   color: white;
@@ -58,7 +101,6 @@
   border-radius: 5px;
   font-size: 25px;
   font-family: 'Poppins', sans-serif;
-/*  height: 25px;*/
 }
 
 .socialshare{

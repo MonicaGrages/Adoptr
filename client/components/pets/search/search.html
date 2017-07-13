@@ -8,11 +8,13 @@
 </div>
 
 <div class="search_pet_info" ui-sref="petShow({id: $ctrl.pet.id})">
-  <h4>{{$ctrl.pet.name}}</h4>
-  <div md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addFavorite()">
+  <h4 class="pet_search_name">{{$ctrl.pet.name}}</h4>
+  <div class="swipe-box" md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addFavorite()">
+    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
     <img class="pet_search_image" ng-src={{$ctrl.pet.photo}}>
+    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
   </div>
 </div>
-<footer-nav></footer-nav>
+<div><footer-nav></footer-nav></div>
 </section>
 
