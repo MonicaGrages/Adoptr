@@ -1,15 +1,17 @@
-<div ui-sref="landingPage">
-  <h2 class="logo">adoptr</h2>
-</div>
+<nav class="header_nav">
+  <div ui-sref="landingPage">
+    <h2 class="logo">adoptr</h2>
+  </div>
 
-<div ng-show="!$ctrl.currentUser.id">
-  <p><a ui-sref="signIn">Sign in</a></p>
-  <p><a ui-sref="userRegistration">Sign up</a></p>
-</div>
-<div ng-show="$ctrl.currentUser.id">
-  <p>Signed in as {{$ctrl.currentUser.email}}</p>
-  <a ui-sref="userShow({id: $ctrl.currentUser.id})">My Account</a>
-  <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>
-  <p><a ui-sref="favorites({userId: $ctrl.currentUser.id})">See My Favorite Pets</a></p>
-  <p><a ui-sref="petSearch">Search for a Pet</a></p>
-</div>
+  <div ng-show="!$ctrl.currentUser.id" class="logged_out_links">
+    <p><a ui-sref="signIn">Sign in</a></p>
+    <p><a ui-sref="userRegistration">Sign up</a></p>
+  </div>
+  <div ng-show="$ctrl.currentUser.id" class="logged_in_links">
+    <p>Signed in as {{$ctrl.currentUser.email}}</p>
+    <a ui-sref="userShow({id: $ctrl.currentUser.id})">My Account</a>
+    <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>
+    <p><a ui-sref="favorites({userId: $ctrl.currentUser.id})">See My Favorite Pets</a></p>
+    <p><a ui-sref="petSearch">Search for a Pet</a></p>
+  </div>
+</nav>

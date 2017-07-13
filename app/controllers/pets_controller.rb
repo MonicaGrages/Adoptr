@@ -6,6 +6,6 @@ class PetsController < ApplicationController
   def show
     @pet = Pet.find(params[:id])
     render json: @pet,
-      include: [:favorites, :contact]
+      include: [:favorites, :passes, :contact]
   end
 end

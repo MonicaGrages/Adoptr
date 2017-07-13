@@ -2,7 +2,6 @@ PetsController.$inject = ['PetsService', 'FavoritesService', 'PassesService', '$
 function PetsController(PetsService, FavoritesService, PassesService, $auth, $stateParams, $state){
   var vm = this;
   vm.currentUser = $auth.user;
-  vm.isFavorite = false;
   vm.showContact = false;
   activate();
 
@@ -12,6 +11,7 @@ function PetsController(PetsService, FavoritesService, PassesService, $auth, $st
     .then(response => {
       vm.pet = response;
       vm.checkIfFavorite();
+      vm.checkIfPassed();
     })
     .catch(response => {
       console.log('error getting pet');
@@ -27,6 +27,17 @@ function PetsController(PetsService, FavoritesService, PassesService, $auth, $st
         return true;
       } else {
         vm.isFavorite = false;
+      }
+    })
+  }
+
+  vm.checkIfPassed = function() {
+    vm.pet.passes.forEach(function(pass) {
+      if (pass.user_id === vm.currentUser.id) {
+        vm.wasPassed = true;
+        return true;
+      } else {
+        vm.wasPassed = false;
       }
     })
   }

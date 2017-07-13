@@ -4,39 +4,63 @@
   <p>You favorited this pet on {{$ctrl.favorite.created_at | date}}</p>
   <p><a ng-click="$ctrl.deleteFavorite()">Remove From Favorites</a></p>
 </div>
-<div ng-hide="$ctrl.isFavorite">
-  <a ng-click="$ctrl.addToFavorites()">Add To Favorites</a>
-  <a ng-click="$ctrl.passOnPet()">Pass on Pet</a>
-</div>
+
+
+  <a ng-hide="$ctrl.isFavorite" ng-click="$ctrl.addToFavorites()">Add To Favorites</a>
+  <a ng-hide="$ctrl.isFavorite || $ctrl.wasPassed" ng-click="$ctrl.passOnPet()">Pass on Pet</a>
+
 
 <div md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addFavorite()">
   <img ng-src={{$ctrl.pet.photo}}>
 </div>
 <p>{{$ctrl.pet.description}}</p>
+
 <p>Age: {{$ctrl.pet.age}}</p>
 <p>Size: {{$ctrl.pet.size}}</p>
 <p>Sex: {{$ctrl.pet.sex}}</p>
 
-<button ng-click="$ctrl.showContact=true">Contact About Adoption</button>
-<div ng-show="$ctrl.showContact">
-  <p>Phone: {{$ctrl.pet.contact.phone}}</p>
-  <p>Email: {{$ctrl.pet.contact.email}}</p>
-  <p>City: {{$ctrl.pet.contact.city}}</p>
-  <p>State: {{$ctrl.pet.contact.state}}</p>
-  <p>Zip: {{$ctrl.pet.contact.zip}}</p>
-  <a href="https://www.petfinder.com/petdetail/{{$ctrl.pet.petfinder_id}}">View on Petfinder</a>
-  <button ng-click="$ctrl.showContact=false">Hide</button>
-</div>
 
+<h3>Help {{$ctrl.pet.name}} find a fur-ever home</h3>
+<div>
+  <button ng-click="$ctrl.showContact=true">Contact About Adoption</button>
+  <div ng-show="$ctrl.showContact">
+    <p>Phone: {{$ctrl.pet.contact.phone}}</p>
+    <p>Email: {{$ctrl.pet.contact.email}}</p>
+    <p>City: {{$ctrl.pet.contact.city}}</p>
+    <p>State: {{$ctrl.pet.contact.state}}</p>
+    <p>Zip: {{$ctrl.pet.contact.zip}}</p>
+    <a href="https://www.petfinder.com/petdetail/{{$ctrl.pet.petfinder_id}}">View on Petfinder</a>
+    <button ng-click="$ctrl.showContact=false">Hide</button>
+  </div>
+</div>
+<h4>Can't adopt right now but still want to help? Get the word out.</h4>
 <div class="socialshare_links">
-  <a href="#"
-  socialshare
-  socialshare-provider="twitter"
-  socialshare-text="Help 'name' find a fur-ever home"
-  socialshare-hashtags="FourLeggedFriends, FurEverHome"
-  socialshare-url="adoptr.herokuapp/pets/id#here">
-  twitter icon here
-  </a>
+  <i class="fa fa-twitter-square socialshare_icon" aria-hidden="true"
+    socialshare
+    socialshare-provider="twitter"
+    socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
+    socialshare-hashtags="FourLeggedFriends, FurEverHome"
+    socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+  </i>
+  <i class="fa fa-facebook-official socialshare_icon" aria-hidden="true"
+    socialshare
+    socialshare-provider="facebook"
+    socialshare-quote="Help {{$ctrl.pet.name}} find a fur-ever home"
+    socialshare-hashtags="#FurEverHome"
+    socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+  </i>
+  <i class="fa fa-google-plus-square socialshare_icon" aria-hidden="true"
+    socialshare
+    socialshare-provider="google"
+    socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+  </i>
+  <i class="fa fa-pinterest-square socialshare_icon" aria-hidden="true"
+    socialshare
+    socialshare-provider="pinterest"
+    socialshare-text="Help {{$ctrl.pet.name}} find a fur-ever home"
+    socialshare-media="{{$ctrl.pet.photo}}"
+    socialshare-url="https://adoptr.herokuapp.com/#!/pets/{{$ctrl.pet.id}}">
+  </i>
 </div>
 
 <div>
