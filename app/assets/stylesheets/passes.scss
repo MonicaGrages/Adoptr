@@ -1,3 +1,23 @@
 // Place all the styles related to the Passes controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pass_or_favorite_index_header{
+  text-align: center;
+}
+
+.passed_or_favorited_pets_container{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.each_favorited_or_passed_pet{
+  height: 300px;
+  width: 300px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+  margin: 15px;
+}

@@ -1,8 +1,9 @@
 <header-nav></header-nav>
-<h3>Favorites Here</h3>
+<h3 class="pass_or_favorite_index_header">Your Favorites</h3>
+<h4 class="pass_or_favorite_index_header">click one for adoption information</h4>
 
-
-<div ng-repeat="favorite in $ctrl.favorites">
+<!--
+<div ng-repeat="favorite in $ctrl.favorites | orderBy: '-created_at'">
 <a ui-sref="petShow({id: favorite.pet_id})">
 <div>
   <p>{{favorite.pet.name}}</p>
@@ -10,3 +11,15 @@
 </div>
 </a>
 </div>
+ -->
+
+<div class="passed_or_favorited_pets_container">
+<div ng-repeat="favorite in $ctrl.favorites | orderBy:'-created_at' | limitTo : 40">
+  <div class="each_favorited_or_passed_pet" style="background-image: url({{favorite.pet.photo}})" ui-sref="petShow({id: favorite.pet_id})">
+      <button class="adoption_contact_buttons">{{favorite.pet.name}}</button>
+      <!-- <img ng-src="{{pass.pet.photo}}"> -->
+  </div>
+</div>
+</div>
+
+<footer-nav></footer-nav>
