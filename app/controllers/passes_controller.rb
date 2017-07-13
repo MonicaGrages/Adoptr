@@ -1,6 +1,6 @@
 class PassesController < ApplicationController
 
-    def create
+  def create
     @pass = Pass.new(pass_params)
     if @pass.save
       puts "successful pet pass"
@@ -8,6 +8,13 @@ class PassesController < ApplicationController
     else
       render json: @pass.errors
     end
+  end
+
+  def index
+    @user = User.find(params[:user_id])
+    @passes = @user.passes
+    render json: @passes,
+      include: {:pet => {:only => [:name, :photo]}}
   end
 
 

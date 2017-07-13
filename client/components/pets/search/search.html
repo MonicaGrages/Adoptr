@@ -1,11 +1,14 @@
 <header-nav></header-nav>
-<p ng-show="$ctrl.lastPetLikedMessage" ng-hide="$ctrl.lastPetPassedMessage"><span>&hearts;</span>{{$ctrl.lastPetLikedMessage}}</p>
-<p ng-show="$ctrl.lastPetPassedMessage" ng-hide="$ctrl.lastPetLikedMessage">{{$ctrl.lastPetPassedMessage}}</p>
+<p ng-show="$ctrl.lastPetLikedMessage">&hearts;{{$ctrl.lastPetLikedMessage}}</p>
+<p ng-show="$ctrl.lastPetPassedMessage">{{$ctrl.lastPetPassedMessage}}</p>
 
-<div class="search_pet_info" ui-sref="petShow({id: $ctrl.pet.id})">
+<div>
   <h6> Swipe left to see another pet <<< </h6>
   <h6> >>> Swipe right to add this pet to favorites</h6>
-  <h6 ui-sref="landingPage">How does it work?</h6>
+  <h6 ui-sref="landingPage({'#': 'window-2'})">How does it work?</h6>
+</div>
+
+<div class="search_pet_info" ui-sref="petShow({id: $ctrl.pet.id})">
   <h4>{{$ctrl.pet.name}}</h4>
   <div md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addFavorite()">
     <img ng-src={{$ctrl.pet.photo}}>

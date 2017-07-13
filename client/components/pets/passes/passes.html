@@ -1,0 +1,13 @@
+<header-nav></header-nav>
+<h3>Pets you swiped left</h3>
+<h4>Give them another chance?</h4>
+
+
+<div ng-repeat="pass in $ctrl.passes">
+<a ui-sref="petShow({id: pass.pet_id})">
+  <div>
+    <p>{{pass.pet.name}}</p>
+    <img ng-src="{{pass.pet.photo}}">
+  </div>
+</a>
+</div>

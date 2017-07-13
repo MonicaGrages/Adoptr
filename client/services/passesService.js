@@ -10,6 +10,13 @@ function PassesService ($http) {
       });
   }
 
+  service.getPassesByUser = function(userId) {
+    return $http.get('users/'+userId+'/passes')
+      .then(response => {
+        return response;
+      })
+  }
+
   return service;
 }
 

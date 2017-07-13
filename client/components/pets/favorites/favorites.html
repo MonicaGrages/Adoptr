@@ -4,6 +4,9 @@
 
 <div ng-repeat="favorite in $ctrl.favorites">
 <a ui-sref="petShow({id: favorite.pet_id})">
-{{favorite.pet.name}}
+<div>
+  <p>{{favorite.pet.name}}</p>
+  <img ng-src="{{favorite.pet.photo}}">
+</div>
 </a>
 </div>

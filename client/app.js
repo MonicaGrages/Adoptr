@@ -47,6 +47,13 @@ function router ($stateProvider, $urlRouterProvider) {
         auth: validateUser
       }
     })
+    .state("passes", {
+      url: "/users/:userId/passes",
+      template: "<passes></passes>",
+      resolve: {
+        auth: validateUser
+      }
+    })
     .state("petShow", {
       url: "/pets/:id",
       template: "<pet-show></pet-show>",

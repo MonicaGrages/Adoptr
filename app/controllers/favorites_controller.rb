@@ -3,7 +3,7 @@ class FavoritesController < ApplicationController
     @user = User.find(params[:userId])
     @favorites = @user.favorites
     render json: @favorites,
-      include: {:pet => {:only => :name}}
+      include: {:pet => {:only => [:name, :photo]}}
   end
 
   def create
