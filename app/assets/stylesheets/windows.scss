@@ -5,11 +5,43 @@ $colors: #0075CA, white, #9B95B7;
   width:100%;
   height:100%;
   position:absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 #window-1{
-    color: white;
+  color: white;
+  .cat_using_phone{
+    background-image: url("http://i.imgur.com/1MJgkL0.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 4px solid white;
+    border-radius: 10px;
+    height: 300px;
+    width: 400px;
   }
+  .landing_page_main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .landing_page_main_image_container{
+      font-family: 'Poppins', sans-serif;
+      display: flex;
+      flex-direction: column;
+      margin-left: 15px;
+      margin-right: 15px;
+    }
+    .logo{
+      text-align: center;
+      margin-left: 15px;
+      margin-right: 15px;
+      .home_page_logo{
+        font-size: 80px;
+      }
+    }
+  }
+}
 
 @for $i from 1 through 3{
     .window:nth-child(#{$i}){
@@ -18,12 +50,4 @@ $colors: #0075CA, white, #9B95B7;
     }
 }
 
-.cat_using_phone{
-  background-image: url("http://i.imgur.com/1MJgkL0.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  border: 4px solid white;
-  border-radius: 10px;
-  height: 300px;
-  width: 400px;
-}
+
