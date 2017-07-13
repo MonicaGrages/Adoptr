@@ -19,11 +19,11 @@ function SearchController(SearchService, FavoritesService, PassesService, UsersS
   vm.addFavorite = function() {
     let petId = vm.pet.id;
     let userId = vm.currentUser.id;
-    console.log(petId);
     FavoritesService.addFavorite(petId, userId)
       .then(response => {
-        console.log('favorited pet');
+        vm.lastPetLikedMessage = "You liked "+vm.pet.name;
         activate();
+
       })
       .catch(response => {
         console.log(response);
@@ -35,6 +35,7 @@ function SearchController(SearchService, FavoritesService, PassesService, UsersS
     let userId = vm.currentUser.id;
     PassesService.addPass(petId, userId)
       .then(response => {
+        vm.lastPetPassedMessage = "You passed on "+vm.pet.name;
         activate();
       })
       .catch(response => {
