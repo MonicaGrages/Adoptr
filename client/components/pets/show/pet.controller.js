@@ -1,5 +1,5 @@
-PetsController.$inject = ['PetsService', 'FavoritesService', '$auth', '$stateParams'];
-function PetsController(PetsService, FavoritesService, $auth, $stateParams){
+PetsController.$inject = ['PetsService', 'FavoritesService', 'PassesService', '$auth', '$stateParams', '$state'];
+function PetsController(PetsService, FavoritesService, PassesService, $auth, $stateParams, $state){
   var vm = this;
   vm.currentUser = $auth.user;
   vm.isFavorite = false;
@@ -38,6 +38,18 @@ function PetsController(PetsService, FavoritesService, $auth, $stateParams){
       .then(response => {
         vm.favorite = response.data;
         return vm.isFavorite = true;
+      })
+      .catch(response => {
+        console.log(response);
+      });
+  }
+
+  vm.passOnPet = function () {
+    let petId = $stateParams.id;
+    let userId = vm.currentUser.id;
+    PassesService.addPass(petId, userId)
+      .then(response => {
+        $state.go('petSearch');
       })
       .catch(response => {
         console.log(response);
