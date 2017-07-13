@@ -8,15 +8,25 @@
   <button ng-click="$ctrl.isEditingPreferences=true">Edit</button>
   <p>
     Looking for:
-    <span ng-show="$ctrl.user.preference.pet_type">{{$ctrl.user.preference.pet_type}}</span>
+    <span ng-show="$ctrl.user.preference.pet_type=='all'">Any pets</span>
+    <span ng-show="$ctrl.user.preference.pet_type=='dog'">Dogs</span>
+    <span ng-show="$ctrl.user.preference.pet_type=='cat'">Cats</span>
   </p>
   <p>Near zip code: {{$ctrl.user.preference.zip}}</p>
-  <p>Age: {{$ctrl.user.preference.age}}</p>
-  <p>Size: {{$ctrl.user.preference.size}}</p>
+  <p>
+    Age:
+    <span ng-show="$ctrl.user.preference.age=='all'">Any age</span>
+    <span ng-hide="$ctrl.user.preference.age=='all'">{{$ctrl.user.preference.age}}</span>
+  </p>
+  <p>
+    Size:
+    <span ng-show="$ctrl.user.preference.size=='all'">Any size</span>
+    <span ng-hide="$ctrl.user.preference.size=='all'">{{$ctrl.user.preference.size}}</span>
+  </p>
   <p>
     Sex:
-    <span ng-show="$ctrl.user.preference.sex">{{$ctrl.user.preference.sex}}</span>
-    <span ng-hide="$ctrl.user.preference.sex">Any</span>
+    <span ng-show="$ctrl.user.preference.sex=='all'">Either sex</span>
+    <span ng-hide="$ctrl.user.preference.sex=='all'">{{$ctrl.user.preference.sex}}</span>
   </p>
 </div>
 <div ng-show="$ctrl.isEditingPreferences">
