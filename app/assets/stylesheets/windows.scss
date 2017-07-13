@@ -1,0 +1,15 @@
+$colors: #9B95B7, #0075CA, #C7A083;
+
+
+.window{
+    width:100%;
+    height:100%;
+    position:absolute;
+}
+
+@for $i from 1 through 3{
+    .window:nth-child(#{$i}){
+        background:nth($colors, $i);
+        top:($i - 1) * 100%;
+    }
+}

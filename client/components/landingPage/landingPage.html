@@ -1,39 +1,47 @@
+<section class="window">
 <div ng-show="!$ctrl.currentUser.id">
   <p><a ui-sref="signIn">Sign in</a></p>
   <p><a ui-sref="userRegistration">Sign up</a></p>
 </div>
 
-<div ng-show="$ctrl.currentUser.id">
-  <header-nav>
-</div>
+<!-- <div ng-show="$ctrl.currentUser.id">
+  <header-nav></header-nav>
+</div> -->
 
 <h1>Adoptr</h1>
+</section>
 
+<section class="window">
 <!-- This is a swipe demo made with font awesome icons and css animations. I took a lot of guidance from the code in this codepen: https://codepen.io/CunningFatalist/pen/LEOpGB -->
-<div class="animations_container">
-  <div class="each_animation">
-    <div class="phone_image_container">
-      <img class="dog_image" ng-src="http://www.freeiconspng.com/uploads/animal-pet-dog-icon-13.png">
-      <div class="stage">
-        <div class="swipe">
-          <i class="fa fa-long-arrow-left"></i>
-          <i class="fa fa-hand-o-up"></i>
-          <i class="fa fa-long-arrow-right"></i>
+  <div class="animations_container">
+    <div class="each_animation">
+      <div class="phone_image_container">
+        <img class="dog_image" ng-src="http://www.freeiconspng.com/uploads/animal-pet-dog-icon-13.png">
+        <div class="stage">
+          <div class="swipe">
+            <i class="fa fa-long-arrow-left"></i>
+            <i class="fa fa-hand-o-up"></i>
+            <i class="fa fa-long-arrow-right"></i>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="each_animation">
-    <div class="computer_image_container">
-      <img class="dog_image" ng-src="http://www.freeiconspng.com/uploads/animal-pet-dog-icon-13.png">
-      <div class="stage">
-        <div class="swipe">
-          <i class="fa fa-long-arrow-left"></i>
-          <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
-          <i class="fa fa-long-arrow-right"></i>
+    <div class="each_animation">
+      <div class="computer_image_container">
+        <img class="dog_image" ng-src="http://www.freeiconspng.com/uploads/animal-pet-dog-icon-13.png">
+        <div class="stage">
+          <div class="swipe">
+            <i class="fa fa-long-arrow-left"></i>
+            <i class="fa fa-mouse-pointer" aria-hidden="true"></i>
+            <i class="fa fa-long-arrow-right"></i>
+          </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+</section>
+
+<section class="window">
+  This is another window
+</section>
