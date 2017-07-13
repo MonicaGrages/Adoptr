@@ -6,8 +6,9 @@ require('angular-messages');
 require('angular-material');
 require('angular-aria');
 require('angular-animate');
+require('angular-socialshare');
 
-angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth", "ngMessages", "ngMaterial", "ngAria", "ngAnimate"])
+angular.module("AdoptrApp", ["ui.router", "ipCookie", "ng-token-auth", "ngMessages", "ngMaterial", "ngAria", "ngAnimate", "720kb.socialshare"])
   .config(router, auth);
 
 auth.$inject = ["$authProvider"];
