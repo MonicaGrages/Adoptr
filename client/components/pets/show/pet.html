@@ -1,24 +1,23 @@
 <header-nav></header-nav>
+
 <h1>{{$ctrl.pet.name}}</h1>
 <div ng-show="$ctrl.isFavorite">
   <p>You favorited this pet on {{$ctrl.favorite.created_at | date}}</p>
-  <p><a ng-click="$ctrl.deleteFavorite()">Remove From Favorites</a></p>
+  <p><a ng-click="$ctrl.deleteFavorite()">remove from favorites</a></p>
 </div>
-
-
-  <a ng-hide="$ctrl.isFavorite" ng-click="$ctrl.addToFavorites()">Add To Favorites</a>
-  <a ng-hide="$ctrl.isFavorite || $ctrl.wasPassed" ng-click="$ctrl.passOnPet()">Pass on Pet</a>
-
-
-<div md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addFavorite()">
-  <img ng-src={{$ctrl.pet.photo}}>
+<div class="pet_show_favorite_or_pass_buttons">
+  <a ng-hide="$ctrl.isFavorite || $ctrl.wasPassed" ng-click="$ctrl.passOnPet()">
+    <i class="fa fa-angle-double-left" aria-hidden="true"></i> pass
+  </a>
+  <a ng-hide="$ctrl.isFavorite" ng-click="$ctrl.addToFavorites()">
+    <i class="fa fa-heart" aria-hidden="true"></i> add to favorites
+  </a>
 </div>
+<img ng-src={{$ctrl.pet.photo}}>
 <p>{{$ctrl.pet.description}}</p>
-
 <p>Age: {{$ctrl.pet.age}}</p>
 <p>Size: {{$ctrl.pet.size}}</p>
 <p>Sex: {{$ctrl.pet.sex}}</p>
-
 
 <h3>Help {{$ctrl.pet.name}} find a fur-ever home</h3>
 <div>
@@ -70,9 +69,4 @@
   </i>
 </div>
 
-<div>
-  <nav>
-    <a href="#">Email this pet to a friend</a>
-    <a href="#">Post this pet on facebook, twitter, etc</a>
-  </nav>
-</div>
+

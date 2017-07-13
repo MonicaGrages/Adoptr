@@ -16,7 +16,27 @@
 
 html {
   background-color: white;
+  font-family: 'Poppins', sans-serif;
 }
+
+
+.header_nav{
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  .header_nav_links {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.header_nav_links:hover{
+  text-decoration: underline;
+}
+
+
 
 .error-messages {
   font-size: 13px;
@@ -29,10 +49,6 @@ html {
 
 .success {
   color: green;
-}
-
-.logo {
-  font-family: 'Poppins', sans-serif;
 }
 
 .socialshare_links{

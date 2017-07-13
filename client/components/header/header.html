@@ -1,17 +1,13 @@
 <nav class="header_nav">
-  <div ui-sref="landingPage">
-    <h2 class="logo">adoptr</h2>
-  </div>
 
-  <div ng-show="!$ctrl.currentUser.id" class="logged_out_links">
-    <p><a ui-sref="signIn">Sign in</a></p>
-    <p><a ui-sref="userRegistration">Sign up</a></p>
-  </div>
-  <div ng-show="$ctrl.currentUser.id" class="logged_in_links">
-    <p>Signed in as {{$ctrl.currentUser.email}}</p>
-    <a ui-sref="userShow({id: $ctrl.currentUser.id})">My Account</a>
-    <p><a ng-click='$ctrl.signOut()'>Log Out</a></p>
-    <p><a ui-sref="favorites({userId: $ctrl.currentUser.id})">See My Favorite Pets</a></p>
-    <p><a ui-sref="petSearch">Search for a Pet</a></p>
-  </div>
+  <p class="header_nav_links" ui-sref="landingPage">adoptr</p>
+
+  <p class="header_nav_links" ng-if="!$ctrl.currentUser.id" ui-sref="signIn">login</p>
+  <p class="header_nav_links" ng-if="!$ctrl.currentUser.id" ui-sref="userRegistration">sign up</p>
+
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ui-sref="petSearch">search</p>
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ui-sref="favorites({userId: $ctrl.currentUser.id})">favorites</p>
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ui-sref="userShow({id: $ctrl.currentUser.id})">account</p>
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ng-click='$ctrl.signOut()'>log out</p>
+
 </nav>

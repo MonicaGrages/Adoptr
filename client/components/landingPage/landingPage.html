@@ -1,17 +1,5 @@
 <section class="window" id="window-1">
-
-  <div id="home_page_nav_links" ng-show="$ctrl.currentUser.id">
-    <p><a ui-sref="petSearch">start search</a></p>
-    <p><a ui-sref="favorites({userId: $ctrl.currentUser.id})">my favorites</a></p>
-    <a ui-sref="userShow({id: $ctrl.currentUser.id})">my account</a>
-    <p><a ng-click='$ctrl.signOut()'>log out</a></p>
-  </div>
-
-  <div ng-show="!$ctrl.currentUser.id">
-    <p><a ui-sref="signIn">Sign in</a></p>
-    <p><a ui-sref="userRegistration">Sign up</a></p>
-  </div>
-
+  <header-nav></header-nav>
   <div class="landing_page_main">
     <div class="landing_page_main_image_container">
       <div class="dog_computer"></div>
@@ -21,9 +9,9 @@
       <h1 class="home_page_logo">adoptr</h1>
     </div>
   </div>
-
   <div class="home_page_scroll_tag"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>      how does it work?</div>
 </section>
+
 
 <section class="window" id="window-2">
   <div class="home_page_scroll_tag"><i class="fa fa-chevron-circle-up" aria-hidden="true"></i></div>
@@ -32,8 +20,7 @@
     <p>Swipe right on your mobile device if you like the pet you're seeing, swipe left to see a different pet</p>
     <p>Use click, drag, drop if you're not using a touch-screen device</p>
   </div>
-
-<!-- This is a swipe demo made with font awesome icons and css animations. I took a lot of guidance from the code in this codepen: https://codepen.io/CunningFatalist/pen/LEOpGB -->
+  <!-- This is a swipe demo made with font awesome icons and css animations. I took a lot of guidance from the code in this codepen: https://codepen.io/CunningFatalist/pen/LEOpGB -->
   <div class="animations_container">
     <div class="each_animation">
       <div class="phone_image_container">
@@ -47,7 +34,6 @@
         </div>
       </div>
     </div>
-
     <div class="each_animation">
       <div class="computer_image_container">
         <img class="cat_image" ng-src="http://icons.iconarchive.com/icons/iconsmind/outline/128/Cat-icon.png">
@@ -62,11 +48,11 @@
     </div>
   </div>
   <div>
-    <h3>If you're lucky, the right pet will like you back</h3>
+  <h3>If you're lucky, the right pet will like you back</h3>
   </div>
-
   <div class="home_page_scroll_tag"><i class="fa fa-chevron-circle-down" aria-hidden="true"></i>   about the developer</div>
 </section>
+
 
 <section class="window" id="window-3">
   This is another window

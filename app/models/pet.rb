@@ -22,7 +22,7 @@ class Pet < ApplicationRecord
 
     new_pet = create(name: pet['name']['$t'],
       pet_type: pet['animal']['$t'],
-      photo: pet['media']['photos']['photo'][3]['$t'],
+      photo: pet['media']['photos']['photo'][2]['$t'],
       description: pet['description']['$t'],
       sex: pet['sex']['$t'],
       age: pet['age']['$t'],

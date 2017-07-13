@@ -2,11 +2,9 @@
 <p ng-show="$ctrl.lastPetLikedMessage">&hearts;{{$ctrl.lastPetLikedMessage}}</p>
 <p ng-show="$ctrl.lastPetPassedMessage">{{$ctrl.lastPetPassedMessage}}</p>
 
-<div>
-  <h6> Swipe left to see another pet <<< </h6>
-  <h6> >>> Swipe right to add this pet to favorites</h6>
-  <h6 ui-sref="landingPage({'#': 'window-2'})">How does it work?</h6>
-</div>
+
+<p ui-sref="landingPage({'#': 'window-2'})">How does it work?</p>
+
 
 <div class="search_pet_info" ui-sref="petShow({id: $ctrl.pet.id})">
   <h4>{{$ctrl.pet.name}}</h4>
