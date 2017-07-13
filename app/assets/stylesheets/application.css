@@ -19,7 +19,6 @@ html {
   font-family: 'Poppins', sans-serif;
 }
 
-
 .header_nav{
   padding: 20px;
   display: flex;
@@ -32,11 +31,14 @@ html {
   }
 }
 
+.adoptr_nav_link{
+  font-weight: 900;
+  font-size: 20px;
+}
+
 .header_nav_links:hover{
   text-decoration: underline;
 }
-
-
 
 .error-messages {
   font-size: 13px;
@@ -51,9 +53,20 @@ html {
   color: green;
 }
 
-.socialshare_links{
-  font-size: 40px;
+.footer{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15px;
+  padding-left: 15px;
 }
+
+.github_link{
+  font-size: 24px;
+  color: black;
+}
+
+
 
 
 

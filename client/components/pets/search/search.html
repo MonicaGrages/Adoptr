@@ -1,17 +1,18 @@
+<section class="window" id="window-1">
 <header-nav></header-nav>
-<p ng-show="$ctrl.lastPetLikedMessage">&hearts;{{$ctrl.lastPetLikedMessage}}</p>
-<p ng-show="$ctrl.lastPetPassedMessage">{{$ctrl.lastPetPassedMessage}}</p>
 
-
-<p ui-sref="landingPage({'#': 'window-2'})">How does it work?</p>
-
+<div class="pet_search_top_messages">
+  <p class="liked_or_passed_message" ng-show="$ctrl.lastPetLikedMessage">&hearts;{{$ctrl.lastPetLikedMessage}}</p>
+  <p class="liked_or_passed_message" ng-show="$ctrl.lastPetPassedMessage"><i class="fa fa-angle-double-left" aria-hidden="true"></i> {{$ctrl.lastPetPassedMessage}}</p>
+  <p class="how_does_it_work_link" ui-sref="landingPage({'#': 'window-2'})"><i class="fa fa-question-circle" aria-hidden="true"></i> How does it work</p>
+</div>
 
 <div class="search_pet_info" ui-sref="petShow({id: $ctrl.pet.id})">
   <h4>{{$ctrl.pet.name}}</h4>
   <div md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addFavorite()">
-    <img ng-src={{$ctrl.pet.photo}}>
+    <img class="pet_search_image" ng-src={{$ctrl.pet.photo}}>
   </div>
-
 </div>
-
+<footer-nav></footer-nav>
+</section>
 

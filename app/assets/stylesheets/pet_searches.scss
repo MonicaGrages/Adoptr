@@ -1,3 +1,21 @@
 // Place all the styles related to the PetSearches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.pet_search_top_messages{
+  display: flex;
+  justify-content: space-around;
+}
+
+.how_does_it_work_link:hover{
+  text-decoration: underline;
+}
+
+.search_pet_info{
+  text-align: center;
+  font-size: 35px;
+}
+
+.pet_search_image{
+  box-shadow: 10px 10px 5px #888888;
+}

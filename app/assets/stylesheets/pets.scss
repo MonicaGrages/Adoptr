@@ -3,7 +3,75 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .pet_show_favorite_or_pass_buttons{
+  width: 90%;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 25px;
+  a:hover{
+    text-decoration: underline;
+  };
+}
+
+.pet_show_main{
+  margin-right: auto;
+  margin-left: auto;
+  width: 60%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .pet_show_small_details{
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.remove_from_favorites_button:hover{
+  text-decoration: underline;
+}
+
+.pet_show_contact_heading{
+  text-align: center;
+}
+
+.adoption_contact_info{
+  display: flex;
+  justify-content: center;
+  .petfinder_link{
+    color: black;
+  }
+  .hide_adoption_contact_button_container{
+    display: flex;
+    justify-content: center;
+  }
+}
+
+
+.adoption_contact_buttons{
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 25px;
+  font-family: 'Poppins', sans-serif;
+/*  height: 25px;*/
+}
+
+.socialshare{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  div{
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+}
+
+.socialshare_links{
+  font-size: 40px;
 }
