@@ -1,4 +1,4 @@
-# Adoptr
+# Adoptr - this project is under construction
 
 This project was planned and developed in one week
 
