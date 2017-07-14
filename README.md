@@ -1,7 +1,7 @@
 # Adoptr
 ## helping four-legged friends find fur-ever homes
 
-### An angular on rails app planned, designed, and developed be me in one week
+### An AngularJS on rails app I planned, designed, and developed in one week
 
 ### Cool things I learned about during this project:
 - Angular Material - swipes
