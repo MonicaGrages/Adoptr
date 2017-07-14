@@ -27,3 +27,6 @@
 ![adoptr user sign up](http://i.imgur.com/67oPjtp.png "adoptr user sign up")
 
 ![adoptr user](http://i.imgur.com/qXZXjXO.png "adoptr user")
+
+### ERD
+![ERD](http://i.imgur.com/kLfRvBW.jpg?2 "ERD")
