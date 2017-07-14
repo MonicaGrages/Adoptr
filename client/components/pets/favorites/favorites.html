@@ -1,17 +1,14 @@
 <header-nav></header-nav>
-<h3 class="pass_or_favorite_index_header">Your Favorites</h3>
-<h4 class="pass_or_favorite_index_header">click one for adoption information</h4>
 
-<!--
-<div ng-repeat="favorite in $ctrl.favorites | orderBy: '-created_at'">
-<a ui-sref="petShow({id: favorite.pet_id})">
-<div>
-  <p>{{favorite.pet.name}}</p>
-  <img ng-src="{{favorite.pet.photo}}">
+<div class="pass_or_favorite_index_header" ng-show="$ctrl.favorites.length>0">
+  <h3 class="pass_or_favorite_index_header">Your Favorites</h3>
+  <h4 class="pass_or_favorite_index_header">click one for adoption information</h4>
 </div>
-</a>
+
+<div class="pass_or_favorite_index_header" ng-show="$ctrl.favorites.length==0">
+  <h4>you haven't favorited any pets</h4>
+  <button class="big_black_buttons" ui-sref="petSearch">get started</button>
 </div>
- -->
 
 <div class="passed_or_favorited_pets_container">
 <div ng-repeat="favorite in $ctrl.favorites | orderBy:'-created_at' | limitTo : 40">
