@@ -30,3 +30,12 @@
   align-items: center;
   justify-content: space-around;
 }
+
+@media only screen and (max-width: 1000px) {
+  .how_does_it_work_link{
+    font-size: 25px;
+  }
+  .pet_search_name{
+    font-size: 40px;
+  }
+}

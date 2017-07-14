@@ -71,7 +71,25 @@ html {
   color: black;
 }
 
+@media only screen and (max-width: 1000px) {
+  .header_nav{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  .header_nav_links {
+    margin: 0px;
+    padding: 0px;
+    font-size: 24px;
+  }
 
+  .window{
+    height: default;
+    width: default;
+    position: relative;
+  }
+
+}
 
 
 
