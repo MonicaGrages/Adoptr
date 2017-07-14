@@ -7,7 +7,7 @@
   <h4>Pet Search Preferences</h4>
 
   <div ng-hide="$ctrl.isEditingPreferences">
-    <button ng-click="$ctrl.isEditingPreferences=true" class="adoption_contact_buttons">Edit</button>
+    <button ng-click="$ctrl.isEditingPreferences=true" class="big_black_buttons">Edit</button>
     <p>
       Looking for:
       <span ng-show="$ctrl.user.preference.pet_type=='all'">Any pets</span>
@@ -79,14 +79,14 @@
       </div>
       <div>
         <input type="submit" name="Submit Changes" ng-click="$ctrl.isEditingPreferences=false"
-          ng-disabled="preferences.zip.$invalid" class="adoption_contact_buttons">
+          ng-disabled="preferences.zip.$invalid" class="big_black_buttons">
       </div>
     </form>
-    <button ng-click="$ctrl.isEditingPreferences=false" class="adoption_contact_buttons">Nevermind</button>
+    <button ng-click="$ctrl.isEditingPreferences=false" class="big_black_buttons">Nevermind</button>
   </div>
 
 
-    <button class="adoption_contact_buttons" ui-sref="passes({userId: $ctrl.user.id})">See pets I passed on</button>
+    <button class="big_black_buttons" ui-sref="passes({userId: $ctrl.user.id})">See pets I passed on</button>
 
 </main>
 <footer-nav></footer-nav>

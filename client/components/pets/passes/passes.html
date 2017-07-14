@@ -8,7 +8,7 @@
 <div class="passed_or_favorited_pets_container">
 <div ng-repeat="pass in $ctrl.passes | orderBy:'-created_at' | limitTo : 10">
   <div class="each_favorited_or_passed_pet" style="background-image: url({{pass.pet.photo}})" ui-sref="petShow({id: pass.pet_id})">
-      <button class="adoption_contact_buttons">{{pass.pet.name}}</button>
+      <button class="big_black_buttons">{{pass.pet.name}}</button>
       <!-- <img ng-src="{{pass.pet.photo}}"> -->
   </div>
 </div>
