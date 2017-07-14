@@ -1,13 +1,13 @@
-PetsController.$inject = ['PetsService', 'FavoritesService', 'PassesService', '$auth', '$stateParams', '$state'];
-function PetsController(PetsService, FavoritesService, PassesService, $auth, $stateParams, $state){
+PetsController.$inject = ['PetsService', 'FavoritesService', 'PassesService', '$auth', '$stateParams', '$state', '$scope'];
+function PetsController(PetsService, FavoritesService, PassesService, $auth, $stateParams, $state, $scope){
   var vm = this;
   vm.currentUser = $auth.user;
   vm.showContact = false;
+  vm.chatEntries = [];
   activate();
 
   function activate(){
     let id = $stateParams.id;
-    vm.chatEntries = [];
     PetsService.getPet(id)
     .then(response => {
       vm.pet = response;
@@ -80,22 +80,21 @@ function PetsController(PetsService, FavoritesService, PassesService, $auth, $st
       })
   }
 
-  vm.addRealChatEntry = function(lastChatEntry) {
+  vm.addRealChatEntry = function() {
     vm.chatEntries.pop();
     if (vm.pet.pet_type==="Cat") {
     vm.chatEntries.push("meow!");
     } else if (vm.pet.pet_type==="Dog"){
     vm.chatEntries.push("woof!");
     }
-    vm.lastChatEntry = "";
+    $scope.$apply();
   }
 
   vm.addToChat = function(lastChatEntry) {
-    console.log(lastChatEntry);
     vm.chatEntries.push(lastChatEntry);
-    console.log(vm.pet.pet_type);
     vm.chatEntries.push("...");
-    setTimeout(vm.addRealChatEntry(lastChatEntry),20000);
+    vm.lastChatEntry = "";
+    setTimeout(vm.addRealChatEntry, 4000);
   }
 
 

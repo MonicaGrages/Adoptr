@@ -120,18 +120,29 @@ border: 3px solid white;
   font-size: 40px;
 }
 
+/*.chat_box_container{
+  height: 995px;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+}*/
+
 .chat_box{
   position: absolute;
   bottom: 0;
 }
 
 .chat_box_top{
-  height: 60px;
+  height: 55px;
   width: 250px;
   background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .chat_box_expanded{
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -151,15 +162,17 @@ border: 3px solid white;
 .pet_chat{
   border: 2px solid white;
   border-radius: 20px;
-  color: blue;
+  color: white;
   margin-right: 80px;
   width: 100px;
+  background-color: blue;
 }
 
 .person_chat{
   border: 2px solid white;
   border-radius: 20px;
-  color: green;
+  background-color: green;
+  color: white;
   margin-left: 120px;
   width: 100px;
 }

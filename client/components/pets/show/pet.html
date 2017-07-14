@@ -31,12 +31,13 @@
   </main>
   <div class="home_page_scroll_tag"><i class="fa fa-chevron-circle-down" aria-hidden="true" ui-sref="petShow({'#': 'window-2'})"></i></div>
 
+  <div class="chat_box_container">
   <div class="chat_box">
-    <div class="chat_box_top" ng-hide="$ctrl.chatboxIsOpen" ng-click="$ctrl.chatboxIsOpen=true">Chat with {{$ctrl.pet.name}}<span class="plus_minus_chat_box"> + </span></div>
+    <div class="chat_box_top" ng-hide="$ctrl.chatboxIsOpen" ng-click="$ctrl.chatboxIsOpen=true">Chat with {{$ctrl.pet.name}}<span class="plus_minus_chat_box"> (+) </span></div>
     <div ng-show="$ctrl.chatboxIsOpen">
-      <div class="chat_box_top" ng-click="$ctrl.chatboxIsOpen=false">Chat with {{$ctrl.pet.name}}<span class="plus_minus_chat_box"> - </span></div>
+      <div class="chat_box_top" ng-click="$ctrl.chatboxIsOpen=false">Chat with {{$ctrl.pet.name}}<span class="plus_minus_chat_box"> (-) </span></div>
       <div class="chat_box_expanded">
-        <div ng-repeat="chatEntry in $ctrl.chatEntries">
+        <div ng-repeat="chatEntry in $ctrl.chatEntries track by $index">
           <p ng-class-odd="'person_chat'" ng-class-even="'pet_chat'">{{chatEntry}}</p>
         </div>
         <div class="chat_box_inputs">
@@ -45,6 +46,7 @@
         </div>
       </div>
     </div>
+  </div>
   </div>
 </section>
 
