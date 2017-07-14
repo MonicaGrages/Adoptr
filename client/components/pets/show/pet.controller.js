@@ -7,6 +7,7 @@ function PetsController(PetsService, FavoritesService, PassesService, $auth, $st
 
   function activate(){
     let id = $stateParams.id;
+    vm.chatEntries = [];
     PetsService.getPet(id)
     .then(response => {
       vm.pet = response;
@@ -77,6 +78,24 @@ function PetsController(PetsService, FavoritesService, PassesService, $auth, $st
         console.log('error deleting favorite');
         console.log(response.data.error);
       })
+  }
+
+  vm.addRealChatEntry = function(lastChatEntry) {
+    vm.chatEntries.pop();
+    if (vm.pet.pet_type==="Cat") {
+    vm.chatEntries.push("meow!");
+    } else if (vm.pet.pet_type==="Dog"){
+    vm.chatEntries.push("woof!");
+    }
+    vm.lastChatEntry = "";
+  }
+
+  vm.addToChat = function(lastChatEntry) {
+    console.log(lastChatEntry);
+    vm.chatEntries.push(lastChatEntry);
+    console.log(vm.pet.pet_type);
+    vm.chatEntries.push("...");
+    setTimeout(vm.addRealChatEntry(lastChatEntry),20000);
   }
 
 
