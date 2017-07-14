@@ -1,9 +1,12 @@
-<h3>A Warm Welcome From Adoptr</h3>
-<h4>We just need a little more info to make sure we show you adoptable pets that are perfect for you</h4>
+<section class="window" id="user_registration_preferences_window">
+  <div>
+    <h3>A Warm Welcome From Adoptr</h3>
+    <h4>We just need a little more info to make sure we show you adoptable pets that are perfect for you</h4>
+  </div>
 
-
-Pet Search Preferences:
-<form ng-submit="$ctrl.updatePreferences($ctrl.user.preference)">
+  <div>
+  <h3>Pet Search Preferences:</h3>
+  <form ng-submit="$ctrl.updatePreferences($ctrl.user.preference)" name="preferences" novalidate>
     <div>
       <p>I am a:</p>
       <input type="radio" value="human">Human
@@ -18,8 +21,13 @@ Pet Search Preferences:
     </div>
     <div>
       <p>Near Zip Code:
-        <input type="text" ng-model="$ctrl.user.preference.zip">
+      <input type="text" name="zip" ng-model="$ctrl.user.preference.zip" required ng-maxlength="5" ng-minlength="5">
       </p>
+      <div class="error-messages" ng-messages="preferences.zip.$error">
+        <div ng-message="required">Please enter a zip code</div>
+        <div ng-message="maxlength">Zip code should be 5 digits. Ex: 30309</div>
+        <div ng-message="minlength">Zip code should be 5 digits. Ex: 30309</div>
+      </div>
     </div>
     <div>
       Age:
@@ -44,6 +52,8 @@ Pet Search Preferences:
       <input type="radio" value="all" ng-model="$ctrl.user.preference.sex">Either Sex
     </div>
     <div>
-      <input type="submit" value="Start my pet search" ng-click="$ctrl.isEditingPreferences=false">
+      <input type="submit" ng-disabled="preferences.$invalid" value="start my search" class="big_black_buttons" id="registration_preferences_form_submit" ng-click="$ctrl.isEditingPreferences=false">
     </div>
   </form>
+  </div>
+</section>

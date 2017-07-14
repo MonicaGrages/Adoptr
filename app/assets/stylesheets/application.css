@@ -42,7 +42,7 @@ html {
 
 .error-messages {
   font-size: 13px;
-  color: gray;
+  color: red;
 }
 
 .error {
