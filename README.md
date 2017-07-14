@@ -1,4 +1,4 @@
-# Adoptr
+# [Adoptr](https://adoptr.herokuapp.com/#!/)
 ## helping four-legged friends find fur-ever homes
 
 ### An AngularJS on rails app I planned, designed, and developed in one week
