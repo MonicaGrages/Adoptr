@@ -2,30 +2,30 @@
 
 <main class="user_show_main">
   <h1>Your Account</h1>
-  {{$ctrl.user.email}}
+  <p class="user_info">{{$ctrl.user.email}}</p>
 
-  <h4>Pet Search Preferences</h4>
+  <h3>Pet Search Preferences</h3>
 
   <div ng-hide="$ctrl.isEditingPreferences">
     <button ng-click="$ctrl.isEditingPreferences=true" class="big_black_buttons">Edit</button>
-    <p>
+    <p class="user_info">
       Looking for:
       <span ng-show="$ctrl.user.preference.pet_type=='all'">Any pets</span>
       <span ng-show="$ctrl.user.preference.pet_type=='dog'">Dogs</span>
       <span ng-show="$ctrl.user.preference.pet_type=='cat'">Cats</span>
     </p>
-    <p>Near zip code: {{$ctrl.user.preference.zip}}</p>
-    <p>
+    <p class="user_info">Near zip code: {{$ctrl.user.preference.zip}}</p>
+    <p class="user_info">
       Age:
       <span ng-show="$ctrl.user.preference.age=='all'">Any age</span>
       <span ng-hide="$ctrl.user.preference.age=='all'">{{$ctrl.user.preference.age}}</span>
     </p>
-    <p>
+    <p class="user_info">
       Size:
       <span ng-show="$ctrl.user.preference.size=='all'">Any size</span>
       <span ng-hide="$ctrl.user.preference.size=='all'">{{$ctrl.user.preference.size}}</span>
     </p>
-    <p>
+    <p class="user_info">
       Sex:
       <span ng-show="$ctrl.user.preference.sex=='all'">Either sex</span>
       <span ng-hide="$ctrl.user.preference.sex=='all'">{{$ctrl.user.preference.sex}}</span>
@@ -40,13 +40,13 @@
       </div>
 
       <div>
-      <p>Looking for:</p>
+      <p class="user_info">Looking for:</p>
         <input type="radio" value="dog" ng-model="$ctrl.user.preference.pet_type">Dogs
         <input type="radio" value="cat" ng-model="$ctrl.user.preference.pet_type">Cats
         <input type="radio" value="all" ng-model="$ctrl.user.preference.pet_type">All
       </div>
       <div>
-        <div>Near Zip Code:
+        <div class="user_info">Near Zip Code:
           <input type="text" name="zip" ng-model="$ctrl.user.preference.zip" required ng-maxlength="5" ng-minlength="5">
           <div class="error-messages" ng-messages="preferences.zip.$error">
             <div ng-message="required">Please enter a zip code</div>
@@ -55,7 +55,7 @@
           </div>
         </div>
       </div>
-      <div>
+      <div class="user_info">
         Age:
         <input type="radio" value="Baby" ng-model="$ctrl.user.preference.age">Baby
         <input type="radio" value="Young" ng-model="$ctrl.user.preference.age">Young
@@ -63,7 +63,7 @@
         <input type="radio" value="Senior" ng-model="$ctrl.user.preference.age">Senior
         <input type="radio" value="all" ng-model="$ctrl.user.preference.age">Any Age
       </div>
-      <div>
+      <div class="user_info">
         Size:
         <input type="radio" value="S" ng-model="$ctrl.user.preference.size">Small
         <input type="radio" value="M" ng-model="$ctrl.user.preference.size">Medium
@@ -71,13 +71,13 @@
         <input type="radio" value="XL" ng-model="$ctrl.user.preference.size">X-Large
         <input type="radio" value="all" ng-model="$ctrl.user.preference.size">Any Size
       </div>
-      <div>
+      <div class="user_info">
         Sex:
         <input type="radio" value="M" ng-model="$ctrl.user.preference.sex">Male
         <input type="radio" value="F" ng-model="$ctrl.user.preference.sex">Female
         <input type="radio" value="all" ng-model="$ctrl.user.preference.sex">Either Sex
       </div>
-      <div>
+      <div class="user_info">
         <input type="submit" name="Submit Changes" ng-click="$ctrl.isEditingPreferences=false"
           ng-disabled="preferences.zip.$invalid" class="big_black_buttons">
       </div>
@@ -86,7 +86,7 @@
   </div>
 
 
-    <button class="big_black_buttons" ui-sref="passes({userId: $ctrl.user.id})">See pets I passed on</button>
+    <button class="big_black_buttons" ui-sref="passes({userId: $ctrl.user.id})">pets I passed on</button>
 
 </main>
 <footer-nav></footer-nav>

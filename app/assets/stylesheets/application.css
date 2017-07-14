@@ -80,7 +80,7 @@ html {
   .header_nav_links {
     margin: 0px;
     padding: 0px;
-    font-size: 35px;
+    font-size: 19px;
   }
 
   .window{
@@ -91,11 +91,12 @@ html {
   }
 
   .footer{
-    font-size: 35px;
+    font-size: 14px;
+    flex-direction: column;
   }
 
   .github_link{
-    font-size: 50px;
+    font-size: 40px;
   }
 
 }

@@ -29,7 +29,7 @@
 .pet_show_name{
   margin: 0;
   color: #D3D3D3;
-  font-size: 45px;
+  font-size: 38px;
 }
 
 .pet_show_image{
@@ -72,7 +72,7 @@ border: 3px solid white;
 
 .pet_show_contact_heading{
   text-align: center;
-  font-size: 45px;
+  font-size: 35px;
 }
 
 .adoption_contact_info{
@@ -163,7 +163,7 @@ border: 3px solid white;
 
 @media only screen and (max-width: 700px) {
   .big_black_buttons{
-    font-size: 50px;
+    font-size: 30px;
   }
   .pet_show_name{
     font-size: 50px;
@@ -173,7 +173,7 @@ border: 3px solid white;
     width: 85vw;
   }
   .pet_show_main{
-    font-size: 40px;
+    font-size: 20px;
   }
   .pet_show_pass_favorite_buttons{
     flex-direction: column;
@@ -181,23 +181,28 @@ border: 3px solid white;
   }
   .pet_show_favorites_message{
     flex-direction: column;
+    font-size: 20px;
   }
   .chat_box_container{
     display: none;
   }
   .socialshare{
     flex-direction: column;
-    font-size: 55px;
+    font-size: 29px;
   }
   .socialshare_links{
-    font-size: 65px;
+    font-size: 50px;
   }
   .adoption_contact_info{
-    font-size: 40px;
+    font-size: 18px;
   }
   .pet_show_description{
-    font-size: 28px;
+    font-size: 16px;
     max-height: 50vh;
-}
+  }
+  .pet_show_small_details{
+    flex-direction: column;
+    font-size: 20px;
+  }
 }
 
