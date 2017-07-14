@@ -20,19 +20,20 @@ html {
 }
 
 .header_nav{
+  color: white;
   padding: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
   .header_nav_links {
-    color: white;
     text-decoration: none;
   }
 }
 
 #black_header{
   color: black;
+/*  background-color: red;*/
 }
 
 .adoptr_nav_link{
