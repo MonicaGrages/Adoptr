@@ -2,16 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*.pet_show_favorite_or_pass_buttons{
-  width: 90%;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin-bottom: 25px;
-  a:hover{
-    text-decoration: underline;
-  };
-}*/
+
 
 #pet_show_window{
   color: white;
@@ -119,13 +110,6 @@ border: 3px solid white;
 .socialshare_links{
   font-size: 40px;
 }
-
-/*.chat_box_container{
-  height: 995px;
-  width: 250px;
-  position: relative;
-  overflow: hidden;
-}*/
 
 .chat_box{
   position: absolute;

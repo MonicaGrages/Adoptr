@@ -1,0 +1,13 @@
+<nav class="header_nav" id="black_header">
+
+  <p class="header_nav_links adoptr_nav_link" ui-sref="landingPage">adoptr</p>
+
+  <p class="header_nav_links" ng-if="!$ctrl.currentUser.id" ui-sref="signIn">login</p>
+  <p class="header_nav_links" ng-if="!$ctrl.currentUser.id" ui-sref="userRegistration">sign up</p>
+
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ui-sref="petSearch">search</p>
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ui-sref="favorites({userId: $ctrl.currentUser.id})">favorites</p>
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ui-sref="userShow({id: $ctrl.currentUser.id})">account</p>
+  <p class="header_nav_links" ng-if="$ctrl.currentUser.id" ng-click='$ctrl.signOut()'>log out</p>
+
+</nav>

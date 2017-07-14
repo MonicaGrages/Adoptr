@@ -31,6 +31,10 @@ html {
   }
 }
 
+#black_header{
+  color: black;
+}
+
 .adoptr_nav_link{
   font-weight: 900;
   font-size: 20px;
