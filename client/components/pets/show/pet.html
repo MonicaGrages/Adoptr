@@ -14,7 +14,7 @@
           <i class="fa fa-angle-double-left" aria-hidden="true"></i> pass
         </a>
         <a ng-hide="$ctrl.isFavorite" ng-click="$ctrl.addToFavorites()">
-          add to favorites <i class="fa fa-heart" aria-hidden="true"></i>
+          favorite <i class="fa fa-heart" aria-hidden="true"></i>
         </a>
       </div>
       <div><img class="pet_show_image" ng-src={{$ctrl.pet.photo}} md-swipe-left="$ctrl.passOnPet()" md-swipe-right="$ctrl.addToFavorites()"   ></div>

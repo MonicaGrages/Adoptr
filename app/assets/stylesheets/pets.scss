@@ -161,3 +161,42 @@ border: 3px solid white;
   width: 100px;
 }
 
+@media only screen and (max-width: 1000px) {
+  .big_black_buttons{
+    font-size: 50px;
+  }
+  .pet_show_name{
+    font-size: 50px;
+  }
+  .pet_show_image{
+    height: auto;
+    width: 85vw;
+  }
+  .pet_show_main{
+    font-size: 40px;
+  }
+  .pet_show_pass_favorite_buttons{
+    flex-direction: column;
+  }
+  .pet_show_favorites_message{
+    flex-direction: column;
+  }
+  .chat_box_container{
+    display: none;
+  }
+  .socialshare{
+    flex-direction: column;
+    font-size: 55px;
+  }
+  .socialshare_links{
+    font-size: 65px;
+  }
+  .adoption_contact_info{
+    font-size: 40px;
+  }
+  .pet_show_description{
+    font-size: 20px;
+    max-height: 50vh;
+}
+}
+

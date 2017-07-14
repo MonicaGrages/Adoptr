@@ -85,8 +85,17 @@ html {
 
   .window{
     height: default;
+    min-height: 100vh;
     width: default;
     position: relative;
+  }
+
+  .footer{
+    font-size: 35px;
+  }
+
+  .github_link{
+    font-size: 50px;
   }
 
 }
