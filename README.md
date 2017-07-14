@@ -25,3 +25,5 @@
 ![adoptr favorite pets](http://i.imgur.com/V4SNJ1m.png "adoptr favorite pets")
 
 ![adoptr user sign up](http://i.imgur.com/67oPjtp.png "adoptr user sign up")
+
+![adoptr user](http://i.imgur.com/qXZXjXO.png "adoptr user")
