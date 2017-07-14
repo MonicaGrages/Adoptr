@@ -119,3 +119,61 @@ border: 3px solid white;
 .socialshare_links{
   font-size: 40px;
 }
+
+/*.chat_box_container{
+  height: 995px;
+  width: 250px;
+  position: relative;
+  overflow: hidden;
+}*/
+
+.chat_box{
+  position: absolute;
+  bottom: 0;
+}
+
+.chat_box_top{
+  height: 55px;
+  width: 250px;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.chat_box_expanded{
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 340px;
+  width: 250px;
+  background-color: #D3D3D3;
+  .chat_box_inputs{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .chat_input{
+      width: 180px;
+    }
+  }
+}
+
+.pet_chat{
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  margin-right: 80px;
+  width: 100px;
+  background-color: blue;
+}
+
+.person_chat{
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: green;
+  color: white;
+  margin-left: 120px;
+  width: 100px;
+}
+
