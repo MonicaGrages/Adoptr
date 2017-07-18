@@ -50,15 +50,6 @@ function UserSessionsController($auth, $state, $rootScope){
           console.log('error');
           console.log(response);
         });
-    // $auth.requestPasswordReset(passwordResetForm)
-    //     .then(function(response) {
-    //       // handle success response
-    //       console.log(response);
-    //     })
-    //     .catch(function(response) {
-    //       // handle error response
-    //       console.log(response);
-    //     });
   }
 
 
