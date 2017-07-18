@@ -1,3 +1,3 @@
 Devise.setup do |config|
-  config.mailer_sender = "mgrages1@gmail.com"
+  config.mailer_sender = "adoptr@adoptr.herokuapp.com"
 end
