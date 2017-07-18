@@ -15,7 +15,10 @@ auth.$inject = ["$authProvider"];
 function auth($authProvider) {
     $authProvider.configure({
       apiUrl: '/',
-      validateOnPageLoad: false
+      validateOnPageLoad: false,
+      // passwordResetPath:    'api/auth/password',
+      // passwordUpdatePath:   'api/auth/password',
+      passwordResetSuccessUrl: 'passwordReset'
     });
 }
 
@@ -68,6 +71,10 @@ function router ($stateProvider, $urlRouterProvider) {
       resolve: {
         auth: validateUser
       }
+    })
+    .state("passwordReset", {
+      url: "/passwordReset",
+      template: "<password-reset></password-reset>"
     })
     .state("enterPreferences", {
       url: "/new_user_preferences",

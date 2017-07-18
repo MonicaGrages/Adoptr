@@ -1,11 +1,14 @@
-UserSessionsController.$inject = ['$auth', '$state'];
+UserSessionsController.$inject = ['$auth', '$state', '$rootScope'];
 
-function UserSessionsController($auth, $state){
+function UserSessionsController($auth, $state, $rootScope){
   var vm = this;
   vm.passwordResetForm = {};
   activate();
 
   function activate(){
+    $rootScope.$on('auth:password-reset-confirm-success', function() {
+      $state.go('passwordReset');
+    });
   }
 
   vm.handleLoginBtnClick = function(loginForm) {
