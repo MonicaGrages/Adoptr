@@ -5,7 +5,7 @@ class Pet < ApplicationRecord
   has_one :contact, dependent: :destroy
   validates :petfinder_id, uniqueness: true
   include HTTParty
-  base_uri 'http://api.petfinder.com/pet.find?key=1219862dd4ec54515c6b83ea07c325ca&format=json&output=full&count=1'
+  base_uri "http://api.petfinder.com/pet.find?key=#{ENV["api_key"]}&format=json&output=full&count=1"
 
 
   def self.generate (user_id, search_query)
