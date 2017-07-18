@@ -67,7 +67,7 @@ Rails.application.configure do
   # config.action_mailer.raise_delivery_errors = false
 
   # https://devcenter.heroku.com/articles/sendgrid
-  config.action_mailer.default_url_options = { :host => 'adoptr.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'smtp.sendgrid.net' }
 
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
