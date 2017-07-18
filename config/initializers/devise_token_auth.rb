@@ -46,6 +46,6 @@ DeviseTokenAuth.setup do |config|
   # do so by enabling this flag. NOTE: This feature is highly experimental!
   # config.enable_standard_devise_support = false
 
-  config.mailer_sender = "mail-to-send@from.com"
+  config.mailer_sender = "mgrages1@gmail.com"
 
 end
