@@ -1,12 +1,10 @@
-# [Adoptr](https://adoptr.herokuapp.com/#!/)
+# Adoptr
 ## helping four-legged friends find fur-ever homes
 
 ![Adoptr Screenshot](http://i.imgur.com/cjwFpFfl.png "Adoptr Screenshot")
 ![Adoptr Screenshot](http://i.imgur.com/irMVZEol.png "Adoptr Screenshot")
 
 ### An AngularJS on rails app I planned, designed, and developed in one week
-
-### [Slide Deck](https://docs.google.com/presentation/d/1pywxidyFddnH0eRfaJPRvuVNkG4yPA44ap8i1dSi5Gw/edit?usp=sharing)
 
 ### Cool things I learned about during this project:
 - Angular Material - swipes
